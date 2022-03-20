@@ -1,0 +1,4 @@
+C:\Users\juanp\OneDrive\Escritorio\Informatica 2\Proyecto\Proyecto informática (Segunda entrega)\Proyecto_Juan_Estrada_Jose_Colombo\Proyecto_Juan_Estrada_Jose_Colombo\Debug\Proyecto_Juan_Estrada_Jose_Colombo.vcxproj.AssemblyReference.cache
+C:\Users\juanp\OneDrive\Escritorio\Informatica 2\Proyecto\Proyecto informática (Segunda entrega)\Proyecto_Juan_Estrada_Jose_Colombo\Proyecto_Juan_Estrada_Jose_Colombo\Debug\Proyecto_Juan_Estrada_Jose_Colombo.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\juanp\OneDrive\Escritorio\Informatica 2\Proyecto\Proyecto informática (Segunda entrega)\Proyecto_Juan_Estrada_Jose_Colombo\Proyecto_Juan_Estrada_Jose_Colombo\Debug\ProyectoJuanEstradaJoseColombo.MyForm.resources
+C:\Users\juanp\OneDrive\Escritorio\Informatica 2\Proyecto\Proyecto informática (Segunda entrega)\Proyecto_Juan_Estrada_Jose_Colombo\Proyecto_Juan_Estrada_Jose_Colombo\Debug\Proyecto_Juan_Estrada_Jose_Colombo.vcxproj.GenerateResource.cache
