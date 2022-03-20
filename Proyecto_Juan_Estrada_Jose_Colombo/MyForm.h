@@ -888,6 +888,7 @@ private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ send
 	gpbmodificar->Visible = true; 
 }
 private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs^ e) {
+	////Prueba 
 	try 
 	{
 		if (cont < 5)
