@@ -18,6 +18,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 	Inventario libro[5]; 
 	int cont = 0; 
 
+
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
@@ -118,14 +119,27 @@ namespace ProyectoJuanEstradaJoseColombo {
 	private: System::Windows::Forms::ToolStripMenuItem^ reportesToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ controlDeLibrosToolStripMenuItem;
 	private: System::Windows::Forms::DataGridView^ dtgvcontrol;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headnombre;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headautor;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headfecha;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headedicion;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headestado;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headdestino;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headeditorial;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headcategoria;
+
+
+
+
+
+
+
+
+private: System::Windows::Forms::Label^ lbltitcategoriaModificar;
+private: System::Windows::Forms::ComboBox^ cmbcategoriaModificar;
+private: System::Windows::Forms::TextBox^ tbxeditorialModificar;
+private: System::Windows::Forms::Label^ label2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headnombre;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headautor;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headfecha;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headedicion;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headestado;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headdestino;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headeditorial;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headcategoria;
+
 
 
 
@@ -206,6 +220,10 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->tbxvalorreferenciaEliminar = (gcnew System::Windows::Forms::TextBox());
 			this->lbltitvreferencia = (gcnew System::Windows::Forms::Label());
 			this->gpbmodificar = (gcnew System::Windows::Forms::GroupBox());
+			this->lbltitcategoriaModificar = (gcnew System::Windows::Forms::Label());
+			this->cmbcategoriaModificar = (gcnew System::Windows::Forms::ComboBox());
+			this->tbxeditorialModificar = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->btnmodificar = (gcnew System::Windows::Forms::Button());
 			this->cmbdestinoModificar = (gcnew System::Windows::Forms::ComboBox());
 			this->cmbestadoModificar = (gcnew System::Windows::Forms::ComboBox());
@@ -368,12 +386,16 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// 
 			// btnguardar
 			// 
-			this->btnguardar->Location = System::Drawing::Point(603, 265);
+			this->btnguardar->BackColor = System::Drawing::SystemColors::HighlightText;
+			this->btnguardar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnguardar->ForeColor = System::Drawing::Color::RoyalBlue;
+			this->btnguardar->Location = System::Drawing::Point(570, 249);
 			this->btnguardar->Name = L"btnguardar";
-			this->btnguardar->Size = System::Drawing::Size(75, 23);
+			this->btnguardar->Size = System::Drawing::Size(115, 33);
 			this->btnguardar->TabIndex = 13;
 			this->btnguardar->Text = L"Guardar libro";
-			this->btnguardar->UseVisualStyleBackColor = true;
+			this->btnguardar->UseVisualStyleBackColor = false;
 			this->btnguardar->Click += gcnew System::EventHandler(this, &MyForm::btnguardar_Click);
 			// 
 			// cmbdestino
@@ -497,6 +519,8 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->gpbVisualizar->Controls->Add(this->lbltitautorVisualizar);
 			this->gpbVisualizar->Controls->Add(this->lblnombreVisualizar);
 			this->gpbVisualizar->Controls->Add(this->lbltitrefrenciadelibrovisualizar);
+			this->gpbVisualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->gpbVisualizar->Location = System::Drawing::Point(24, 37);
 			this->gpbVisualizar->Name = L"gpbVisualizar";
 			this->gpbVisualizar->Size = System::Drawing::Size(647, 324);
@@ -549,12 +573,16 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// 
 			// btnvisualizar
 			// 
-			this->btnvisualizar->Location = System::Drawing::Point(525, 277);
+			this->btnvisualizar->BackColor = System::Drawing::SystemColors::HighlightText;
+			this->btnvisualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnvisualizar->ForeColor = System::Drawing::Color::Green;
+			this->btnvisualizar->Location = System::Drawing::Point(501, 269);
 			this->btnvisualizar->Name = L"btnvisualizar";
-			this->btnvisualizar->Size = System::Drawing::Size(92, 23);
+			this->btnvisualizar->Size = System::Drawing::Size(116, 31);
 			this->btnvisualizar->TabIndex = 13;
 			this->btnvisualizar->Text = L"Visualizar libro";
-			this->btnvisualizar->UseVisualStyleBackColor = true;
+			this->btnvisualizar->UseVisualStyleBackColor = false;
 			this->btnvisualizar->Click += gcnew System::EventHandler(this, &MyForm::btnvisualizar_Click);
 			// 
 			// lblresultdestinoVisualizar
@@ -676,7 +704,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->gpbeliminar->Controls->Add(this->lbltitnombreeliminar);
 			this->gpbeliminar->Controls->Add(this->tbxvalorreferenciaEliminar);
 			this->gpbeliminar->Controls->Add(this->lbltitvreferencia);
-			this->gpbeliminar->Location = System::Drawing::Point(792, 26);
+			this->gpbeliminar->Location = System::Drawing::Point(719, 23);
 			this->gpbeliminar->Name = L"gpbeliminar";
 			this->gpbeliminar->Size = System::Drawing::Size(529, 164);
 			this->gpbeliminar->TabIndex = 3;
@@ -686,12 +714,16 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// 
 			// btneliminar
 			// 
-			this->btneliminar->Location = System::Drawing::Point(199, 121);
+			this->btneliminar->BackColor = System::Drawing::SystemColors::HighlightText;
+			this->btneliminar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btneliminar->ForeColor = System::Drawing::Color::Red;
+			this->btneliminar->Location = System::Drawing::Point(220, 113);
 			this->btneliminar->Name = L"btneliminar";
-			this->btneliminar->Size = System::Drawing::Size(93, 23);
+			this->btneliminar->Size = System::Drawing::Size(102, 31);
 			this->btneliminar->TabIndex = 4;
 			this->btneliminar->Text = L"Eliminar libro";
-			this->btneliminar->UseVisualStyleBackColor = true;
+			this->btneliminar->UseVisualStyleBackColor = false;
 			this->btneliminar->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// lblresultnombreEliminar
@@ -729,6 +761,10 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// 
 			// gpbmodificar
 			// 
+			this->gpbmodificar->Controls->Add(this->lbltitcategoriaModificar);
+			this->gpbmodificar->Controls->Add(this->cmbcategoriaModificar);
+			this->gpbmodificar->Controls->Add(this->tbxeditorialModificar);
+			this->gpbmodificar->Controls->Add(this->label2);
 			this->gpbmodificar->Controls->Add(this->btnmodificar);
 			this->gpbmodificar->Controls->Add(this->cmbdestinoModificar);
 			this->gpbmodificar->Controls->Add(this->cmbestadoModificar);
@@ -744,22 +780,64 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->gpbmodificar->Controls->Add(this->lbltitautorModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitnombreModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitvreferenciaModificar);
-			this->gpbmodificar->Location = System::Drawing::Point(792, 37);
+			this->gpbmodificar->Location = System::Drawing::Point(742, 45);
 			this->gpbmodificar->Name = L"gpbmodificar";
-			this->gpbmodificar->Size = System::Drawing::Size(724, 324);
+			this->gpbmodificar->Size = System::Drawing::Size(724, 379);
 			this->gpbmodificar->TabIndex = 4;
 			this->gpbmodificar->TabStop = false;
 			this->gpbmodificar->Text = L"Modificar libro ingresado";
 			this->gpbmodificar->Visible = false;
 			// 
+			// lbltitcategoriaModificar
+			// 
+			this->lbltitcategoriaModificar->AutoSize = true;
+			this->lbltitcategoriaModificar->Location = System::Drawing::Point(13, 303);
+			this->lbltitcategoriaModificar->Name = L"lbltitcategoriaModificar";
+			this->lbltitcategoriaModificar->Size = System::Drawing::Size(109, 13);
+			this->lbltitcategoriaModificar->TabIndex = 18;
+			this->lbltitcategoriaModificar->Text = L"(Correcion) Categoria:";
+			// 
+			// cmbcategoriaModificar
+			// 
+			this->cmbcategoriaModificar->FormattingEnabled = true;
+			this->cmbcategoriaModificar->Items->AddRange(gcnew cli::array< System::Object^  >(20) {
+				L"De texto", L"Complementario", L"Consulta o referencia",
+					L"Recreativo", L"Cientifico", L"Instructivo", L"Literariosy linguistico", L"Tecnico", L"Informativos", L"Divulgacion", L"Religioso",
+					L"Ilustrado", L"Electronico", L"Poetico", L"Biografico", L"Material auxiliar", L"Didactico", L"Viaje", L"Artistico", L"Autoestima"
+			});
+			this->cmbcategoriaModificar->Location = System::Drawing::Point(275, 298);
+			this->cmbcategoriaModificar->Name = L"cmbcategoriaModificar";
+			this->cmbcategoriaModificar->Size = System::Drawing::Size(170, 21);
+			this->cmbcategoriaModificar->TabIndex = 17;
+			// 
+			// tbxeditorialModificar
+			// 
+			this->tbxeditorialModificar->Location = System::Drawing::Point(275, 195);
+			this->tbxeditorialModificar->Name = L"tbxeditorialModificar";
+			this->tbxeditorialModificar->Size = System::Drawing::Size(428, 20);
+			this->tbxeditorialModificar->TabIndex = 16;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(15, 198);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(107, 13);
+			this->label2->TabIndex = 15;
+			this->label2->Text = L"(Correccion) Editorial:";
+			// 
 			// btnmodificar
 			// 
-			this->btnmodificar->Location = System::Drawing::Point(320, 277);
+			this->btnmodificar->BackColor = System::Drawing::SystemColors::HighlightText;
+			this->btnmodificar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnmodificar->ForeColor = System::Drawing::Color::Goldenrod;
+			this->btnmodificar->Location = System::Drawing::Point(581, 329);
 			this->btnmodificar->Name = L"btnmodificar";
-			this->btnmodificar->Size = System::Drawing::Size(126, 23);
+			this->btnmodificar->Size = System::Drawing::Size(137, 35);
 			this->btnmodificar->TabIndex = 14;
 			this->btnmodificar->Text = L"Modificar libro";
-			this->btnmodificar->UseVisualStyleBackColor = true;
+			this->btnmodificar->UseVisualStyleBackColor = false;
 			// 
 			// cmbdestinoModificar
 			// 
@@ -768,9 +846,9 @@ namespace ProyectoJuanEstradaJoseColombo {
 				L"Ingreso a biblioteca ", L"Reciclaje",
 					L"Sección tome 1"
 			});
-			this->cmbdestinoModificar->Location = System::Drawing::Point(275, 231);
+			this->cmbdestinoModificar->Location = System::Drawing::Point(275, 261);
 			this->cmbdestinoModificar->Name = L"cmbdestinoModificar";
-			this->cmbdestinoModificar->Size = System::Drawing::Size(145, 21);
+			this->cmbdestinoModificar->Size = System::Drawing::Size(170, 21);
 			this->cmbdestinoModificar->TabIndex = 13;
 			// 
 			// cmbestadoModificar
@@ -780,14 +858,14 @@ namespace ProyectoJuanEstradaJoseColombo {
 				L"Bueno ", L"Decente", L"Deteriorado",
 					L"Malo"
 			});
-			this->cmbestadoModificar->Location = System::Drawing::Point(275, 196);
+			this->cmbestadoModificar->Location = System::Drawing::Point(275, 227);
 			this->cmbestadoModificar->Name = L"cmbestadoModificar";
-			this->cmbestadoModificar->Size = System::Drawing::Size(145, 21);
+			this->cmbestadoModificar->Size = System::Drawing::Size(170, 21);
 			this->cmbestadoModificar->TabIndex = 12;
 			// 
 			// tbxedicionModificar
 			// 
-			this->tbxedicionModificar->Location = System::Drawing::Point(275, 162);
+			this->tbxedicionModificar->Location = System::Drawing::Point(275, 159);
 			this->tbxedicionModificar->Name = L"tbxedicionModificar";
 			this->tbxedicionModificar->Size = System::Drawing::Size(428, 20);
 			this->tbxedicionModificar->TabIndex = 11;
@@ -823,7 +901,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// lbltitdestinoModificar
 			// 
 			this->lbltitdestinoModificar->AutoSize = true;
-			this->lbltitdestinoModificar->Location = System::Drawing::Point(18, 231);
+			this->lbltitdestinoModificar->Location = System::Drawing::Point(15, 269);
 			this->lbltitdestinoModificar->Name = L"lbltitdestinoModificar";
 			this->lbltitdestinoModificar->Size = System::Drawing::Size(90, 13);
 			this->lbltitdestinoModificar->TabIndex = 6;
@@ -832,7 +910,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// lbltitestadoModificar
 			// 
 			this->lbltitestadoModificar->AutoSize = true;
-			this->lbltitestadoModificar->Location = System::Drawing::Point(15, 196);
+			this->lbltitestadoModificar->Location = System::Drawing::Point(15, 230);
 			this->lbltitestadoModificar->Name = L"lbltitestadoModificar";
 			this->lbltitestadoModificar->Size = System::Drawing::Size(90, 13);
 			this->lbltitestadoModificar->TabIndex = 5;
@@ -870,9 +948,9 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->lbltitnombreModificar->AutoSize = true;
 			this->lbltitnombreModificar->Location = System::Drawing::Point(15, 68);
 			this->lbltitnombreModificar->Name = L"lbltitnombreModificar";
-			this->lbltitnombreModificar->Size = System::Drawing::Size(127, 13);
+			this->lbltitnombreModificar->Size = System::Drawing::Size(146, 13);
 			this->lbltitnombreModificar->TabIndex = 1;
-			this->lbltitnombreModificar->Text = L"(Nuevo) Nombre del libro:";
+			this->lbltitnombreModificar->Text = L"(Correccion) Nombre del libro:";
 			// 
 			// lbltitvreferenciaModificar
 			// 
@@ -893,10 +971,10 @@ namespace ProyectoJuanEstradaJoseColombo {
 				this->headnombre,
 					this->headautor, this->headfecha, this->headedicion, this->headestado, this->headdestino, this->headeditorial, this->headcategoria
 			});
-			this->dtgvcontrol->Location = System::Drawing::Point(751, 391);
+			this->dtgvcontrol->Location = System::Drawing::Point(748, 446);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
-			this->dtgvcontrol->Size = System::Drawing::Size(719, 150);
+			this->dtgvcontrol->Size = System::Drawing::Size(734, 150);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
 			// 
@@ -984,6 +1062,8 @@ private: System::Void ingresarLibroToolStripMenuItem_Click(System::Object^ sende
 	gpbxingreso->Visible = true; 
 	gpbVisualizar->Visible = false;
 	dtgvcontrol->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbmodificar->Visible = false;
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -992,31 +1072,43 @@ private: System::Void visualizarLibroToolStripMenuItem_Click(System::Object^ sen
 	gpbVisualizar->Visible = true; 
 	gpbxingreso->Visible = false;
 	dtgvcontrol->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbmodificar->Visible = false;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Establecimiento del groupboxeliminar Visible + Ocultar los demas groupbox
 	gpbeliminar->Visible = true; 
+	gpbmodificar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
 }
 private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Establecimiento del groupboxModificar Visible + Ocultar los demas groupbox
 	gpbmodificar->Visible = true; 
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
 }
 private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs^ e) {
 	try 
 	{
 		if (cont < 5)
 		{
-				//Recoleccion de datos para el data grid (Control de libros) 
-				dtgvcontrol->Rows->Add();
-				cont = dtgvcontrol->Rows->Count - 1;
-				dtgvcontrol[0, cont]->Value = tbxnombre->Text;
-				dtgvcontrol[1, cont]->Value = tbxautor->Text;
-				dtgvcontrol[2, cont]->Value = datetimepfecha->Text;
-				dtgvcontrol[3, cont]->Value = tbxedicion->Text;
-				dtgvcontrol[4, cont]->Value = cmbestado->Text;
-				dtgvcontrol[5, cont]->Value = cmbdestino->Text;
-				dtgvcontrol[6, cont]->Value = tbxeditorial->Text;
-				dtgvcontrol[7, cont]->Value = cmbcategoria->Text;
+			//Recoleccion de datos para el data grid (Control de libros) 
+			dtgvcontrol->Rows->Add();
+			cont = dtgvcontrol->Rows->Count - 1;
+			dtgvcontrol[0, cont]->Value = tbxnombre->Text;
+			dtgvcontrol[1, cont]->Value = tbxautor->Text;
+			dtgvcontrol[2, cont]->Value = datetimepfecha->Text;
+			dtgvcontrol[3, cont]->Value = tbxedicion->Text;
+			dtgvcontrol[4, cont]->Value = cmbestado->Text;
+			dtgvcontrol[5, cont]->Value = cmbdestino->Text;
+			dtgvcontrol[6, cont]->Value = tbxeditorial->Text;
+			dtgvcontrol[7, cont]->Value = cmbcategoria->Text;
 
 			//Recoleccion de datos para el relleno de datos para el arreglo. 
 			if (libro[cont].getNombre() == "")
@@ -1104,26 +1196,17 @@ private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sen
 	try
 	{
 		//Establecimiento del datagrid Visible + Mensaje de categoria ingresada 
+
+
+		//DATA GRID VIEW (FALTA AGREGAR EL VALOR DE REFERENCIA CORRESPONDIENTE A CADA LIBRO -> Control de libros) 
+
 		gpbxingreso->Visible = false;
 		gpbVisualizar->Visible = false;
 		dtgvcontrol->Visible = true; 
-		//int cantidadlibro; 
-
+		gpbmodificar->Visible = false;
+		gpbeliminar->Visible = false;
 		MessageBox::Show("Este es el control de los libros en el inventario bibliotecario.");
-		/*if (cantidadlibro < 5)
-		{ 
-		dtgvcontrol->Rows->Add(); 
-		cantidadlibro = dtgvcontrol->Rows->Count - 1; 
-		dtgvcontrol[0, cantidadlibro]->Value = tbxnombre->Text;
-		dtgvcontrol[1, cantidadlibro]->Value = tbxautor->Text;
-		dtgvcontrol[2, cantidadlibro]->Value = datetimepfecha->Text;
-		dtgvcontrol[3, cantidadlibro]->Value = tbxedicion->Text;
-		dtgvcontrol[4, cantidadlibro]->Value = cmbestado->Text;
-		dtgvcontrol[5, cantidadlibro]->Value = cmbdestino->Text;
-		dtgvcontrol[6, cantidadlibro]->Value = tbxeditorial->Text;
-		dtgvcontrol[7, cantidadlibro]->Value = cmbcategoria->Text;
-		cantidadlibro++; 
-		}*/
+
 	}
 	catch (Exception^ ex)
 	{
