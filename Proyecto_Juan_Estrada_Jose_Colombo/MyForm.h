@@ -115,6 +115,19 @@ namespace ProyectoJuanEstradaJoseColombo {
 
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::ComboBox^ cmbcategoria;
+	private: System::Windows::Forms::ToolStripMenuItem^ reportesToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ controlDeLibrosToolStripMenuItem;
+	private: System::Windows::Forms::DataGridView^ dtgvcontrol;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headnombre;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headautor;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headfecha;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headedicion;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headestado;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headdestino;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headeditorial;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ headcategoria;
+
+
 
 
 	protected:
@@ -146,6 +159,8 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->modificarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->visualizarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->eliminarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reportesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->controlDeLibrosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->gpbxingreso = (gcnew System::Windows::Forms::GroupBox());
 			this->cmbcategoria = (gcnew System::Windows::Forms::ComboBox());
 			this->tbxeditorial = (gcnew System::Windows::Forms::TextBox());
@@ -206,16 +221,29 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->lbltitautorModificar = (gcnew System::Windows::Forms::Label());
 			this->lbltitnombreModificar = (gcnew System::Windows::Forms::Label());
 			this->lbltitvreferenciaModificar = (gcnew System::Windows::Forms::Label());
+			this->dtgvcontrol = (gcnew System::Windows::Forms::DataGridView());
+			this->headnombre = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->headautor = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->headfecha = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->headedicion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->headestado = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->headdestino = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->headeditorial = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->headcategoria = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->menuStrip1->SuspendLayout();
 			this->gpbxingreso->SuspendLayout();
 			this->gpbVisualizar->SuspendLayout();
 			this->gpbeliminar->SuspendLayout();
 			this->gpbmodificar->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dtgvcontrol))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->libroToolStripMenuItem });
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->libroToolStripMenuItem,
+					this->reportesToolStripMenuItem, this->controlDeLibrosToolStripMenuItem
+			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Size = System::Drawing::Size(1482, 24);
@@ -260,6 +288,19 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->eliminarLibroToolStripMenuItem->Text = L"Eliminar libro";
 			this->eliminarLibroToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::eliminarLibroToolStripMenuItem_Click);
 			// 
+			// reportesToolStripMenuItem
+			// 
+			this->reportesToolStripMenuItem->Name = L"reportesToolStripMenuItem";
+			this->reportesToolStripMenuItem->Size = System::Drawing::Size(65, 20);
+			this->reportesToolStripMenuItem->Text = L"Reportes";
+			// 
+			// controlDeLibrosToolStripMenuItem
+			// 
+			this->controlDeLibrosToolStripMenuItem->Name = L"controlDeLibrosToolStripMenuItem";
+			this->controlDeLibrosToolStripMenuItem->Size = System::Drawing::Size(107, 20);
+			this->controlDeLibrosToolStripMenuItem->Text = L"Control de libros";
+			this->controlDeLibrosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::controlDeLibrosToolStripMenuItem_Click);
+			// 
 			// gpbxingreso
 			// 
 			this->gpbxingreso->Controls->Add(this->cmbcategoria);
@@ -279,7 +320,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->gpbxingreso->Controls->Add(this->lbltitfecha);
 			this->gpbxingreso->Controls->Add(this->lbltitautor);
 			this->gpbxingreso->Controls->Add(this->lbltitnombre);
-			this->gpbxingreso->Location = System::Drawing::Point(24, 378);
+			this->gpbxingreso->Location = System::Drawing::Point(12, 343);
 			this->gpbxingreso->Name = L"gpbxingreso";
 			this->gpbxingreso->Size = System::Drawing::Size(724, 314);
 			this->gpbxingreso->TabIndex = 1;
@@ -297,7 +338,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			});
 			this->cmbcategoria->Location = System::Drawing::Point(183, 257);
 			this->cmbcategoria->Name = L"cmbcategoria";
-			this->cmbcategoria->Size = System::Drawing::Size(121, 21);
+			this->cmbcategoria->Size = System::Drawing::Size(174, 21);
 			this->cmbcategoria->TabIndex = 17;
 			// 
 			// tbxeditorial
@@ -341,7 +382,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->cmbdestino->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Ingreso a biblioteca", L"Reciclaje ", L"Seccion tome 1" });
 			this->cmbdestino->Location = System::Drawing::Point(183, 227);
 			this->cmbdestino->Name = L"cmbdestino";
-			this->cmbdestino->Size = System::Drawing::Size(121, 21);
+			this->cmbdestino->Size = System::Drawing::Size(174, 21);
 			this->cmbdestino->TabIndex = 12;
 			// 
 			// cmbestado
@@ -350,7 +391,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->cmbestado->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Bueno", L"Decente", L"Deteriorado", L"Malo" });
 			this->cmbestado->Location = System::Drawing::Point(183, 193);
 			this->cmbestado->Name = L"cmbestado";
-			this->cmbestado->Size = System::Drawing::Size(121, 21);
+			this->cmbestado->Size = System::Drawing::Size(174, 21);
 			this->cmbestado->TabIndex = 11;
 			// 
 			// tbxedicion
@@ -842,11 +883,77 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->lbltitvreferenciaModificar->TabIndex = 0;
 			this->lbltitvreferenciaModificar->Text = L"Ingrese el valor de referencia del libro a modificar:";
 			// 
+			// dtgvcontrol
+			// 
+			this->dtgvcontrol->AllowUserToAddRows = false;
+			this->dtgvcontrol->AllowUserToDeleteRows = false;
+			this->dtgvcontrol->AllowUserToOrderColumns = true;
+			this->dtgvcontrol->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dtgvcontrol->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
+				this->headnombre,
+					this->headautor, this->headfecha, this->headedicion, this->headestado, this->headdestino, this->headeditorial, this->headcategoria
+			});
+			this->dtgvcontrol->Location = System::Drawing::Point(751, 391);
+			this->dtgvcontrol->Name = L"dtgvcontrol";
+			this->dtgvcontrol->ReadOnly = true;
+			this->dtgvcontrol->Size = System::Drawing::Size(719, 150);
+			this->dtgvcontrol->TabIndex = 5;
+			this->dtgvcontrol->Visible = false;
+			// 
+			// headnombre
+			// 
+			this->headnombre->HeaderText = L"Nombre";
+			this->headnombre->Name = L"headnombre";
+			this->headnombre->ReadOnly = true;
+			// 
+			// headautor
+			// 
+			this->headautor->HeaderText = L"Autor";
+			this->headautor->Name = L"headautor";
+			this->headautor->ReadOnly = true;
+			// 
+			// headfecha
+			// 
+			this->headfecha->HeaderText = L"Fecha de publicacion";
+			this->headfecha->Name = L"headfecha";
+			this->headfecha->ReadOnly = true;
+			// 
+			// headedicion
+			// 
+			this->headedicion->HeaderText = L"Edicion";
+			this->headedicion->Name = L"headedicion";
+			this->headedicion->ReadOnly = true;
+			// 
+			// headestado
+			// 
+			this->headestado->HeaderText = L"Estado";
+			this->headestado->Name = L"headestado";
+			this->headestado->ReadOnly = true;
+			// 
+			// headdestino
+			// 
+			this->headdestino->HeaderText = L"Destino";
+			this->headdestino->Name = L"headdestino";
+			this->headdestino->ReadOnly = true;
+			// 
+			// headeditorial
+			// 
+			this->headeditorial->HeaderText = L"Editorial";
+			this->headeditorial->Name = L"headeditorial";
+			this->headeditorial->ReadOnly = true;
+			// 
+			// headcategoria
+			// 
+			this->headcategoria->HeaderText = L"Categoria";
+			this->headcategoria->Name = L"headcategoria";
+			this->headcategoria->ReadOnly = true;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1482, 654);
+			this->ClientSize = System::Drawing::Size(1482, 681);
+			this->Controls->Add(this->dtgvcontrol);
 			this->Controls->Add(this->gpbmodificar);
 			this->Controls->Add(this->gpbeliminar);
 			this->Controls->Add(this->gpbxingreso);
@@ -864,6 +971,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->gpbeliminar->PerformLayout();
 			this->gpbmodificar->ResumeLayout(false);
 			this->gpbmodificar->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dtgvcontrol))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -872,12 +980,18 @@ namespace ProyectoJuanEstradaJoseColombo {
 	private: System::Void eliminarToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void ingresarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Establecimiento del groupboxingreso Visible + Ocultar los demas groupbox
 	gpbxingreso->Visible = true; 
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void visualizarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Establecimiento del groupboxVisualizar Visible + Ocultar los demas groupbox
 	gpbVisualizar->Visible = true; 
+	gpbxingreso->Visible = false;
+	dtgvcontrol->Visible = false;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -888,11 +1002,23 @@ private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ send
 	gpbmodificar->Visible = true; 
 }
 private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs^ e) {
-	////Prueba 
 	try 
 	{
 		if (cont < 5)
 		{
+				//Recoleccion de datos para el data grid (Control de libros) 
+				dtgvcontrol->Rows->Add();
+				cont = dtgvcontrol->Rows->Count - 1;
+				dtgvcontrol[0, cont]->Value = tbxnombre->Text;
+				dtgvcontrol[1, cont]->Value = tbxautor->Text;
+				dtgvcontrol[2, cont]->Value = datetimepfecha->Text;
+				dtgvcontrol[3, cont]->Value = tbxedicion->Text;
+				dtgvcontrol[4, cont]->Value = cmbestado->Text;
+				dtgvcontrol[5, cont]->Value = cmbdestino->Text;
+				dtgvcontrol[6, cont]->Value = tbxeditorial->Text;
+				dtgvcontrol[7, cont]->Value = cmbcategoria->Text;
+
+			//Recoleccion de datos para el relleno de datos para el arreglo. 
 			if (libro[cont].getNombre() == "")
 			{
 				string nombre = marshal_as<string>(tbxnombre->Text); 
@@ -912,6 +1038,7 @@ private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs
 				libro[cont].setCategoria(categoria); 
 				libro[cont].setEditorial(editorial); 
 				MessageBox::Show("El libro ha sido registrado"); 
+				MessageBox::Show("El indice de referencia que le corresponde al libro es el: " + cont); 
 			}
 			cont++;
 			tbxnombre->Text = ""; 
@@ -925,6 +1052,7 @@ private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs
 		}
 		else
 		{
+			//Mensaje de cantidad maxima de libros + componentes "bloqueados" para evitar mas ingresos  
 			MessageBox::Show("La cantidad de ingreso de libros ha llegado a su limite"); 
 			tbxnombre->Text = "";
 			tbxautor->Text = "";
@@ -953,6 +1081,7 @@ private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs
 private: System::Void btnvisualizar_Click(System::Object^ sender, System::EventArgs^ e) {
 	try
 	{
+		//Visualizacion de los datos de un libro en especifico,  segun su Id establecido al momento de ingreso. 
 		int id = stoi(marshal_as<string>(tbxvreferenciaVisualizar->Text)); 
 		lblresultnombreVisualizar->Text = marshal_as<String^>(libro[id].getNombre());
 		lblresultautorVisualizar->Text = marshal_as<String^>(libro[id].getAutor());
@@ -970,6 +1099,37 @@ private: System::Void btnvisualizar_Click(System::Object^ sender, System::EventA
 }
 private: System::Void gpbVisualizar_Enter(System::Object^ sender, System::EventArgs^ e) {
 }
+
+private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	try
+	{
+		//Establecimiento del datagrid Visible + Mensaje de categoria ingresada 
+		gpbxingreso->Visible = false;
+		gpbVisualizar->Visible = false;
+		dtgvcontrol->Visible = true; 
+		//int cantidadlibro; 
+
+		MessageBox::Show("Este es el control de los libros en el inventario bibliotecario.");
+		/*if (cantidadlibro < 5)
+		{ 
+		dtgvcontrol->Rows->Add(); 
+		cantidadlibro = dtgvcontrol->Rows->Count - 1; 
+		dtgvcontrol[0, cantidadlibro]->Value = tbxnombre->Text;
+		dtgvcontrol[1, cantidadlibro]->Value = tbxautor->Text;
+		dtgvcontrol[2, cantidadlibro]->Value = datetimepfecha->Text;
+		dtgvcontrol[3, cantidadlibro]->Value = tbxedicion->Text;
+		dtgvcontrol[4, cantidadlibro]->Value = cmbestado->Text;
+		dtgvcontrol[5, cantidadlibro]->Value = cmbdestino->Text;
+		dtgvcontrol[6, cantidadlibro]->Value = tbxeditorial->Text;
+		dtgvcontrol[7, cantidadlibro]->Value = cmbcategoria->Text;
+		cantidadlibro++; 
+		}*/
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex -> Message); 
+	}
+}
 };
 }
-//Agregar más requisitos funcionales: categorías, editoriales, mostrar através de estado. 
+ 
