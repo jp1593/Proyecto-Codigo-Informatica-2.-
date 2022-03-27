@@ -148,6 +148,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ reportePorEditorialToolStrip
 private: System::Windows::Forms::ToolStripMenuItem^ reportePorCategoríaToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ reporteDeLibrosRegistradosPorPersonaToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStripMenuItem;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 
 
 
@@ -183,7 +184,15 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->visualizarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->eliminarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->reportesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->cantidadDeLibrosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reportePorEdicionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reportePorAñoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reportePorAutorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reportePorEditorialToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reportePorCategoríaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->controlDeLibrosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->personasRegistradasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->gpbxingreso = (gcnew System::Windows::Forms::GroupBox());
 			this->cmbcategoria = (gcnew System::Windows::Forms::ComboBox());
 			this->tbxeditorial = (gcnew System::Windows::Forms::TextBox());
@@ -257,14 +266,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->headdestino = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->headeditorial = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->headcategoria = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->cantidadDeLibrosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->reportePorEdicionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->reportePorAñoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->reportePorAutorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->reportePorEditorialToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->reportePorCategoríaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->personasRegistradasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->valorreferencia = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->menuStrip1->SuspendLayout();
 			this->gpbxingreso->SuspendLayout();
 			this->gpbVisualizar->SuspendLayout();
@@ -334,12 +336,60 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->reportesToolStripMenuItem->Size = System::Drawing::Size(65, 20);
 			this->reportesToolStripMenuItem->Text = L"Reportes";
 			// 
+			// cantidadDeLibrosToolStripMenuItem
+			// 
+			this->cantidadDeLibrosToolStripMenuItem->Name = L"cantidadDeLibrosToolStripMenuItem";
+			this->cantidadDeLibrosToolStripMenuItem->Size = System::Drawing::Size(290, 22);
+			this->cantidadDeLibrosToolStripMenuItem->Text = L"Cantidad de libros";
+			// 
+			// reportePorEdicionToolStripMenuItem
+			// 
+			this->reportePorEdicionToolStripMenuItem->Name = L"reportePorEdicionToolStripMenuItem";
+			this->reportePorEdicionToolStripMenuItem->Size = System::Drawing::Size(290, 22);
+			this->reportePorEdicionToolStripMenuItem->Text = L"Reporte por edicion";
+			// 
+			// reportePorAñoToolStripMenuItem
+			// 
+			this->reportePorAñoToolStripMenuItem->Name = L"reportePorAñoToolStripMenuItem";
+			this->reportePorAñoToolStripMenuItem->Size = System::Drawing::Size(290, 22);
+			this->reportePorAñoToolStripMenuItem->Text = L"Reporte por año ";
+			// 
+			// reportePorAutorToolStripMenuItem
+			// 
+			this->reportePorAutorToolStripMenuItem->Name = L"reportePorAutorToolStripMenuItem";
+			this->reportePorAutorToolStripMenuItem->Size = System::Drawing::Size(290, 22);
+			this->reportePorAutorToolStripMenuItem->Text = L"Reporte por autor ";
+			// 
+			// reportePorEditorialToolStripMenuItem
+			// 
+			this->reportePorEditorialToolStripMenuItem->Name = L"reportePorEditorialToolStripMenuItem";
+			this->reportePorEditorialToolStripMenuItem->Size = System::Drawing::Size(290, 22);
+			this->reportePorEditorialToolStripMenuItem->Text = L"Reporte por editorial";
+			// 
+			// reportePorCategoríaToolStripMenuItem
+			// 
+			this->reportePorCategoríaToolStripMenuItem->Name = L"reportePorCategoríaToolStripMenuItem";
+			this->reportePorCategoríaToolStripMenuItem->Size = System::Drawing::Size(290, 22);
+			this->reportePorCategoríaToolStripMenuItem->Text = L"Reporte por categoría";
+			// 
+			// reporteDeLibrosRegistradosPorPersonaToolStripMenuItem
+			// 
+			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Name = L"reporteDeLibrosRegistradosPorPersonaToolStripMenuItem";
+			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Size = System::Drawing::Size(290, 22);
+			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Text = L"Reporte de libros registrados por persona";
+			// 
 			// controlDeLibrosToolStripMenuItem
 			// 
 			this->controlDeLibrosToolStripMenuItem->Name = L"controlDeLibrosToolStripMenuItem";
 			this->controlDeLibrosToolStripMenuItem->Size = System::Drawing::Size(107, 20);
 			this->controlDeLibrosToolStripMenuItem->Text = L"Control de libros";
 			this->controlDeLibrosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::controlDeLibrosToolStripMenuItem_Click);
+			// 
+			// personasRegistradasToolStripMenuItem
+			// 
+			this->personasRegistradasToolStripMenuItem->Name = L"personasRegistradasToolStripMenuItem";
+			this->personasRegistradasToolStripMenuItem->Size = System::Drawing::Size(126, 20);
+			this->personasRegistradasToolStripMenuItem->Text = L"Personas registradas";
 			// 
 			// gpbxingreso
 			// 
@@ -360,6 +410,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->gpbxingreso->Controls->Add(this->lbltitfecha);
 			this->gpbxingreso->Controls->Add(this->lbltitautor);
 			this->gpbxingreso->Controls->Add(this->lbltitnombre);
+			this->gpbxingreso->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->gpbxingreso->Location = System::Drawing::Point(12, 343);
 			this->gpbxingreso->Name = L"gpbxingreso";
 			this->gpbxingreso->Size = System::Drawing::Size(724, 314);
@@ -412,9 +464,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->btnguardar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnguardar->ForeColor = System::Drawing::Color::RoyalBlue;
-			this->btnguardar->Location = System::Drawing::Point(570, 249);
+			this->btnguardar->Location = System::Drawing::Point(550, 247);
 			this->btnguardar->Name = L"btnguardar";
-			this->btnguardar->Size = System::Drawing::Size(115, 33);
+			this->btnguardar->Size = System::Drawing::Size(135, 31);
 			this->btnguardar->TabIndex = 13;
 			this->btnguardar->Text = L"Guardar libro";
 			this->btnguardar->UseVisualStyleBackColor = false;
@@ -543,7 +595,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->gpbVisualizar->Controls->Add(this->lbltitrefrenciadelibrovisualizar);
 			this->gpbVisualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gpbVisualizar->Location = System::Drawing::Point(24, 37);
+			this->gpbVisualizar->Location = System::Drawing::Point(33, 23);
 			this->gpbVisualizar->Name = L"gpbVisualizar";
 			this->gpbVisualizar->Size = System::Drawing::Size(647, 324);
 			this->gpbVisualizar->TabIndex = 2;
@@ -599,9 +651,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->btnvisualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnvisualizar->ForeColor = System::Drawing::Color::Green;
-			this->btnvisualizar->Location = System::Drawing::Point(501, 269);
+			this->btnvisualizar->Location = System::Drawing::Point(529, 283);
 			this->btnvisualizar->Name = L"btnvisualizar";
-			this->btnvisualizar->Size = System::Drawing::Size(116, 31);
+			this->btnvisualizar->Size = System::Drawing::Size(107, 31);
 			this->btnvisualizar->TabIndex = 13;
 			this->btnvisualizar->Text = L"Visualizar libro";
 			this->btnvisualizar->UseVisualStyleBackColor = false;
@@ -726,7 +778,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->gpbeliminar->Controls->Add(this->lbltitnombreeliminar);
 			this->gpbeliminar->Controls->Add(this->tbxvalorreferenciaEliminar);
 			this->gpbeliminar->Controls->Add(this->lbltitvreferencia);
-			this->gpbeliminar->Location = System::Drawing::Point(719, 23);
+			this->gpbeliminar->Location = System::Drawing::Point(714, 34);
 			this->gpbeliminar->Name = L"gpbeliminar";
 			this->gpbeliminar->Size = System::Drawing::Size(529, 164);
 			this->gpbeliminar->TabIndex = 3;
@@ -802,7 +854,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->gpbmodificar->Controls->Add(this->lbltitautorModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitnombreModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitvreferenciaModificar);
-			this->gpbmodificar->Location = System::Drawing::Point(742, 45);
+			this->gpbmodificar->Location = System::Drawing::Point(782, 27);
 			this->gpbmodificar->Name = L"gpbmodificar";
 			this->gpbmodificar->Size = System::Drawing::Size(724, 379);
 			this->gpbmodificar->TabIndex = 4;
@@ -854,9 +906,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->btnmodificar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnmodificar->ForeColor = System::Drawing::Color::Goldenrod;
-			this->btnmodificar->Location = System::Drawing::Point(581, 329);
+			this->btnmodificar->Location = System::Drawing::Point(602, 329);
 			this->btnmodificar->Name = L"btnmodificar";
-			this->btnmodificar->Size = System::Drawing::Size(137, 35);
+			this->btnmodificar->Size = System::Drawing::Size(116, 35);
 			this->btnmodificar->TabIndex = 14;
 			this->btnmodificar->Text = L"Modificar libro";
 			this->btnmodificar->UseVisualStyleBackColor = false;
@@ -989,14 +1041,15 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->dtgvcontrol->AllowUserToDeleteRows = false;
 			this->dtgvcontrol->AllowUserToOrderColumns = true;
 			this->dtgvcontrol->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dtgvcontrol->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
+			this->dtgvcontrol->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(9) {
 				this->headnombre,
-					this->headautor, this->headfecha, this->headedicion, this->headestado, this->headdestino, this->headeditorial, this->headcategoria
+					this->headautor, this->headfecha, this->headedicion, this->headestado, this->headdestino, this->headeditorial, this->headcategoria,
+					this->valorreferencia
 			});
-			this->dtgvcontrol->Location = System::Drawing::Point(748, 446);
+			this->dtgvcontrol->Location = System::Drawing::Point(756, 440);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
-			this->dtgvcontrol->Size = System::Drawing::Size(734, 150);
+			this->dtgvcontrol->Size = System::Drawing::Size(744, 150);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
 			// 
@@ -1048,53 +1101,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStrip
 			this->headcategoria->Name = L"headcategoria";
 			this->headcategoria->ReadOnly = true;
 			// 
-			// cantidadDeLibrosToolStripMenuItem
+			// valorreferencia
 			// 
-			this->cantidadDeLibrosToolStripMenuItem->Name = L"cantidadDeLibrosToolStripMenuItem";
-			this->cantidadDeLibrosToolStripMenuItem->Size = System::Drawing::Size(290, 22);
-			this->cantidadDeLibrosToolStripMenuItem->Text = L"Cantidad de libros";
-			// 
-			// reportePorEdicionToolStripMenuItem
-			// 
-			this->reportePorEdicionToolStripMenuItem->Name = L"reportePorEdicionToolStripMenuItem";
-			this->reportePorEdicionToolStripMenuItem->Size = System::Drawing::Size(290, 22);
-			this->reportePorEdicionToolStripMenuItem->Text = L"Reporte por edicion";
-			// 
-			// reportePorAñoToolStripMenuItem
-			// 
-			this->reportePorAñoToolStripMenuItem->Name = L"reportePorAñoToolStripMenuItem";
-			this->reportePorAñoToolStripMenuItem->Size = System::Drawing::Size(290, 22);
-			this->reportePorAñoToolStripMenuItem->Text = L"Reporte por año ";
-			// 
-			// reportePorAutorToolStripMenuItem
-			// 
-			this->reportePorAutorToolStripMenuItem->Name = L"reportePorAutorToolStripMenuItem";
-			this->reportePorAutorToolStripMenuItem->Size = System::Drawing::Size(290, 22);
-			this->reportePorAutorToolStripMenuItem->Text = L"Reporte por autor ";
-			// 
-			// reportePorEditorialToolStripMenuItem
-			// 
-			this->reportePorEditorialToolStripMenuItem->Name = L"reportePorEditorialToolStripMenuItem";
-			this->reportePorEditorialToolStripMenuItem->Size = System::Drawing::Size(290, 22);
-			this->reportePorEditorialToolStripMenuItem->Text = L"Reporte por editorial";
-			// 
-			// reportePorCategoríaToolStripMenuItem
-			// 
-			this->reportePorCategoríaToolStripMenuItem->Name = L"reportePorCategoríaToolStripMenuItem";
-			this->reportePorCategoríaToolStripMenuItem->Size = System::Drawing::Size(290, 22);
-			this->reportePorCategoríaToolStripMenuItem->Text = L"Reporte por categoría";
-			// 
-			// personasRegistradasToolStripMenuItem
-			// 
-			this->personasRegistradasToolStripMenuItem->Name = L"personasRegistradasToolStripMenuItem";
-			this->personasRegistradasToolStripMenuItem->Size = System::Drawing::Size(126, 20);
-			this->personasRegistradasToolStripMenuItem->Text = L"Personas registradas";
-			// 
-			// reporteDeLibrosRegistradosPorPersonaToolStripMenuItem
-			// 
-			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Name = L"reporteDeLibrosRegistradosPorPersonaToolStripMenuItem";
-			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Size = System::Drawing::Size(290, 22);
-			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Text = L"Reporte de libros registrados por persona";
+			this->valorreferencia->HeaderText = L"Valor de referencia ";
+			this->valorreferencia->Name = L"valorreferencia";
+			this->valorreferencia->ReadOnly = true;
 			// 
 			// MyForm
 			// 
@@ -1179,6 +1190,7 @@ private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs
 			dtgvcontrol[5, cont]->Value = cmbdestino->Text;
 			dtgvcontrol[6, cont]->Value = tbxeditorial->Text;
 			dtgvcontrol[7, cont]->Value = cmbcategoria->Text;
+			//marshal_as<string>(dtgvcontrol[8, cont]->Value) = marshal_as<string>(cont);
 
 			//Recoleccion de datos para el relleno de datos para el arreglo. 
 			if (libro[cont].getNombre() == "")
