@@ -1281,6 +1281,8 @@ private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sen
 
 
 		//DATA GRID VIEW (FALTA AGREGAR EL VALOR DE REFERENCIA CORRESPONDIENTE A CADA LIBRO -> Control de libros) 
+		
+		//Cambiar de visible a invisible
 
 		gpbxingreso->Visible = false;
 		gpbVisualizar->Visible = false;
