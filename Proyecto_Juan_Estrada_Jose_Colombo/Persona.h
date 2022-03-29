@@ -6,15 +6,15 @@ class Persona
 {
 public: 
 	std::string nombrepersona; 
-	std::string carne; 
-	std::string facultad; 
-	std::string anoencurso; 
+	std::string documentoident; 
+	std::string numtelefono; 
+	std::string dedicacion; 
 	
 private: 
 
 	void verdatospersona()
 	{
-		std::string result = nombrepersona + carne + facultad + anoencurso; 
+		std::string result = nombrepersona + documentoident + numtelefono + dedicacion; 
 	}
 
 	void setNombrepersona(std::string nombrepersona)
@@ -22,19 +22,19 @@ private:
 		this->nombrepersona = nombrepersona; 
 	}
 
-	void setCarne(std::string carne)
+	void setCarne(std::string documentoident)
 	{
-		this->carne = carne; 
+		this->documentoident  = documentoident;
 	}
 
-	void setFacultad(std::string facultad)
+	void setFacultad(std::string numtelefono)
 	{
-		this->facultad = facultad; 
+		this->numtelefono = numtelefono;
 	}
 
-	void setAnoencurso(std::string anoencurso)
+	void setAnoencurso(std::string dedicacion)
 	{
-		this->anoencurso = anoencurso; 
+		this->dedicacion = dedicacion;
 	}
 
 	std::string getNombrePersona()
@@ -44,17 +44,17 @@ private:
 
 	std::string getCarne()
 	{
-		return this->carne; 
+		return this->documentoident;
 	}
 
 	std::string getFacultad()
 	{
-		return this->facultad; 
+		return this->numtelefono;
 	}
 
 	std::string getAnoencurso()
 	{
-		return this->anoencurso; 
+		return this->dedicacion;
 	}
 
 };
