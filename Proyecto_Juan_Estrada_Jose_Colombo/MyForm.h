@@ -214,6 +214,12 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->gpbVisualizar = (gcnew System::Windows::Forms::GroupBox());
 			this->lblresulteditorialVisualizar = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->gpbeliminar = (gcnew System::Windows::Forms::GroupBox());
+			this->btneliminar = (gcnew System::Windows::Forms::Button());
+			this->lblresultnombreEliminar = (gcnew System::Windows::Forms::Label());
+			this->lbltitnombreeliminar = (gcnew System::Windows::Forms::Label());
+			this->tbxvalorreferenciaEliminar = (gcnew System::Windows::Forms::TextBox());
+			this->lbltitvreferencia = (gcnew System::Windows::Forms::Label());
 			this->lblresultcatgoriaVisualizar = (gcnew System::Windows::Forms::Label());
 			this->lbltitcategoriaVisualizar = (gcnew System::Windows::Forms::Label());
 			this->tbxvreferenciaVisualizar = (gcnew System::Windows::Forms::TextBox());
@@ -231,12 +237,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->lbltitautorVisualizar = (gcnew System::Windows::Forms::Label());
 			this->lblnombreVisualizar = (gcnew System::Windows::Forms::Label());
 			this->lbltitrefrenciadelibrovisualizar = (gcnew System::Windows::Forms::Label());
-			this->gpbeliminar = (gcnew System::Windows::Forms::GroupBox());
-			this->btneliminar = (gcnew System::Windows::Forms::Button());
-			this->lblresultnombreEliminar = (gcnew System::Windows::Forms::Label());
-			this->lbltitnombreeliminar = (gcnew System::Windows::Forms::Label());
-			this->tbxvalorreferenciaEliminar = (gcnew System::Windows::Forms::TextBox());
-			this->lbltitvreferencia = (gcnew System::Windows::Forms::Label());
 			this->gpbmodificar = (gcnew System::Windows::Forms::GroupBox());
 			this->lbltitcategoriaModificar = (gcnew System::Windows::Forms::Label());
 			this->cmbcategoriaModificar = (gcnew System::Windows::Forms::ComboBox());
@@ -283,7 +283,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1482, 24);
+			this->menuStrip1->Size = System::Drawing::Size(1370, 24);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -621,6 +621,69 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->label1->TabIndex = 17;
 			this->label1->Text = L"Editorial: ";
 			// 
+			// gpbeliminar
+			// 
+			this->gpbeliminar->Controls->Add(this->btneliminar);
+			this->gpbeliminar->Controls->Add(this->lblresultnombreEliminar);
+			this->gpbeliminar->Controls->Add(this->lbltitnombreeliminar);
+			this->gpbeliminar->Controls->Add(this->tbxvalorreferenciaEliminar);
+			this->gpbeliminar->Controls->Add(this->lbltitvreferencia);
+			this->gpbeliminar->Location = System::Drawing::Point(727, 38);
+			this->gpbeliminar->Name = L"gpbeliminar";
+			this->gpbeliminar->Size = System::Drawing::Size(529, 164);
+			this->gpbeliminar->TabIndex = 3;
+			this->gpbeliminar->TabStop = false;
+			this->gpbeliminar->Text = L"Eliminar libro";
+			this->gpbeliminar->Visible = false;
+			this->gpbeliminar->Enter += gcnew System::EventHandler(this, &MyForm::gpbeliminar_Enter);
+			// 
+			// btneliminar
+			// 
+			this->btneliminar->BackColor = System::Drawing::SystemColors::HighlightText;
+			this->btneliminar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btneliminar->ForeColor = System::Drawing::Color::Red;
+			this->btneliminar->Location = System::Drawing::Point(220, 113);
+			this->btneliminar->Name = L"btneliminar";
+			this->btneliminar->Size = System::Drawing::Size(102, 31);
+			this->btneliminar->TabIndex = 4;
+			this->btneliminar->Text = L"Eliminar libro";
+			this->btneliminar->UseVisualStyleBackColor = false;
+			this->btneliminar->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// lblresultnombreEliminar
+			// 
+			this->lblresultnombreEliminar->AutoSize = true;
+			this->lblresultnombreEliminar->Location = System::Drawing::Point(167, 61);
+			this->lblresultnombreEliminar->Name = L"lblresultnombreEliminar";
+			this->lblresultnombreEliminar->Size = System::Drawing::Size(0, 13);
+			this->lblresultnombreEliminar->TabIndex = 3;
+			// 
+			// lbltitnombreeliminar
+			// 
+			this->lbltitnombreeliminar->AutoSize = true;
+			this->lbltitnombreeliminar->Location = System::Drawing::Point(22, 61);
+			this->lbltitnombreeliminar->Name = L"lbltitnombreeliminar";
+			this->lbltitnombreeliminar->Size = System::Drawing::Size(105, 13);
+			this->lbltitnombreeliminar->TabIndex = 2;
+			this->lbltitnombreeliminar->Text = L"El libro a eliminar es: ";
+			// 
+			// tbxvalorreferenciaEliminar
+			// 
+			this->tbxvalorreferenciaEliminar->Location = System::Drawing::Point(362, 28);
+			this->tbxvalorreferenciaEliminar->Name = L"tbxvalorreferenciaEliminar";
+			this->tbxvalorreferenciaEliminar->Size = System::Drawing::Size(100, 20);
+			this->tbxvalorreferenciaEliminar->TabIndex = 1;
+			// 
+			// lbltitvreferencia
+			// 
+			this->lbltitvreferencia->AutoSize = true;
+			this->lbltitvreferencia->Location = System::Drawing::Point(19, 28);
+			this->lbltitvreferencia->Name = L"lbltitvreferencia";
+			this->lbltitvreferencia->Size = System::Drawing::Size(321, 13);
+			this->lbltitvreferencia->TabIndex = 0;
+			this->lbltitvreferencia->Text = L"Ingrese el valor de su libro correspondiente al momento de ingreso:";
+			// 
 			// lblresultcatgoriaVisualizar
 			// 
 			this->lblresultcatgoriaVisualizar->AutoSize = true;
@@ -770,68 +833,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->lbltitrefrenciadelibrovisualizar->Size = System::Drawing::Size(318, 13);
 			this->lbltitrefrenciadelibrovisualizar->TabIndex = 0;
 			this->lbltitrefrenciadelibrovisualizar->Text = L"Ingrese el valor correspondiente a su libro al momento de ingreso: ";
-			// 
-			// gpbeliminar
-			// 
-			this->gpbeliminar->Controls->Add(this->btneliminar);
-			this->gpbeliminar->Controls->Add(this->lblresultnombreEliminar);
-			this->gpbeliminar->Controls->Add(this->lbltitnombreeliminar);
-			this->gpbeliminar->Controls->Add(this->tbxvalorreferenciaEliminar);
-			this->gpbeliminar->Controls->Add(this->lbltitvreferencia);
-			this->gpbeliminar->Location = System::Drawing::Point(714, 34);
-			this->gpbeliminar->Name = L"gpbeliminar";
-			this->gpbeliminar->Size = System::Drawing::Size(529, 164);
-			this->gpbeliminar->TabIndex = 3;
-			this->gpbeliminar->TabStop = false;
-			this->gpbeliminar->Text = L"Eliminar libro";
-			this->gpbeliminar->Visible = false;
-			// 
-			// btneliminar
-			// 
-			this->btneliminar->BackColor = System::Drawing::SystemColors::HighlightText;
-			this->btneliminar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btneliminar->ForeColor = System::Drawing::Color::Red;
-			this->btneliminar->Location = System::Drawing::Point(220, 113);
-			this->btneliminar->Name = L"btneliminar";
-			this->btneliminar->Size = System::Drawing::Size(102, 31);
-			this->btneliminar->TabIndex = 4;
-			this->btneliminar->Text = L"Eliminar libro";
-			this->btneliminar->UseVisualStyleBackColor = false;
-			this->btneliminar->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
-			// 
-			// lblresultnombreEliminar
-			// 
-			this->lblresultnombreEliminar->AutoSize = true;
-			this->lblresultnombreEliminar->Location = System::Drawing::Point(167, 61);
-			this->lblresultnombreEliminar->Name = L"lblresultnombreEliminar";
-			this->lblresultnombreEliminar->Size = System::Drawing::Size(0, 13);
-			this->lblresultnombreEliminar->TabIndex = 3;
-			// 
-			// lbltitnombreeliminar
-			// 
-			this->lbltitnombreeliminar->AutoSize = true;
-			this->lbltitnombreeliminar->Location = System::Drawing::Point(22, 61);
-			this->lbltitnombreeliminar->Name = L"lbltitnombreeliminar";
-			this->lbltitnombreeliminar->Size = System::Drawing::Size(105, 13);
-			this->lbltitnombreeliminar->TabIndex = 2;
-			this->lbltitnombreeliminar->Text = L"El libro a eliminar es: ";
-			// 
-			// tbxvalorreferenciaEliminar
-			// 
-			this->tbxvalorreferenciaEliminar->Location = System::Drawing::Point(362, 28);
-			this->tbxvalorreferenciaEliminar->Name = L"tbxvalorreferenciaEliminar";
-			this->tbxvalorreferenciaEliminar->Size = System::Drawing::Size(100, 20);
-			this->tbxvalorreferenciaEliminar->TabIndex = 1;
-			// 
-			// lbltitvreferencia
-			// 
-			this->lbltitvreferencia->AutoSize = true;
-			this->lbltitvreferencia->Location = System::Drawing::Point(19, 28);
-			this->lbltitvreferencia->Name = L"lbltitvreferencia";
-			this->lbltitvreferencia->Size = System::Drawing::Size(321, 13);
-			this->lbltitvreferencia->TabIndex = 0;
-			this->lbltitvreferencia->Text = L"Ingrese el valor de su libro correspondiente al momento de ingreso:";
 			// 
 			// gpbmodificar
 			// 
@@ -1111,7 +1112,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1482, 681);
+			this->ClientSize = System::Drawing::Size(1370, 681);
 			this->Controls->Add(this->dtgvcontrol);
 			this->Controls->Add(this->gpbmodificar);
 			this->Controls->Add(this->gpbeliminar);
@@ -1160,6 +1161,24 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	//Establecimiento del groupboxeliminar Visible + Ocultar los demas groupbox
+
+	/*
+	if (tbxvalorreferenciaEliminar[cont] == 0) 
+	{
+		MessageBox::Show("No hay libros registrados con este valor, por favor ingrese otro");
+	}
+	else 
+	{
+		tbxnombre->Text = "";
+		tbxautor->Text = "";
+		datetimepfecha->Text = "";
+		tbxedicion->Text = "";
+		cmbestado->Text = "";
+		cmbdestino->Text = "";
+		cmbcategoria->Text = "";
+		tbxeditorial->Text = "";
+	}*/
+
 	gpbeliminar->Visible = true; 
 	gpbmodificar->Visible = false;
 	gpbxingreso->Visible = false;
@@ -1296,6 +1315,8 @@ private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sen
 	{
 		MessageBox::Show(ex -> Message); 
 	}
+}
+private: System::Void gpbeliminar_Enter(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
