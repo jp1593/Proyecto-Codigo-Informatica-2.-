@@ -14,3 +14,7 @@ C:\Users\juanp\OneDrive\Escritorio\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan
 C:\Users\juanp\OneDrive\Escritorio\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\x64\Debug\Proyecto_Juan_Estrada_Jose_Colombo.vcxproj.SuggestedBindingRedirects.cache
 C:\Users\juanp\OneDrive\Escritorio\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\x64\Debug\ProyectoJuanEstradaJoseColombo.MyForm.resources
 C:\Users\juanp\OneDrive\Escritorio\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\x64\Debug\Proyecto_Juan_Estrada_Jose_Colombo.vcxproj.GenerateResource.cache
+C:\Users\joseg\Desktop\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\x64\Debug\Proyecto_Juan_Estrada_Jose_Colombo.vcxproj.AssemblyReference.cache
+C:\Users\joseg\Desktop\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\x64\Debug\Proyecto_Juan_Estrada_Jose_Colombo.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\joseg\Desktop\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\x64\Debug\ProyectoJuanEstradaJoseColombo.MyForm.resources
+C:\Users\joseg\Desktop\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\x64\Debug\Proyecto_Juan_Estrada_Jose_Colombo.vcxproj.GenerateResource.cache
