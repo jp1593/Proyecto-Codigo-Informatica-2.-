@@ -22,17 +22,17 @@ private:
 		this->nombrepersona = nombrepersona; 
 	}
 
-	void setCarne(std::string documentoident)
+	void setDocumentoident(std::string documentoident)
 	{
 		this->documentoident  = documentoident;
 	}
 
-	void setFacultad(std::string numtelefono)
+	void setNumtelefono(std::string numtelefono)
 	{
 		this->numtelefono = numtelefono;
 	}
 
-	void setAnoencurso(std::string dedicacion)
+	void setDedicacion(std::string dedicacion)
 	{
 		this->dedicacion = dedicacion;
 	}
@@ -42,17 +42,17 @@ private:
 		return this->nombrepersona; 
 	}
 
-	std::string getCarne()
+	std::string getDocumentoIdent()
 	{
 		return this->documentoident;
 	}
 
-	std::string getFacultad()
+	std::string getNumtelefono()
 	{
 		return this->numtelefono;
 	}
 
-	std::string getAnoencurso()
+	std::string getDedicacion()
 	{
 		return this->dedicacion;
 	}
