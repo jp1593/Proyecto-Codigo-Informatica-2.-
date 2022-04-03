@@ -1162,28 +1162,35 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	//Establecimiento del groupboxeliminar Visible + Ocultar los demas groupbox
 
-	/*
-	if (tbxvalorreferenciaEliminar[cont] == 0) 
-	{
-		MessageBox::Show("No hay libros registrados con este valor, por favor ingrese otro");
-	}
-	else 
-	{
-		tbxnombre->Text = "";
-		tbxautor->Text = "";
-		datetimepfecha->Text = "";
-		tbxedicion->Text = "";
-		cmbestado->Text = "";
-		cmbdestino->Text = "";
-		cmbcategoria->Text = "";
-		tbxeditorial->Text = "";
-	}*/
+	
 
-	gpbeliminar->Visible = true; 
-	gpbmodificar->Visible = false;
-	gpbxingreso->Visible = false;
-	gpbVisualizar->Visible = false;
-	dtgvcontrol->Visible = false;
+	for (int i = 0; i < 5; i++) {
+
+		if (cont == 0)
+		{
+			MessageBox::Show("No hay libros registrados con este valor, por favor ingrese otro");
+		}
+		else if (cont == i)
+		{
+			tbxnombre->Text = "";
+			tbxautor->Text = "";
+			datetimepfecha->Text = "";
+			tbxedicion->Text = "";
+			cmbestado->Text = "";
+			cmbdestino->Text = "";
+			cmbcategoria->Text = "";
+			tbxeditorial->Text = "";
+			MessageBox::Show("Libro eliminado correctamente");
+		}
+
+		gpbeliminar->Visible = true;
+		gpbmodificar->Visible = false;
+		gpbxingreso->Visible = false;
+		gpbVisualizar->Visible = false;
+		dtgvcontrol->Visible = false;
+
+	}
+	
 }
 private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	//Establecimiento del groupboxModificar Visible + Ocultar los demas groupbox
