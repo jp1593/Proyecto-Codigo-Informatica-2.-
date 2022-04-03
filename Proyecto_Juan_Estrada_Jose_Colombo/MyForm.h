@@ -1163,6 +1163,7 @@ private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sende
 	//Establecimiento del groupboxeliminar Visible + Ocultar los demas groupbox
 
 	
+
 	for (int i = 0; i < 5; i++) {
 
 		if (cont == 0)
