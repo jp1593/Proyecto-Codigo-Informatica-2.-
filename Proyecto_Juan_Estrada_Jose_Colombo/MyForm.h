@@ -1166,7 +1166,7 @@ private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sende
 
 	for (int i = 0; i < 5; i++) {
 
-		if (cont == 0)
+		if (i == 0)
 		{
 			MessageBox::Show("No hay libros registrados con este valor, por favor ingrese otro");
 		}
