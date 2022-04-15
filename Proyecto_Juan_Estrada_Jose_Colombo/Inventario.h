@@ -101,5 +101,7 @@ public:
 		return this->editorial; 
 	}
 
+	
+
 };
 

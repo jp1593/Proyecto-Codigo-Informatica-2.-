@@ -133,14 +133,14 @@ private: System::Windows::Forms::Label^ lbltitcategoriaModificar;
 private: System::Windows::Forms::ComboBox^ cmbcategoriaModificar;
 private: System::Windows::Forms::TextBox^ tbxeditorialModificar;
 private: System::Windows::Forms::Label^ label2;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ headnombre;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ headautor;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ headfecha;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ headedicion;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ headestado;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ headdestino;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ headeditorial;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ headcategoria;
+
+
+
+
+
+
+
+
 private: System::Windows::Forms::ToolStripMenuItem^ cantidadDeLibrosToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ reportePorEdicionToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ reportePorAñoToolStripMenuItem;
@@ -149,9 +149,19 @@ private: System::Windows::Forms::ToolStripMenuItem^ reportePorEditorialToolStrip
 private: System::Windows::Forms::ToolStripMenuItem^ reportePorCategoríaToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ reporteDeLibrosRegistradosPorPersonaToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStripMenuItem;
-private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
+
 private: System::Windows::Forms::Button^ btnGuarLibMod;
 private: System::Windows::Forms::Button^ btnConfirEliLib;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headnombre;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headautor;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headfecha;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headedicion;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headestado;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headdestino;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headeditorial;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ headcategoria;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
+
 
 
 
@@ -180,6 +190,7 @@ private: System::Windows::Forms::Button^ btnConfirEliLib;
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->libroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ingresarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -876,7 +887,7 @@ private: System::Windows::Forms::Button^ btnConfirEliLib;
 			this->gpbmodificar->Controls->Add(this->lbltitautorModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitnombreModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitvreferenciaModificar);
-			this->gpbmodificar->Location = System::Drawing::Point(675, 211);
+			this->gpbmodificar->Location = System::Drawing::Point(666, 15);
 			this->gpbmodificar->Name = L"gpbmodificar";
 			this->gpbmodificar->Size = System::Drawing::Size(724, 379);
 			this->gpbmodificar->TabIndex = 4;
@@ -1084,12 +1095,22 @@ private: System::Windows::Forms::Button^ btnConfirEliLib;
 					this->headautor, this->headfecha, this->headedicion, this->headestado, this->headdestino, this->headeditorial, this->headcategoria,
 					this->valorreferencia
 			});
-			this->dtgvcontrol->Location = System::Drawing::Point(756, 440);
+			this->dtgvcontrol->Location = System::Drawing::Point(742, 428);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
-			this->dtgvcontrol->Size = System::Drawing::Size(744, 150);
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this->dtgvcontrol->Size = System::Drawing::Size(946, 150);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
+			this->dtgvcontrol->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dtgvcontrol_CellContentClick);
 			// 
 			// headnombre
 			// 
@@ -1248,6 +1269,7 @@ private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs
 			dtgvcontrol[5, cont]->Value = cmbdestino->Text;
 			dtgvcontrol[6, cont]->Value = tbxeditorial->Text;
 			dtgvcontrol[7, cont]->Value = cmbcategoria->Text;
+			dtgvcontrol[8, cont]->Value = cont;
 			//marshal_as<string>(dtgvcontrol[8, cont]->Value) = marshal_as<string>(cont);
 
 			//Recoleccion de datos para el relleno de datos para el arreglo. 
@@ -1371,6 +1393,8 @@ private: System::Void btnmodificar_Click(System::Object^ sender, System::EventAr
 		cmbcategoriaModificar->Text = marshal_as<String^>(libro[id].getCategoria());
 		tbxeditorialModificar->Text = marshal_as<String^>(libro[id].getEditorial());
 		//MessageBox::Show("Libro modificado correctamente");
+		//dtgvcontrol->Rows->RemoveAt(id);
+
 	}
 	catch (Exception^ ex)
 	{
@@ -1383,6 +1407,7 @@ private: System::Void btnGuarLibMod_Click(System::Object^ sender, System::EventA
 
 	try 
 	{
+		int id = stoi(marshal_as<string>(tbxvalorreferenciaModificar->Text));
 		string nombreMod = marshal_as<string>(tbxnombreModificar->Text);
 		string autorMod = marshal_as<string>(tbxautorModificar->Text);
 		string fechaMod = marshal_as<string>(datetimepfechaModificar->Text);
@@ -1391,15 +1416,40 @@ private: System::Void btnGuarLibMod_Click(System::Object^ sender, System::EventA
 		string destinoMod = marshal_as<string>(cmbdestinoModificar->Text);
 		string categoriaMod = marshal_as<string>(cmbcategoriaModificar->Text);
 		string editorialMod = marshal_as<string>(tbxeditorialModificar->Text);
-		libro[cont - 1].setNombre(nombreMod);
-		libro[cont - 1].setAutor(autorMod);
-		libro[cont - 1].setFecha(fechaMod);
-		libro[cont - 1].setEdicion(edicionMod);
-		libro[cont - 1].setEstado(estadoMod);
-		libro[cont - 1].setDestino(destinoMod);
-		libro[cont - 1].setCategoria(categoriaMod);
-		libro[cont - 1].setEditorial(editorialMod);
+		libro[id].setNombre(nombreMod);
+		libro[id].setAutor(autorMod);
+		libro[id].setFecha(fechaMod);
+		libro[id].setEdicion(edicionMod);
+		libro[id].setEstado(estadoMod);
+		libro[id].setDestino(destinoMod);
+		libro[id].setCategoria(categoriaMod);
+		libro[id].setEditorial(editorialMod);
 		MessageBox::Show("Libro modificado correctamente");
+
+		//Modifiacion de datos de libro en el DTGV
+		dtgvcontrol[0, id]->Value = tbxnombreModificar->Text;
+		dtgvcontrol[1, id]->Value = tbxautorModificar->Text;
+		dtgvcontrol[2, id]->Value = datetimepfechaModificar->Text;
+		dtgvcontrol[3, id]->Value = tbxedicionModificar->Text;
+		dtgvcontrol[4, id]->Value = cmbestadoModificar->Text;
+		dtgvcontrol[5, id]->Value = cmbdestinoModificar->Text;
+		dtgvcontrol[6, id]->Value = tbxeditorialModificar->Text;
+		dtgvcontrol[7, id]->Value = cmbcategoriaModificar->Text;
+		dtgvcontrol[8, id]->Value = id;
+
+
+		tbxautorModificar->Text = ""; 
+		tbxedicionModificar->Text = "";
+		tbxeditorialModificar->Text = "";
+		tbxvalorreferenciaModificar->Text = "";
+		cmbcategoriaModificar->Text = "";
+		cmbdestinoModificar->Text = "";
+		cmbestadoModificar->Text = ""; 
+		tbxnombreModificar->Text = ""; 
+
+
+
+
 	}
 	catch (Exception^ ex)
 	{
@@ -1421,6 +1471,7 @@ private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::Even
 
 	try
 	{
+		//Eliminacion de libro 
 		int id = stoi(marshal_as<string>(tbxvalorreferenciaEliminar->Text));
 
 		libro[id].setNombre("");
@@ -1433,11 +1484,22 @@ private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::Even
 		libro[id].setEditorial("");
 		MessageBox::Show("Libro eliminado correctamente");
 
+		lblresultnombreEliminar->Text = ""; 
+
+		//Eliminacion de libro en el control de libros 
+		//if (id == )
+
+		//Eliminacion de libro en el DTGV 
+		dtgvcontrol->Rows->RemoveAt(id); 
+
+
 	}
 	catch (Exception^ ex)
 	{
 		MessageBox::Show(ex->Message);
 	}
+}
+private: System::Void dtgvcontrol_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
 };
 }
