@@ -18,6 +18,8 @@ namespace ProyectoJuanEstradaJoseColombo {
 	using namespace std;
 	Inventario libro[5]; 
 	int cont = 0; 
+	int cant = 0; 
+	string impcont = ""; 
 
 
 	/// <summary>
@@ -161,6 +163,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ headdestino;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ headeditorial;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ headcategoria;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
+private: System::Windows::Forms::GroupBox^ gpbxRcantidadlibro;
+private: System::Windows::Forms::Label^ lbltitR;
+private: System::Windows::Forms::Label^ lblresultRcantidadlibros;
+
 
 
 
@@ -190,7 +196,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->libroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ingresarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -283,12 +289,16 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->headeditorial = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->headcategoria = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->valorreferencia = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->gpbxRcantidadlibro = (gcnew System::Windows::Forms::GroupBox());
+			this->lblresultRcantidadlibros = (gcnew System::Windows::Forms::Label());
+			this->lbltitR = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
 			this->gpbxingreso->SuspendLayout();
 			this->gpbVisualizar->SuspendLayout();
 			this->gpbeliminar->SuspendLayout();
 			this->gpbmodificar->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dtgvcontrol))->BeginInit();
+			this->gpbxRcantidadlibro->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
@@ -357,6 +367,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->cantidadDeLibrosToolStripMenuItem->Name = L"cantidadDeLibrosToolStripMenuItem";
 			this->cantidadDeLibrosToolStripMenuItem->Size = System::Drawing::Size(290, 22);
 			this->cantidadDeLibrosToolStripMenuItem->Text = L"Cantidad de libros";
+			this->cantidadDeLibrosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::cantidadDeLibrosToolStripMenuItem_Click);
 			// 
 			// reportePorEdicionToolStripMenuItem
 			// 
@@ -428,7 +439,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->gpbxingreso->Controls->Add(this->lbltitnombre);
 			this->gpbxingreso->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gpbxingreso->Location = System::Drawing::Point(12, 343);
+			this->gpbxingreso->Location = System::Drawing::Point(0, 43);
 			this->gpbxingreso->Name = L"gpbxingreso";
 			this->gpbxingreso->Size = System::Drawing::Size(724, 314);
 			this->gpbxingreso->TabIndex = 1;
@@ -611,7 +622,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->gpbVisualizar->Controls->Add(this->lbltitrefrenciadelibrovisualizar);
 			this->gpbVisualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gpbVisualizar->Location = System::Drawing::Point(0, 27);
+			this->gpbVisualizar->Location = System::Drawing::Point(12, 43);
 			this->gpbVisualizar->Name = L"gpbVisualizar";
 			this->gpbVisualizar->Size = System::Drawing::Size(647, 324);
 			this->gpbVisualizar->TabIndex = 2;
@@ -795,7 +806,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->gpbeliminar->Controls->Add(this->lbltitnombreeliminar);
 			this->gpbeliminar->Controls->Add(this->tbxvalorreferenciaEliminar);
 			this->gpbeliminar->Controls->Add(this->lbltitvreferencia);
-			this->gpbeliminar->Location = System::Drawing::Point(693, 41);
+			this->gpbeliminar->Location = System::Drawing::Point(0, 27);
 			this->gpbeliminar->Name = L"gpbeliminar";
 			this->gpbeliminar->Size = System::Drawing::Size(529, 164);
 			this->gpbeliminar->TabIndex = 3;
@@ -887,7 +898,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->gpbmodificar->Controls->Add(this->lbltitautorModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitnombreModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitvreferenciaModificar);
-			this->gpbmodificar->Location = System::Drawing::Point(666, 15);
+			this->gpbmodificar->Location = System::Drawing::Point(0, 27);
 			this->gpbmodificar->Name = L"gpbmodificar";
 			this->gpbmodificar->Size = System::Drawing::Size(724, 379);
 			this->gpbmodificar->TabIndex = 4;
@@ -1095,18 +1106,18 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 					this->headautor, this->headfecha, this->headedicion, this->headestado, this->headdestino, this->headeditorial, this->headcategoria,
 					this->valorreferencia
 			});
-			this->dtgvcontrol->Location = System::Drawing::Point(742, 428);
+			this->dtgvcontrol->Location = System::Drawing::Point(734, 460);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->dtgvcontrol->Size = System::Drawing::Size(946, 150);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
@@ -1166,11 +1177,45 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->valorreferencia->Name = L"valorreferencia";
 			this->valorreferencia->ReadOnly = true;
 			// 
+			// gpbxRcantidadlibro
+			// 
+			this->gpbxRcantidadlibro->Controls->Add(this->lblresultRcantidadlibros);
+			this->gpbxRcantidadlibro->Controls->Add(this->lbltitR);
+			this->gpbxRcantidadlibro->Location = System::Drawing::Point(898, 62);
+			this->gpbxRcantidadlibro->Name = L"gpbxRcantidadlibro";
+			this->gpbxRcantidadlibro->Size = System::Drawing::Size(289, 100);
+			this->gpbxRcantidadlibro->TabIndex = 6;
+			this->gpbxRcantidadlibro->TabStop = false;
+			this->gpbxRcantidadlibro->Text = L"Reporte de cantidad de libros";
+			this->gpbxRcantidadlibro->Visible = false;
+			this->gpbxRcantidadlibro->Enter += gcnew System::EventHandler(this, &MyForm::groupBox1_Enter);
+			// 
+			// lblresultRcantidadlibros
+			// 
+			this->lblresultRcantidadlibros->AutoSize = true;
+			this->lblresultRcantidadlibros->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Italic,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->lblresultRcantidadlibros->Location = System::Drawing::Point(137, 56);
+			this->lblresultRcantidadlibros->Name = L"lblresultRcantidadlibros";
+			this->lblresultRcantidadlibros->Size = System::Drawing::Size(0, 24);
+			this->lblresultRcantidadlibros->TabIndex = 1;
+			// 
+			// lbltitR
+			// 
+			this->lbltitR->AutoSize = true;
+			this->lbltitR->Location = System::Drawing::Point(50, 26);
+			this->lbltitR->Name = L"lbltitR";
+			this->lbltitR->Size = System::Drawing::Size(194, 13);
+			this->lbltitR->TabIndex = 0;
+			this->lbltitR->Text = L"La cantidad de libros ingresados es de: ";
+			this->lbltitR->Click += gcnew System::EventHandler(this, &MyForm::lbltitR_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1370, 681);
+			this->Controls->Add(this->gpbxRcantidadlibro);
 			this->Controls->Add(this->dtgvcontrol);
 			this->Controls->Add(this->gpbmodificar);
 			this->Controls->Add(this->gpbeliminar);
@@ -1190,6 +1235,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ valorreferencia;
 			this->gpbmodificar->ResumeLayout(false);
 			this->gpbmodificar->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dtgvcontrol))->EndInit();
+			this->gpbxRcantidadlibro->ResumeLayout(false);
+			this->gpbxRcantidadlibro->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1204,6 +1251,7 @@ private: System::Void ingresarLibroToolStripMenuItem_Click(System::Object^ sende
 	dtgvcontrol->Visible = false;
 	gpbeliminar->Visible = false;
 	gpbmodificar->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -1214,6 +1262,7 @@ private: System::Void visualizarLibroToolStripMenuItem_Click(System::Object^ sen
 	dtgvcontrol->Visible = false;
 	gpbeliminar->Visible = false;
 	gpbmodificar->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -1252,6 +1301,7 @@ private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ send
 	gpbxingreso->Visible = false;
 	gpbVisualizar->Visible = false;
 	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
 }
 private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs^ e) {
 	try 
@@ -1369,6 +1419,7 @@ private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sen
 		dtgvcontrol->Visible = true; 
 		gpbmodificar->Visible = false;
 		gpbeliminar->Visible = false;
+		gpbxRcantidadlibro->Visible = false;
 		MessageBox::Show("Este es el control de los libros en el inventario bibliotecario.");
 
 	}
@@ -1465,6 +1516,7 @@ private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sende
 	gpbxingreso->Visible = false;
 	gpbVisualizar->Visible = false;
 	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false; 
 }
 
 private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1484,6 +1536,10 @@ private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::Even
 		libro[id].setEditorial("");
 		MessageBox::Show("Libro eliminado correctamente");
 
+		cont = cont - 1; 
+		impcont = to_string(cont);
+		//lblresultRcantidadlibros->Text = marshal_as<String^>(impcont);
+
 		lblresultnombreEliminar->Text = ""; 
 
 		//Eliminacion de libro en el control de libros 
@@ -1491,6 +1547,7 @@ private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::Even
 
 		//Eliminacion de libro en el DTGV 
 		dtgvcontrol->Rows->RemoveAt(id); 
+		//id = id - 1; 
 
 
 	}
@@ -1500,6 +1557,22 @@ private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::Even
 	}
 }
 private: System::Void dtgvcontrol_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void lbltitR_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void cantidadDeLibrosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	gpbmodificar->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = true;
+	impcont = to_string(cont); 
+	lblresultRcantidadlibros->Text = marshal_as<String^>(impcont);
+
+	
 }
 };
 }
