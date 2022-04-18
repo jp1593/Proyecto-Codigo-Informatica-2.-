@@ -1978,15 +1978,21 @@ private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^
 	{
 		for (int i = 0; i < 5; i++)
 		{
-			//lblRdestino->Text = "1";
+			lblRdestino->Text = "1";
 
-			//lblRdestino->Text = marshal_as<String^>(libro[i].getNombre());
+
+
+			//lblRdestino->Text = libro[i].getNombre();
+
+			//lblRdestino->Text = marshal_as<String^>(libro[cont].getNombre());
 
 			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
 
-			libro[i].getNombre();
-			string nombre = libro[i].getNombre();
-			lblRdestino->Text = (marshal_as<String^>(nombre));
+			//lblresultnombreVisualizar->Text = marshal_as<String^>(libro[id].getNombre());
+
+			//libro[i].getNombre();
+			//string nombre = libro[i].getNombre();
+			//lblRdestino->Text = (marshal_as<String^>(nombre));
 
 		}
 	}
