@@ -174,18 +174,31 @@ private: System::Windows::Forms::ToolStripMenuItem^ reportePorEstadoDeLibroToolS
 private: System::Windows::Forms::Button^ button1;
 private: System::Windows::Forms::Label^ lblresultRestado;
 private: System::Windows::Forms::ListBox^ listBox1;
-private: System::Windows::Forms::GroupBox^ groupBox1;
-private: System::Windows::Forms::ListBox^ listBox2;
-private: System::Windows::Forms::Label^ label4;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+private: System::Windows::Forms::ToolStripMenuItem^ reportePorDestinoToolStripMenuItem;
+private: System::Windows::Forms::GroupBox^ gpbxRdestino;
+private: System::Windows::Forms::Label^ lblRdestino;
 private: System::Windows::Forms::Button^ button2;
 private: System::Windows::Forms::ComboBox^ cmbRdestino;
-private: System::Windows::Forms::Label^ label5;
-private: System::Windows::Forms::GroupBox^ groupBox2;
-private: System::Windows::Forms::ListBox^ listBox3;
-private: System::Windows::Forms::Label^ label6;
+private: System::Windows::Forms::Label^ label4;
+private: System::Windows::Forms::GroupBox^ gpbxRcategoria;
+private: System::Windows::Forms::Label^ lblRcategoria;
 private: System::Windows::Forms::Button^ button3;
-private: System::Windows::Forms::ComboBox^ comboBox1;
-private: System::Windows::Forms::Label^ label7;
+private: System::Windows::Forms::ComboBox^ cmbRcategoria;
+private: System::Windows::Forms::Label^ label5;
 
 
 
@@ -216,7 +229,7 @@ private: System::Windows::Forms::Label^ label7;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->libroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ingresarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -232,6 +245,7 @@ private: System::Windows::Forms::Label^ label7;
 			this->reportePorEditorialToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->reportePorCategoríaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->reportePorDestinoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->controlDeLibrosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->personasRegistradasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->gpbxingreso = (gcnew System::Windows::Forms::GroupBox());
@@ -300,6 +314,11 @@ private: System::Windows::Forms::Label^ label7;
 			this->lbltitautorModificar = (gcnew System::Windows::Forms::Label());
 			this->lbltitnombreModificar = (gcnew System::Windows::Forms::Label());
 			this->lbltitvreferenciaModificar = (gcnew System::Windows::Forms::Label());
+			this->gpbxRdestino = (gcnew System::Windows::Forms::GroupBox());
+			this->lblRdestino = (gcnew System::Windows::Forms::Label());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->cmbRdestino = (gcnew System::Windows::Forms::ComboBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->dtgvcontrol = (gcnew System::Windows::Forms::DataGridView());
 			this->headnombre = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->headautor = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -314,33 +333,26 @@ private: System::Windows::Forms::Label^ label7;
 			this->lblresultRcantidadlibros = (gcnew System::Windows::Forms::Label());
 			this->lbltitR = (gcnew System::Windows::Forms::Label());
 			this->gpbxRestado = (gcnew System::Windows::Forms::GroupBox());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->cmbRdestino = (gcnew System::Windows::Forms::ComboBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->lblresultRestado = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->cmbRestado = (gcnew System::Windows::Forms::ComboBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
-			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->gpbxRcategoria = (gcnew System::Windows::Forms::GroupBox());
+			this->lblRcategoria = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->cmbRcategoria = (gcnew System::Windows::Forms::ComboBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
 			this->gpbxingreso->SuspendLayout();
 			this->gpbVisualizar->SuspendLayout();
 			this->gpbeliminar->SuspendLayout();
 			this->gpbmodificar->SuspendLayout();
+			this->gpbxRdestino->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dtgvcontrol))->BeginInit();
 			this->gpbxRcantidadlibro->SuspendLayout();
 			this->gpbxRestado->SuspendLayout();
-			this->groupBox1->SuspendLayout();
-			this->groupBox2->SuspendLayout();
+			this->gpbxRcategoria->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
@@ -368,38 +380,38 @@ private: System::Windows::Forms::Label^ label7;
 			// ingresarLibroToolStripMenuItem
 			// 
 			this->ingresarLibroToolStripMenuItem->Name = L"ingresarLibroToolStripMenuItem";
-			this->ingresarLibroToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->ingresarLibroToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->ingresarLibroToolStripMenuItem->Text = L"Ingresar libro";
 			this->ingresarLibroToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ingresarLibroToolStripMenuItem_Click);
 			// 
 			// modificarLibroToolStripMenuItem
 			// 
 			this->modificarLibroToolStripMenuItem->Name = L"modificarLibroToolStripMenuItem";
-			this->modificarLibroToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->modificarLibroToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->modificarLibroToolStripMenuItem->Text = L"Modificar libro";
 			this->modificarLibroToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::modificarLibroToolStripMenuItem_Click);
 			// 
 			// visualizarLibroToolStripMenuItem
 			// 
 			this->visualizarLibroToolStripMenuItem->Name = L"visualizarLibroToolStripMenuItem";
-			this->visualizarLibroToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->visualizarLibroToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->visualizarLibroToolStripMenuItem->Text = L"Visualizar libro";
 			this->visualizarLibroToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::visualizarLibroToolStripMenuItem_Click);
 			// 
 			// eliminarLibroToolStripMenuItem
 			// 
 			this->eliminarLibroToolStripMenuItem->Name = L"eliminarLibroToolStripMenuItem";
-			this->eliminarLibroToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->eliminarLibroToolStripMenuItem->Size = System::Drawing::Size(152, 22);
 			this->eliminarLibroToolStripMenuItem->Text = L"Eliminar libro";
 			this->eliminarLibroToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::eliminarLibroToolStripMenuItem_Click);
 			// 
 			// reportesToolStripMenuItem
 			// 
-			this->reportesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(8) {
+			this->reportesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(9) {
 				this->cantidadDeLibrosToolStripMenuItem,
 					this->reportePorEstadoDeLibroToolStripMenuItem, this->reportePorEdicionToolStripMenuItem, this->reportePorAñoToolStripMenuItem,
 					this->reportePorAutorToolStripMenuItem, this->reportePorEditorialToolStripMenuItem, this->reportePorCategoríaToolStripMenuItem,
-					this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem
+					this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem, this->reportePorDestinoToolStripMenuItem
 			});
 			this->reportesToolStripMenuItem->Name = L"reportesToolStripMenuItem";
 			this->reportesToolStripMenuItem->Size = System::Drawing::Size(65, 20);
@@ -448,12 +460,20 @@ private: System::Windows::Forms::Label^ label7;
 			this->reportePorCategoríaToolStripMenuItem->Name = L"reportePorCategoríaToolStripMenuItem";
 			this->reportePorCategoríaToolStripMenuItem->Size = System::Drawing::Size(290, 22);
 			this->reportePorCategoríaToolStripMenuItem->Text = L"Reporte por categoría";
+			this->reportePorCategoríaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorCategoríaToolStripMenuItem_Click);
 			// 
 			// reporteDeLibrosRegistradosPorPersonaToolStripMenuItem
 			// 
 			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Name = L"reporteDeLibrosRegistradosPorPersonaToolStripMenuItem";
 			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Size = System::Drawing::Size(290, 22);
 			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Text = L"Reporte de libros registrados por persona";
+			// 
+			// reportePorDestinoToolStripMenuItem
+			// 
+			this->reportePorDestinoToolStripMenuItem->Name = L"reportePorDestinoToolStripMenuItem";
+			this->reportePorDestinoToolStripMenuItem->Size = System::Drawing::Size(290, 22);
+			this->reportePorDestinoToolStripMenuItem->Text = L"Reporte por destino";
+			this->reportePorDestinoToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorDestinoToolStripMenuItem_Click);
 			// 
 			// controlDeLibrosToolStripMenuItem
 			// 
@@ -1146,6 +1166,57 @@ private: System::Windows::Forms::Label^ label7;
 			this->lbltitvreferenciaModificar->TabIndex = 0;
 			this->lbltitvreferenciaModificar->Text = L"Ingrese el valor de referencia del libro a modificar:";
 			// 
+			// gpbxRdestino
+			// 
+			this->gpbxRdestino->Controls->Add(this->lblRdestino);
+			this->gpbxRdestino->Controls->Add(this->button2);
+			this->gpbxRdestino->Controls->Add(this->cmbRdestino);
+			this->gpbxRdestino->Controls->Add(this->label4);
+			this->gpbxRdestino->Location = System::Drawing::Point(57, 431);
+			this->gpbxRdestino->Name = L"gpbxRdestino";
+			this->gpbxRdestino->Size = System::Drawing::Size(454, 246);
+			this->gpbxRdestino->TabIndex = 5;
+			this->gpbxRdestino->TabStop = false;
+			this->gpbxRdestino->Text = L"Reporte por destino";
+			this->gpbxRdestino->Visible = false;
+			// 
+			// lblRdestino
+			// 
+			this->lblRdestino->AutoSize = true;
+			this->lblRdestino->Location = System::Drawing::Point(186, 98);
+			this->lblRdestino->Name = L"lblRdestino";
+			this->lblRdestino->Size = System::Drawing::Size(10, 13);
+			this->lblRdestino->TabIndex = 10;
+			this->lblRdestino->Text = L".";
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(169, 61);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(100, 23);
+			this->button2->TabIndex = 9;
+			this->button2->Text = L"Realizar reporte";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click_1);
+			// 
+			// cmbRdestino
+			// 
+			this->cmbRdestino->FormattingEnabled = true;
+			this->cmbRdestino->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Ingreso a biblioteca", L"Reciclaje", L"Seccion tome 1" });
+			this->cmbRdestino->Location = System::Drawing::Point(311, 25);
+			this->cmbRdestino->Name = L"cmbRdestino";
+			this->cmbRdestino->Size = System::Drawing::Size(121, 21);
+			this->cmbRdestino->TabIndex = 8;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(13, 25);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(292, 13);
+			this->label4->TabIndex = 0;
+			this->label4->Text = L"Seleccione el destino por el cual quiere realizar la busqueda:";
+			// 
 			// dtgvcontrol
 			// 
 			this->dtgvcontrol->AllowUserToAddRows = false;
@@ -1160,15 +1231,15 @@ private: System::Windows::Forms::Label^ label7;
 			this->dtgvcontrol->Location = System::Drawing::Point(717, 509);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->dtgvcontrol->Size = System::Drawing::Size(946, 150);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
@@ -1263,13 +1334,12 @@ private: System::Windows::Forms::Label^ label7;
 			// 
 			// gpbxRestado
 			// 
-			this->gpbxRestado->Controls->Add(this->groupBox1);
 			this->gpbxRestado->Controls->Add(this->listBox1);
 			this->gpbxRestado->Controls->Add(this->lblresultRestado);
 			this->gpbxRestado->Controls->Add(this->button1);
 			this->gpbxRestado->Controls->Add(this->cmbRestado);
 			this->gpbxRestado->Controls->Add(this->label3);
-			this->gpbxRestado->Location = System::Drawing::Point(823, 88);
+			this->gpbxRestado->Location = System::Drawing::Point(830, 39);
 			this->gpbxRestado->Name = L"gpbxRestado";
 			this->gpbxRestado->Size = System::Drawing::Size(495, 355);
 			this->gpbxRestado->TabIndex = 7;
@@ -1277,67 +1347,6 @@ private: System::Windows::Forms::Label^ label7;
 			this->gpbxRestado->Text = L"Reporte por estado";
 			this->gpbxRestado->Visible = false;
 			this->gpbxRestado->Enter += gcnew System::EventHandler(this, &MyForm::gpbxRestado_Enter);
-			// 
-			// groupBox1
-			// 
-			this->groupBox1->Controls->Add(this->groupBox2);
-			this->groupBox1->Controls->Add(this->listBox2);
-			this->groupBox1->Controls->Add(this->label4);
-			this->groupBox1->Controls->Add(this->button2);
-			this->groupBox1->Controls->Add(this->cmbRdestino);
-			this->groupBox1->Controls->Add(this->label5);
-			this->groupBox1->Location = System::Drawing::Point(18, 101);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(495, 355);
-			this->groupBox1->TabIndex = 8;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Reporte por destino";
-			this->groupBox1->Visible = false;
-			// 
-			// listBox2
-			// 
-			this->listBox2->FormattingEnabled = true;
-			this->listBox2->Location = System::Drawing::Point(191, 137);
-			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(120, 95);
-			this->listBox2->TabIndex = 4;
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(46, 118);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(0, 13);
-			this->label4->TabIndex = 3;
-			// 
-			// button2
-			// 
-			this->button2->Location = System::Drawing::Point(213, 68);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(103, 23);
-			this->button2->TabIndex = 2;
-			this->button2->Text = L"Realizar reporte";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
-			// 
-			// cmbRdestino
-			// 
-			this->cmbRdestino->FormattingEnabled = true;
-			this->cmbRdestino->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Bueno ", L"Decente", L"Deteriorado", L"Malo" });
-			this->cmbRdestino->Location = System::Drawing::Point(318, 31);
-			this->cmbRdestino->Name = L"cmbRdestino";
-			this->cmbRdestino->Size = System::Drawing::Size(121, 21);
-			this->cmbRdestino->TabIndex = 1;
-			this->cmbRdestino->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::cmbRdestino_SelectedIndexChanged);
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(15, 35);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(298, 13);
-			this->label5->TabIndex = 0;
-			this->label5->Text = L"Seleccione el destino por el cual quiere realizar la busqueda:  ";
 			// 
 			// listBox1
 			// 
@@ -1386,69 +1395,68 @@ private: System::Windows::Forms::Label^ label7;
 			this->label3->Text = L"Seleccione el estado por el cual quiere realizar la busqueda:  ";
 			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
 			// 
-			// groupBox2
+			// gpbxRcategoria
 			// 
-			this->groupBox2->Controls->Add(this->listBox3);
-			this->groupBox2->Controls->Add(this->label6);
-			this->groupBox2->Controls->Add(this->button3);
-			this->groupBox2->Controls->Add(this->comboBox1);
-			this->groupBox2->Controls->Add(this->label7);
-			this->groupBox2->Location = System::Drawing::Point(0, 107);
-			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(495, 355);
-			this->groupBox2->TabIndex = 9;
-			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"Reporte por categoria";
-			this->groupBox2->Visible = false;
+			this->gpbxRcategoria->Controls->Add(this->lblRcategoria);
+			this->gpbxRcategoria->Controls->Add(this->button3);
+			this->gpbxRcategoria->Controls->Add(this->cmbRcategoria);
+			this->gpbxRcategoria->Controls->Add(this->label5);
+			this->gpbxRcategoria->Location = System::Drawing::Point(594, 431);
+			this->gpbxRcategoria->Name = L"gpbxRcategoria";
+			this->gpbxRcategoria->Size = System::Drawing::Size(476, 228);
+			this->gpbxRcategoria->TabIndex = 8;
+			this->gpbxRcategoria->TabStop = false;
+			this->gpbxRcategoria->Text = L"Reporte por categoria";
+			this->gpbxRcategoria->Visible = false;
 			// 
-			// listBox3
+			// lblRcategoria
 			// 
-			this->listBox3->FormattingEnabled = true;
-			this->listBox3->Location = System::Drawing::Point(191, 137);
-			this->listBox3->Name = L"listBox3";
-			this->listBox3->Size = System::Drawing::Size(120, 95);
-			this->listBox3->TabIndex = 4;
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(46, 118);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(0, 13);
-			this->label6->TabIndex = 3;
+			this->lblRcategoria->AutoSize = true;
+			this->lblRcategoria->Location = System::Drawing::Point(188, 103);
+			this->lblRcategoria->Name = L"lblRcategoria";
+			this->lblRcategoria->Size = System::Drawing::Size(10, 13);
+			this->lblRcategoria->TabIndex = 3;
+			this->lblRcategoria->Text = L".";
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(213, 68);
+			this->button3->Location = System::Drawing::Point(170, 65);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(103, 23);
+			this->button3->Size = System::Drawing::Size(112, 23);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Realizar reporte";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
-			// comboBox1
+			// cmbRcategoria
 			// 
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Bueno ", L"Decente", L"Deteriorado", L"Malo" });
-			this->comboBox1->Location = System::Drawing::Point(318, 31);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(121, 21);
-			this->comboBox1->TabIndex = 1;
+			this->cmbRcategoria->FormattingEnabled = true;
+			this->cmbRcategoria->Items->AddRange(gcnew cli::array< System::Object^  >(20) {
+				L"De texto", L"Complementario", L"Consulta o referencia",
+					L"Recreativo", L"Cientifico", L"Instructivo", L"Literarios y linguistico", L"Tecnico", L"Informativos", L"Divulgacion", L"Religioso",
+					L"Ilustrado", L"Electronico", L"Poetico", L"Biografico", L"Material auxiliar", L"Didactico", L"Viaje", L"Artistico", L"Autoestima"
+			});
+			this->cmbRcategoria->Location = System::Drawing::Point(329, 30);
+			this->cmbRcategoria->Name = L"cmbRcategoria";
+			this->cmbRcategoria->Size = System::Drawing::Size(121, 21);
+			this->cmbRcategoria->TabIndex = 1;
 			// 
-			// label7
+			// label5
 			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(15, 35);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(308, 13);
-			this->label7->TabIndex = 0;
-			this->label7->Text = L"Seleccione la categoria por el cual quiere realizar la busqueda:  ";
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(16, 30);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(302, 13);
+			this->label5->TabIndex = 0;
+			this->label5->Text = L"Seleccione la categoria por el cual quiera realizar la busqueda:";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1370, 681);
+			this->Controls->Add(this->gpbxRcategoria);
+			this->Controls->Add(this->gpbxRdestino);
 			this->Controls->Add(this->gpbxRestado);
 			this->Controls->Add(this->gpbxRcantidadlibro);
 			this->Controls->Add(this->dtgvcontrol);
@@ -1459,6 +1467,7 @@ private: System::Windows::Forms::Label^ label7;
 			this->Controls->Add(this->menuStrip1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->gpbxingreso->ResumeLayout(false);
@@ -1469,15 +1478,15 @@ private: System::Windows::Forms::Label^ label7;
 			this->gpbeliminar->PerformLayout();
 			this->gpbmodificar->ResumeLayout(false);
 			this->gpbmodificar->PerformLayout();
+			this->gpbxRdestino->ResumeLayout(false);
+			this->gpbxRdestino->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dtgvcontrol))->EndInit();
 			this->gpbxRcantidadlibro->ResumeLayout(false);
 			this->gpbxRcantidadlibro->PerformLayout();
 			this->gpbxRestado->ResumeLayout(false);
 			this->gpbxRestado->PerformLayout();
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
-			this->groupBox2->ResumeLayout(false);
-			this->groupBox2->PerformLayout();
+			this->gpbxRcategoria->ResumeLayout(false);
+			this->gpbxRcategoria->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1494,6 +1503,8 @@ private: System::Void ingresarLibroToolStripMenuItem_Click(System::Object^ sende
 	gpbmodificar->Visible = false;
 	gpbxRcantidadlibro->Visible = false;
 	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -1506,6 +1517,8 @@ private: System::Void visualizarLibroToolStripMenuItem_Click(System::Object^ sen
 	gpbmodificar->Visible = false;
 	gpbxRcantidadlibro->Visible = false;
 	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -1546,6 +1559,8 @@ private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ send
 	dtgvcontrol->Visible = false;
 	gpbxRcantidadlibro->Visible = false;
 	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
 }
 private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs^ e) {
 	try 
@@ -1665,6 +1680,8 @@ private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sen
 		gpbeliminar->Visible = false;
 		gpbxRcantidadlibro->Visible = false;
 		gpbxRestado->Visible = false;
+		gpbxRdestino->Visible = false;
+		gpbxRcategoria->Visible = false;
 		MessageBox::Show("Este es el control de los libros en el inventario bibliotecario.");
 
 	}
@@ -1763,6 +1780,8 @@ private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sende
 	dtgvcontrol->Visible = false;
 	gpbxRcantidadlibro->Visible = false; 
 	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
 }
 
 private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1816,6 +1835,9 @@ private: System::Void cantidadDeLibrosToolStripMenuItem_Click(System::Object^ se
 	dtgvcontrol->Visible = false;
 	gpbxRcantidadlibro->Visible = true;
 	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
+
 	impcont = to_string(cont); 
 	lblresultRcantidadlibros->Text = marshal_as<String^>(impcont);
 
@@ -1833,6 +1855,8 @@ private: System::Void reportePorEstadoDeLibroToolStripMenuItem_Click(System::Obj
 	dtgvcontrol->Visible = false;
 	gpbxRcantidadlibro->Visible = false;
 	gpbxRestado->Visible = true;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
 
 }
 private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
@@ -1883,6 +1907,7 @@ private: System::Void cmbRdestino_SelectedIndexChanged(System::Object^ sender, S
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	//string valor = libro[cont].getNombre();
+
 	string cmbes = marshal_as<string>(cmbRestado->Text);
 	if (cmbes == "Bueno")
 	{
@@ -1913,6 +1938,329 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 
 		}*/
 
+
+}
+private: System::Void reportePorCategoríaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	gpbmodificar->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
+	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = true;
+	
+}
+private: System::Void reportePorDestinoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	gpbmodificar->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
+	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = true;
+	gpbxRcategoria->Visible = false;
+	
+	
+}
+private: System::Void gpbxRcategoria_Enter(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	//MOSTRAR REPORTE POR DESTINO
+	
+
+	string cmbdes = marshal_as<string>(cmbRdestino->Text);
+	if (cmbdes == "Ingreso a biblioteca")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			//lblRdestino->Text = "1";
+
+			//lblRdestino->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+			libro[i].getNombre();
+			string nombre = libro[i].getNombre();
+			lblRdestino->Text = (marshal_as<String^>(nombre));
+
+		}
+	}
+	else if (cmbdes == "Reciclaje")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRdestino->Text = "2";
+
+			//lblRdestino->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbdes == "Seccion tome 1")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRdestino->Text = "3";
+
+			//lblRdestino->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	//MOSTRAR REPORTE POR CATEGORIA
+
+	string cmbcat = marshal_as<string>(cmbRcategoria->Text);
+	if (cmbcat == "De texto")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "1";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Complementario")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "2";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Consulta o referencia")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "3";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Recreativo")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "4";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Cientifico")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "5";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Instructivo")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "6";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Literarios y linguistico")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "7";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Tecnico")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "8";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Informativos")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "9";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Divulgacion")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "10";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Religioso")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "11";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Ilustrado")
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			lblRcategoria->Text = "12";
+
+			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+		}
+	}
+	else if (cmbcat == "Electronico")
+	{
+	for (int i = 0; i < 5; i++)
+	{
+		lblRcategoria->Text = "13";
+
+		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+	}
+	}
+	else if (cmbcat == "Poetico")
+	{
+	for (int i = 0; i < 5; i++)
+	{
+		lblRcategoria->Text = "14";
+
+		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+	}
+	}
+	else if (cmbcat == "Biografico")
+	{
+	for (int i = 0; i < 5; i++)
+	{
+		lblRcategoria->Text = "15";
+
+		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+	}
+	}
+	else if (cmbcat == "Material auxiliar")
+	{
+	for (int i = 0; i < 5; i++)
+	{
+		lblRcategoria->Text = "16";
+
+		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+	}
+	}
+	else if (cmbcat == "Didactivo")
+	{
+	for (int i = 0; i < 5; i++)
+	{
+		lblRcategoria->Text = "17";
+
+		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+	}
+	}
+	else if (cmbcat == "Viaje")
+	{
+	for (int i = 0; i < 5; i++)
+	{
+		lblRcategoria->Text = "18";
+
+		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+	}
+	}
+	else if (cmbcat == "Artistico")
+	{
+	for (int i = 0; i < 5; i++)
+	{
+		lblRcategoria->Text = "19";
+
+		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+	}
+	}
+	else if (cmbcat == "Autoestima")
+	{
+	for (int i = 0; i < 5; i++)
+	{
+		lblRcategoria->Text = "20";
+
+		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
+
+		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+
+	}
+	}
+	
 
 }
 };
