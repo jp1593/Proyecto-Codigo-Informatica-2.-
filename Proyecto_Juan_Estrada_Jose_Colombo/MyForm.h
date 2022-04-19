@@ -190,15 +190,17 @@ private: System::Windows::Forms::ListBox^ listBox1;
 
 private: System::Windows::Forms::ToolStripMenuItem^ reportePorDestinoToolStripMenuItem;
 private: System::Windows::Forms::GroupBox^ gpbxRdestino;
-private: System::Windows::Forms::Label^ lblRdestino;
+
 private: System::Windows::Forms::Button^ button2;
 private: System::Windows::Forms::ComboBox^ cmbRdestino;
 private: System::Windows::Forms::Label^ label4;
 private: System::Windows::Forms::GroupBox^ gpbxRcategoria;
-private: System::Windows::Forms::Label^ lblRcategoria;
+
 private: System::Windows::Forms::Button^ button3;
 private: System::Windows::Forms::ComboBox^ cmbRcategoria;
 private: System::Windows::Forms::Label^ label5;
+private: System::Windows::Forms::ListBox^ listBox2;
+private: System::Windows::Forms::ListBox^ listBox3;
 
 
 
@@ -315,7 +317,7 @@ private: System::Windows::Forms::Label^ label5;
 			this->lbltitnombreModificar = (gcnew System::Windows::Forms::Label());
 			this->lbltitvreferenciaModificar = (gcnew System::Windows::Forms::Label());
 			this->gpbxRdestino = (gcnew System::Windows::Forms::GroupBox());
-			this->lblRdestino = (gcnew System::Windows::Forms::Label());
+			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->cmbRdestino = (gcnew System::Windows::Forms::ComboBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -339,7 +341,7 @@ private: System::Windows::Forms::Label^ label5;
 			this->cmbRestado = (gcnew System::Windows::Forms::ComboBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->gpbxRcategoria = (gcnew System::Windows::Forms::GroupBox());
-			this->lblRcategoria = (gcnew System::Windows::Forms::Label());
+			this->listBox3 = (gcnew System::Windows::Forms::ListBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->cmbRcategoria = (gcnew System::Windows::Forms::ComboBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -1168,11 +1170,11 @@ private: System::Windows::Forms::Label^ label5;
 			// 
 			// gpbxRdestino
 			// 
-			this->gpbxRdestino->Controls->Add(this->lblRdestino);
+			this->gpbxRdestino->Controls->Add(this->listBox2);
 			this->gpbxRdestino->Controls->Add(this->button2);
 			this->gpbxRdestino->Controls->Add(this->cmbRdestino);
 			this->gpbxRdestino->Controls->Add(this->label4);
-			this->gpbxRdestino->Location = System::Drawing::Point(57, 431);
+			this->gpbxRdestino->Location = System::Drawing::Point(22, 423);
 			this->gpbxRdestino->Name = L"gpbxRdestino";
 			this->gpbxRdestino->Size = System::Drawing::Size(454, 246);
 			this->gpbxRdestino->TabIndex = 5;
@@ -1180,14 +1182,13 @@ private: System::Windows::Forms::Label^ label5;
 			this->gpbxRdestino->Text = L"Reporte por destino";
 			this->gpbxRdestino->Visible = false;
 			// 
-			// lblRdestino
+			// listBox2
 			// 
-			this->lblRdestino->AutoSize = true;
-			this->lblRdestino->Location = System::Drawing::Point(186, 98);
-			this->lblRdestino->Name = L"lblRdestino";
-			this->lblRdestino->Size = System::Drawing::Size(10, 13);
-			this->lblRdestino->TabIndex = 10;
-			this->lblRdestino->Text = L".";
+			this->listBox2->FormattingEnabled = true;
+			this->listBox2->Location = System::Drawing::Point(163, 108);
+			this->listBox2->Name = L"listBox2";
+			this->listBox2->Size = System::Drawing::Size(120, 95);
+			this->listBox2->TabIndex = 10;
 			// 
 			// button2
 			// 
@@ -1397,11 +1398,11 @@ private: System::Windows::Forms::Label^ label5;
 			// 
 			// gpbxRcategoria
 			// 
-			this->gpbxRcategoria->Controls->Add(this->lblRcategoria);
+			this->gpbxRcategoria->Controls->Add(this->listBox3);
 			this->gpbxRcategoria->Controls->Add(this->button3);
 			this->gpbxRcategoria->Controls->Add(this->cmbRcategoria);
 			this->gpbxRcategoria->Controls->Add(this->label5);
-			this->gpbxRcategoria->Location = System::Drawing::Point(594, 431);
+			this->gpbxRcategoria->Location = System::Drawing::Point(458, 431);
 			this->gpbxRcategoria->Name = L"gpbxRcategoria";
 			this->gpbxRcategoria->Size = System::Drawing::Size(476, 228);
 			this->gpbxRcategoria->TabIndex = 8;
@@ -1409,14 +1410,13 @@ private: System::Windows::Forms::Label^ label5;
 			this->gpbxRcategoria->Text = L"Reporte por categoria";
 			this->gpbxRcategoria->Visible = false;
 			// 
-			// lblRcategoria
+			// listBox3
 			// 
-			this->lblRcategoria->AutoSize = true;
-			this->lblRcategoria->Location = System::Drawing::Point(188, 103);
-			this->lblRcategoria->Name = L"lblRcategoria";
-			this->lblRcategoria->Size = System::Drawing::Size(10, 13);
-			this->lblRcategoria->TabIndex = 3;
-			this->lblRcategoria->Text = L".";
+			this->listBox3->FormattingEnabled = true;
+			this->listBox3->Location = System::Drawing::Point(170, 108);
+			this->listBox3->Name = L"listBox3";
+			this->listBox3->Size = System::Drawing::Size(120, 95);
+			this->listBox3->TabIndex = 3;
 			// 
 			// button3
 			// 
@@ -1898,38 +1898,6 @@ private: System::Void cmbRdestino_SelectedIndexChanged(System::Object^ sender, S
 
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	//string valor = libro[cont].getNombre();
-
-	string cmbes = marshal_as<string>(cmbRestado->Text);
-	if (cmbes == "Bueno")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-	}
-
-
-	//listBox1->Items->Add(1);
-		/*string cmbR = marshal_as<string>(cmbRestado->SelectedText);
-		string NR = libro[cont].getNombre();
-		if (cmbR._Equal("Bueno"))
-		{
-			lblresultRestado->Text = marshal_as<String^>(libro[1].getNombre());
-		}*/
-
-		/*if (cmbRestado->SelectedItem == "Bueno")
-		{
-			for (int i = 0; i < 5; i++)
-			{
-				libro[i].getNombre();
-				string nombre = libro[i].getNombre();
-				listBox1->Items->Add(marshal_as<String^>(nombre));
-			}
-
-
-		}*/
-
 
 }
 private: System::Void reportePorCategoríaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1964,302 +1932,133 @@ private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) 
 private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	//MOSTRAR REPORTE POR DESTINO
 	
-
 	string cmbdes = marshal_as<string>(cmbRdestino->Text);
-	if (cmbdes == "Ingreso a biblioteca")
+	for (int i = 0; i < 5; i++)
 	{
-		for (int i = 0; i < 5; i++)
+		if (cmbdes == "Ingreso a biblioteca" && cmbdes == libro[i].getDestino())
 		{
-			lblRdestino->Text = "1";
-
-
-
-			//lblRdestino->Text = libro[i].getNombre();
-
-			//lblRdestino->Text = marshal_as<String^>(libro[cont].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-			//lblresultnombreVisualizar->Text = marshal_as<String^>(libro[id].getNombre());
-
-			//libro[i].getNombre();
-			//string nombre = libro[i].getNombre();
-			//lblRdestino->Text = (marshal_as<String^>(nombre));
-
+			listBox2->Items->Clear();
+			listBox2->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbdes == "Reciclaje" && cmbdes == libro[i].getDestino())
+		{
+			listBox2->Items->Clear();
+			listBox2->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbdes == "Seccion tome 1" && cmbdes == libro[i].getDestino())
+		{
+			listBox2->Items->Clear();
+			listBox2->Items->Add(marshal_as<String^>(libro[i].getNombre()));
 		}
 	}
-	else if (cmbdes == "Reciclaje")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRdestino->Text = "2";
-
-			//lblRdestino->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbdes == "Seccion tome 1")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRdestino->Text = "3";
-
-			//lblRdestino->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	//MOSTRAR REPORTE POR CATEGORIA
 
 	string cmbcat = marshal_as<string>(cmbRcategoria->Text);
-	if (cmbcat == "De texto")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "1";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Complementario")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "2";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Consulta o referencia")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "3";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Recreativo")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "4";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Cientifico")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "5";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Instructivo")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "6";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Literarios y linguistico")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "7";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Tecnico")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "8";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Informativos")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "9";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Divulgacion")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "10";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Religioso")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "11";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Ilustrado")
-	{
-		for (int i = 0; i < 5; i++)
-		{
-			lblRcategoria->Text = "12";
-
-			//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-			//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-		}
-	}
-	else if (cmbcat == "Electronico")
-	{
 	for (int i = 0; i < 5; i++)
 	{
-		lblRcategoria->Text = "13";
-
-		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
+		if (cmbcat == "De texto" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Complementario" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Consulta o referencia" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Recreativo" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Cientifico" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Instructivo" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Literarios y linguistico" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Tecnico" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Informativos" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Divulgacion" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Religioso" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Ilustrado" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Electronico" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Poetico" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Biografico" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Material auxiliar" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Didactico" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Viaje" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Artistico" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbcat == "Autoestima" && cmbcat == libro[i].getCategoria())
+		{
+			listBox3->Items->Clear();
+			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
 	}
-	}
-	else if (cmbcat == "Poetico")
-	{
-	for (int i = 0; i < 5; i++)
-	{
-		lblRcategoria->Text = "14";
-
-		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-	}
-	}
-	else if (cmbcat == "Biografico")
-	{
-	for (int i = 0; i < 5; i++)
-	{
-		lblRcategoria->Text = "15";
-
-		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-	}
-	}
-	else if (cmbcat == "Material auxiliar")
-	{
-	for (int i = 0; i < 5; i++)
-	{
-		lblRcategoria->Text = "16";
-
-		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-	}
-	}
-	else if (cmbcat == "Didactivo")
-	{
-	for (int i = 0; i < 5; i++)
-	{
-		lblRcategoria->Text = "17";
-
-		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-	}
-	}
-	else if (cmbcat == "Viaje")
-	{
-	for (int i = 0; i < 5; i++)
-	{
-		lblRcategoria->Text = "18";
-
-		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-	}
-	}
-	else if (cmbcat == "Artistico")
-	{
-	for (int i = 0; i < 5; i++)
-	{
-		lblRcategoria->Text = "19";
-
-		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-	}
-	}
-	else if (cmbcat == "Autoestima")
-	{
-	for (int i = 0; i < 5; i++)
-	{
-		lblRcategoria->Text = "20";
-
-		//lblRcategoria->Text = marshal_as<String^>(libro[i].getNombre());
-
-		//listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-
-	}
-	}
-	
-
 }
 };
 }
