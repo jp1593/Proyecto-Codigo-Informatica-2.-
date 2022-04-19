@@ -229,7 +229,7 @@ private: System::Windows::Forms::Label^ label5;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->libroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ingresarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -1059,7 +1059,7 @@ private: System::Windows::Forms::Label^ label5;
 			// 
 			this->cmbestadoModificar->FormattingEnabled = true;
 			this->cmbestadoModificar->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
-				L"Bueno ", L"Decente", L"Deteriorado",
+				L"Bueno", L"Decente", L"Deteriorado",
 					L"Malo"
 			});
 			this->cmbestadoModificar->Location = System::Drawing::Point(275, 227);
@@ -1231,15 +1231,15 @@ private: System::Windows::Forms::Label^ label5;
 			this->dtgvcontrol->Location = System::Drawing::Point(717, 509);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this->dtgvcontrol->Size = System::Drawing::Size(946, 150);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
@@ -1378,8 +1378,8 @@ private: System::Windows::Forms::Label^ label5;
 			// cmbRestado
 			// 
 			this->cmbRestado->FormattingEnabled = true;
-			this->cmbRestado->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Bueno ", L"Decente", L"Deteriorado", L"Malo" });
-			this->cmbRestado->Location = System::Drawing::Point(318, 31);
+			this->cmbRestado->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Bueno", L"Decente", L"Deteriorado", L"Malo" });
+			this->cmbRestado->Location = System::Drawing::Point(317, 32);
 			this->cmbRestado->Name = L"cmbRestado";
 			this->cmbRestado->Size = System::Drawing::Size(121, 21);
 			this->cmbRestado->TabIndex = 1;
@@ -1860,38 +1860,33 @@ private: System::Void reportePorEstadoDeLibroToolStripMenuItem_Click(System::Obj
 
 }
 private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	//string valor = libro[cont].getNombre();
+
+	//Reporte de libros por estado 
 	string cmbes = marshal_as<string>(cmbRestado->Text); 
-	if ( cmbes == "Bueno")
+	for (int i = 0; i < 5; i++)
 	{
-		for (int i = 0; i < 5; i++)
+		if (cmbes == "Bueno" && cmbes == libro[i].getEstado())
 		{
+			listBox1->Items->Clear();
+			listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbes == "Decente" && cmbes == libro[i].getEstado())
+		{
+			listBox1->Items->Clear();
+			listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbes == "Deteriorado" && cmbes == libro[i].getEstado())
+		{
+			listBox1->Items->Clear();
+			listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+		else if (cmbes == "Malo" && cmbes == libro[i].getEstado())
+		{
+			listBox1->Items->Clear();
 			listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
 		}
 	}
-
-
-	//listBox1->Items->Add(1);
-		/*string cmbR = marshal_as<string>(cmbRestado->SelectedText);
-		string NR = libro[cont].getNombre(); 
-		if (cmbR._Equal("Bueno"))
-		{
-			lblresultRestado->Text = marshal_as<String^>(libro[1].getNombre());
-		}*/
-		
-		/*if (cmbRestado->SelectedItem == "Bueno")
-		{
-			for (int i = 0; i < 5; i++)
-			{
-				libro[i].getNombre(); 
-				string nombre = libro[i].getNombre(); 
-				listBox1->Items->Add(marshal_as<String^>(nombre));
-			}
-
 			
-		}*/
-	
-
 }
 private: System::Void gpbxRestado_Enter(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -1900,9 +1895,6 @@ private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, Syst
 private: System::Void cmbRestado_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void cmbRdestino_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-
-
-
 
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
