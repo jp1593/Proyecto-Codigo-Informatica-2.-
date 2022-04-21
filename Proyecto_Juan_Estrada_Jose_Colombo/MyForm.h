@@ -216,6 +216,14 @@ private: System::Windows::Forms::Label^ label8;
 private: System::Windows::Forms::ListBox^ listBReditorial;
 private: System::Windows::Forms::Button^ btnReditorial;
 private: System::Windows::Forms::TextBox^ tbxReditorial;
+private: System::Windows::Forms::GroupBox^ gpbxRfecha;
+private: System::Windows::Forms::Label^ label9;
+private: System::Windows::Forms::Button^ button4;
+private: System::Windows::Forms::DateTimePicker^ dtmRfecha;
+
+private: System::Windows::Forms::ListBox^ listBRfecha;
+
+
 
 
 
@@ -373,10 +381,15 @@ private: System::Windows::Forms::TextBox^ tbxReditorial;
 			this->tbxRautor = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->gpbxReditorial = (gcnew System::Windows::Forms::GroupBox());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->tbxReditorial = (gcnew System::Windows::Forms::TextBox());
-			this->btnReditorial = (gcnew System::Windows::Forms::Button());
 			this->listBReditorial = (gcnew System::Windows::Forms::ListBox());
+			this->btnReditorial = (gcnew System::Windows::Forms::Button());
+			this->tbxReditorial = (gcnew System::Windows::Forms::TextBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->gpbxRfecha = (gcnew System::Windows::Forms::GroupBox());
+			this->listBRfecha = (gcnew System::Windows::Forms::ListBox());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->dtmRfecha = (gcnew System::Windows::Forms::DateTimePicker());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
 			this->gpbxingreso->SuspendLayout();
 			this->gpbVisualizar->SuspendLayout();
@@ -390,6 +403,7 @@ private: System::Windows::Forms::TextBox^ tbxReditorial;
 			this->gpbxEdicion->SuspendLayout();
 			this->gpbxRautor->SuspendLayout();
 			this->gpbxReditorial->SuspendLayout();
+			this->gpbxRfecha->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
@@ -479,7 +493,8 @@ private: System::Windows::Forms::TextBox^ tbxReditorial;
 			// 
 			this->reportePorAñoToolStripMenuItem->Name = L"reportePorAñoToolStripMenuItem";
 			this->reportePorAñoToolStripMenuItem->Size = System::Drawing::Size(290, 22);
-			this->reportePorAñoToolStripMenuItem->Text = L"Reporte por año ";
+			this->reportePorAñoToolStripMenuItem->Text = L"Reporte por fecha";
+			this->reportePorAñoToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorAñoToolStripMenuItem_Click);
 			// 
 			// reportePorAutorToolStripMenuItem
 			// 
@@ -1267,7 +1282,7 @@ private: System::Windows::Forms::TextBox^ tbxReditorial;
 					this->headautor, this->headfecha, this->headedicion, this->headestado, this->headdestino, this->headeditorial, this->headcategoria,
 					this->valorreferencia
 			});
-			this->dtgvcontrol->Location = System::Drawing::Point(717, 509);
+			this->dtgvcontrol->Location = System::Drawing::Point(209, 434);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
 			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
@@ -1279,7 +1294,7 @@ private: System::Windows::Forms::TextBox^ tbxReditorial;
 			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
 			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-			this->dtgvcontrol->Size = System::Drawing::Size(946, 150);
+			this->dtgvcontrol->Size = System::Drawing::Size(943, 200);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
 			this->dtgvcontrol->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dtgvcontrol_CellContentClick);
@@ -1590,7 +1605,7 @@ private: System::Windows::Forms::TextBox^ tbxReditorial;
 			this->gpbxReditorial->Controls->Add(this->btnReditorial);
 			this->gpbxReditorial->Controls->Add(this->tbxReditorial);
 			this->gpbxReditorial->Controls->Add(this->label8);
-			this->gpbxReditorial->Location = System::Drawing::Point(79, 426);
+			this->gpbxReditorial->Location = System::Drawing::Point(792, 27);
 			this->gpbxReditorial->Name = L"gpbxReditorial";
 			this->gpbxReditorial->Size = System::Drawing::Size(472, 224);
 			this->gpbxReditorial->TabIndex = 11;
@@ -1598,22 +1613,13 @@ private: System::Windows::Forms::TextBox^ tbxReditorial;
 			this->gpbxReditorial->Text = L"Reporte por editorial";
 			this->gpbxReditorial->Visible = false;
 			// 
-			// label8
+			// listBReditorial
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(13, 27);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(98, 13);
-			this->label8->TabIndex = 0;
-			this->label8->Text = L"Ingrese el editorial: ";
-			this->label8->Click += gcnew System::EventHandler(this, &MyForm::label8_Click);
-			// 
-			// tbxReditorial
-			// 
-			this->tbxReditorial->Location = System::Drawing::Point(131, 27);
-			this->tbxReditorial->Name = L"tbxReditorial";
-			this->tbxReditorial->Size = System::Drawing::Size(317, 20);
-			this->tbxReditorial->TabIndex = 1;
+			this->listBReditorial->FormattingEnabled = true;
+			this->listBReditorial->Location = System::Drawing::Point(131, 93);
+			this->listBReditorial->Name = L"listBReditorial";
+			this->listBReditorial->Size = System::Drawing::Size(216, 108);
+			this->listBReditorial->TabIndex = 3;
 			// 
 			// btnReditorial
 			// 
@@ -1625,19 +1631,78 @@ private: System::Windows::Forms::TextBox^ tbxReditorial;
 			this->btnReditorial->UseVisualStyleBackColor = true;
 			this->btnReditorial->Click += gcnew System::EventHandler(this, &MyForm::btnReditorial_Click);
 			// 
-			// listBReditorial
+			// tbxReditorial
 			// 
-			this->listBReditorial->FormattingEnabled = true;
-			this->listBReditorial->Location = System::Drawing::Point(131, 93);
-			this->listBReditorial->Name = L"listBReditorial";
-			this->listBReditorial->Size = System::Drawing::Size(216, 108);
-			this->listBReditorial->TabIndex = 3;
+			this->tbxReditorial->Location = System::Drawing::Point(131, 27);
+			this->tbxReditorial->Name = L"tbxReditorial";
+			this->tbxReditorial->Size = System::Drawing::Size(317, 20);
+			this->tbxReditorial->TabIndex = 1;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(13, 27);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(98, 13);
+			this->label8->TabIndex = 0;
+			this->label8->Text = L"Ingrese el editorial: ";
+			this->label8->Click += gcnew System::EventHandler(this, &MyForm::label8_Click);
+			// 
+			// gpbxRfecha
+			// 
+			this->gpbxRfecha->Controls->Add(this->listBRfecha);
+			this->gpbxRfecha->Controls->Add(this->button4);
+			this->gpbxRfecha->Controls->Add(this->dtmRfecha);
+			this->gpbxRfecha->Controls->Add(this->label9);
+			this->gpbxRfecha->Location = System::Drawing::Point(776, 23);
+			this->gpbxRfecha->Name = L"gpbxRfecha";
+			this->gpbxRfecha->Size = System::Drawing::Size(594, 237);
+			this->gpbxRfecha->TabIndex = 12;
+			this->gpbxRfecha->TabStop = false;
+			this->gpbxRfecha->Text = L"Reporte por fecha ";
+			this->gpbxRfecha->Visible = false;
+			// 
+			// listBRfecha
+			// 
+			this->listBRfecha->FormattingEnabled = true;
+			this->listBRfecha->Location = System::Drawing::Point(221, 108);
+			this->listBRfecha->Name = L"listBRfecha";
+			this->listBRfecha->Size = System::Drawing::Size(120, 95);
+			this->listBRfecha->TabIndex = 3;
+			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(174, 64);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(217, 23);
+			this->button4->TabIndex = 2;
+			this->button4->Text = L"Reporte por fecha de publicacion";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
+			// 
+			// dtmRfecha
+			// 
+			this->dtmRfecha->Location = System::Drawing::Point(272, 24);
+			this->dtmRfecha->Name = L"dtmRfecha";
+			this->dtmRfecha->Size = System::Drawing::Size(271, 20);
+			this->dtmRfecha->TabIndex = 1;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(16, 30);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(219, 13);
+			this->label9->TabIndex = 0;
+			this->label9->Text = L"Ingrese la fecha de publicacion de los libros: ";
+			this->label9->Click += gcnew System::EventHandler(this, &MyForm::label9_Click);
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1370, 681);
+			this->Controls->Add(this->gpbxRfecha);
 			this->Controls->Add(this->gpbxReditorial);
 			this->Controls->Add(this->gpbxRautor);
 			this->Controls->Add(this->gpbxEdicion);
@@ -1679,6 +1744,8 @@ private: System::Windows::Forms::TextBox^ tbxReditorial;
 			this->gpbxRautor->PerformLayout();
 			this->gpbxReditorial->ResumeLayout(false);
 			this->gpbxReditorial->PerformLayout();
+			this->gpbxRfecha->ResumeLayout(false);
+			this->gpbxRfecha->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1700,6 +1767,7 @@ private: System::Void ingresarLibroToolStripMenuItem_Click(System::Object^ sende
 	gpbxEdicion->Visible = false;
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -1717,6 +1785,7 @@ private: System::Void visualizarLibroToolStripMenuItem_Click(System::Object^ sen
 	gpbxEdicion->Visible = false;
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -1762,6 +1831,7 @@ private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ send
 	gpbxEdicion->Visible = false;
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
 }
 private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs^ e) {
 	try 
@@ -1834,6 +1904,7 @@ private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs
 			cmbdestino->Visible = false;
 			cmbcategoria->Visible = false;
 			tbxeditorial->Visible = false;
+			gpbxRfecha->Visible = false;
 		}
 
 	}
@@ -1886,6 +1957,7 @@ private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sen
 		gpbxEdicion->Visible = false;
 		gpbxRautor->Visible = false;
 		gpbxReditorial->Visible = false;
+		gpbxRfecha->Visible = false;
 		MessageBox::Show("Este es el control de los libros en el inventario bibliotecario.");
 
 	}
@@ -1989,6 +2061,7 @@ private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sende
 	gpbxEdicion->Visible = false;
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
 }
 
 private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2047,6 +2120,7 @@ private: System::Void cantidadDeLibrosToolStripMenuItem_Click(System::Object^ se
 	gpbxEdicion->Visible = false;
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
 
 	impcont = to_string(cont); 
 	lblresultRcantidadlibros->Text = marshal_as<String^>(impcont);
@@ -2071,6 +2145,7 @@ private: System::Void reportePorEstadoDeLibroToolStripMenuItem_Click(System::Obj
 	gpbxEdicion->Visible = false;
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
 
 }
 private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
@@ -2127,6 +2202,7 @@ private: System::Void reportePorCategoríaToolStripMenuItem_Click(System::Object^
 	gpbxEdicion->Visible = false;
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
 	
 }
 private: System::Void reportePorDestinoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2142,6 +2218,7 @@ private: System::Void reportePorDestinoToolStripMenuItem_Click(System::Object^ s
 	gpbxEdicion->Visible = false;
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
 	
 }
 private: System::Void gpbxRcategoria_Enter(System::Object^ sender, System::EventArgs^ e) {
@@ -2293,6 +2370,7 @@ private: System::Void reportePorEdicionToolStripMenuItem_Click(System::Object^ s
 	gpbxEdicion->Visible = true;
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
 
 }
 private: System::Void btnRedicion_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2322,6 +2400,7 @@ private: System::Void reportePorAutorToolStripMenuItem_Click(System::Object^ sen
 	gpbxEdicion->Visible = false;
 	gpbxRautor->Visible = true; 
 	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
 
 }
 private: System::Void btnRautor_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2350,12 +2429,13 @@ private: System::Void reportePorEditorialToolStripMenuItem_Click(System::Object^
 	gpbxEdicion->Visible = false;
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = true; 
+	gpbxRfecha->Visible = false;
 
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void btnReditorial_Click(System::Object^ sender, System::EventArgs^ e) {
-	//Reporte de libros por autor 
+	//Reporte de libros por editorial 
 	string editorialTxt = marshal_as<string>(tbxReditorial->Text);
 	listBReditorial->Items->Clear();
 	for (int i = 0; i < 5; i++)
@@ -2365,6 +2445,36 @@ private: System::Void btnReditorial_Click(System::Object^ sender, System::EventA
 			listBReditorial->Items->Add(marshal_as<String^>(libro[i].getNombre()));
 		}
 	}
+}
+private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Reporte por fecha de libros 
+	string fecha = marshal_as<string>(dtmRfecha->Text); 
+	listBRfecha->Items->Clear(); 
+	for (int i = 0; i < 5; i++)
+	{
+		if (fecha == libro[i].getFecha())
+		{
+			listBRfecha->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+	}
+}
+private: System::Void reportePorAñoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Reporte de libros por fecha visible, los demas diseños ocultos 
+	gpbmodificar->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
+	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = true; 
 }
 };
 }
