@@ -201,6 +201,23 @@ private: System::Windows::Forms::ComboBox^ cmbRcategoria;
 private: System::Windows::Forms::Label^ label5;
 private: System::Windows::Forms::ListBox^ listBox2;
 private: System::Windows::Forms::ListBox^ listBox3;
+private: System::Windows::Forms::GroupBox^ gpbxEdicion;
+private: System::Windows::Forms::Button^ btnRedicion;
+private: System::Windows::Forms::TextBox^ tbxRedicion;
+private: System::Windows::Forms::Label^ label6;
+private: System::Windows::Forms::ListBox^ listBRedicion;
+private: System::Windows::Forms::GroupBox^ gpbxRautor;
+private: System::Windows::Forms::ListBox^ listBRautor;
+private: System::Windows::Forms::Button^ btnRautor;
+private: System::Windows::Forms::TextBox^ tbxRautor;
+private: System::Windows::Forms::Label^ label7;
+private: System::Windows::Forms::GroupBox^ gpbxReditorial;
+private: System::Windows::Forms::Label^ label8;
+private: System::Windows::Forms::ListBox^ listBReditorial;
+private: System::Windows::Forms::Button^ btnReditorial;
+private: System::Windows::Forms::TextBox^ tbxReditorial;
+
+
 
 
 
@@ -231,7 +248,7 @@ private: System::Windows::Forms::ListBox^ listBox3;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->libroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ingresarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -345,6 +362,21 @@ private: System::Windows::Forms::ListBox^ listBox3;
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->cmbRcategoria = (gcnew System::Windows::Forms::ComboBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->gpbxEdicion = (gcnew System::Windows::Forms::GroupBox());
+			this->listBRedicion = (gcnew System::Windows::Forms::ListBox());
+			this->btnRedicion = (gcnew System::Windows::Forms::Button());
+			this->tbxRedicion = (gcnew System::Windows::Forms::TextBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->gpbxRautor = (gcnew System::Windows::Forms::GroupBox());
+			this->listBRautor = (gcnew System::Windows::Forms::ListBox());
+			this->btnRautor = (gcnew System::Windows::Forms::Button());
+			this->tbxRautor = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->gpbxReditorial = (gcnew System::Windows::Forms::GroupBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->tbxReditorial = (gcnew System::Windows::Forms::TextBox());
+			this->btnReditorial = (gcnew System::Windows::Forms::Button());
+			this->listBReditorial = (gcnew System::Windows::Forms::ListBox());
 			this->menuStrip1->SuspendLayout();
 			this->gpbxingreso->SuspendLayout();
 			this->gpbVisualizar->SuspendLayout();
@@ -355,6 +387,9 @@ private: System::Windows::Forms::ListBox^ listBox3;
 			this->gpbxRcantidadlibro->SuspendLayout();
 			this->gpbxRestado->SuspendLayout();
 			this->gpbxRcategoria->SuspendLayout();
+			this->gpbxEdicion->SuspendLayout();
+			this->gpbxRautor->SuspendLayout();
+			this->gpbxReditorial->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
@@ -438,6 +473,7 @@ private: System::Windows::Forms::ListBox^ listBox3;
 			this->reportePorEdicionToolStripMenuItem->Name = L"reportePorEdicionToolStripMenuItem";
 			this->reportePorEdicionToolStripMenuItem->Size = System::Drawing::Size(290, 22);
 			this->reportePorEdicionToolStripMenuItem->Text = L"Reporte por edicion";
+			this->reportePorEdicionToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorEdicionToolStripMenuItem_Click);
 			// 
 			// reportePorAñoToolStripMenuItem
 			// 
@@ -450,12 +486,14 @@ private: System::Windows::Forms::ListBox^ listBox3;
 			this->reportePorAutorToolStripMenuItem->Name = L"reportePorAutorToolStripMenuItem";
 			this->reportePorAutorToolStripMenuItem->Size = System::Drawing::Size(290, 22);
 			this->reportePorAutorToolStripMenuItem->Text = L"Reporte por autor ";
+			this->reportePorAutorToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorAutorToolStripMenuItem_Click);
 			// 
 			// reportePorEditorialToolStripMenuItem
 			// 
 			this->reportePorEditorialToolStripMenuItem->Name = L"reportePorEditorialToolStripMenuItem";
 			this->reportePorEditorialToolStripMenuItem->Size = System::Drawing::Size(290, 22);
 			this->reportePorEditorialToolStripMenuItem->Text = L"Reporte por editorial";
+			this->reportePorEditorialToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorEditorialToolStripMenuItem_Click);
 			// 
 			// reportePorCategoríaToolStripMenuItem
 			// 
@@ -1174,7 +1212,7 @@ private: System::Windows::Forms::ListBox^ listBox3;
 			this->gpbxRdestino->Controls->Add(this->button2);
 			this->gpbxRdestino->Controls->Add(this->cmbRdestino);
 			this->gpbxRdestino->Controls->Add(this->label4);
-			this->gpbxRdestino->Location = System::Drawing::Point(22, 423);
+			this->gpbxRdestino->Location = System::Drawing::Point(814, 29);
 			this->gpbxRdestino->Name = L"gpbxRdestino";
 			this->gpbxRdestino->Size = System::Drawing::Size(454, 246);
 			this->gpbxRdestino->TabIndex = 5;
@@ -1232,15 +1270,15 @@ private: System::Windows::Forms::ListBox^ listBox3;
 			this->dtgvcontrol->Location = System::Drawing::Point(717, 509);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->dtgvcontrol->Size = System::Drawing::Size(946, 150);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
@@ -1340,9 +1378,9 @@ private: System::Windows::Forms::ListBox^ listBox3;
 			this->gpbxRestado->Controls->Add(this->button1);
 			this->gpbxRestado->Controls->Add(this->cmbRestado);
 			this->gpbxRestado->Controls->Add(this->label3);
-			this->gpbxRestado->Location = System::Drawing::Point(830, 39);
+			this->gpbxRestado->Location = System::Drawing::Point(814, 26);
 			this->gpbxRestado->Name = L"gpbxRestado";
-			this->gpbxRestado->Size = System::Drawing::Size(495, 355);
+			this->gpbxRestado->Size = System::Drawing::Size(541, 260);
 			this->gpbxRestado->TabIndex = 7;
 			this->gpbxRestado->TabStop = false;
 			this->gpbxRestado->Text = L"Reporte por estado";
@@ -1402,7 +1440,7 @@ private: System::Windows::Forms::ListBox^ listBox3;
 			this->gpbxRcategoria->Controls->Add(this->button3);
 			this->gpbxRcategoria->Controls->Add(this->cmbRcategoria);
 			this->gpbxRcategoria->Controls->Add(this->label5);
-			this->gpbxRcategoria->Location = System::Drawing::Point(458, 431);
+			this->gpbxRcategoria->Location = System::Drawing::Point(814, 27);
 			this->gpbxRcategoria->Name = L"gpbxRcategoria";
 			this->gpbxRcategoria->Size = System::Drawing::Size(476, 228);
 			this->gpbxRcategoria->TabIndex = 8;
@@ -1450,11 +1488,159 @@ private: System::Windows::Forms::ListBox^ listBox3;
 			this->label5->TabIndex = 0;
 			this->label5->Text = L"Seleccione la categoria por el cual quiera realizar la busqueda:";
 			// 
+			// gpbxEdicion
+			// 
+			this->gpbxEdicion->Controls->Add(this->listBRedicion);
+			this->gpbxEdicion->Controls->Add(this->btnRedicion);
+			this->gpbxEdicion->Controls->Add(this->tbxRedicion);
+			this->gpbxEdicion->Controls->Add(this->label6);
+			this->gpbxEdicion->Location = System::Drawing::Point(810, 26);
+			this->gpbxEdicion->Name = L"gpbxEdicion";
+			this->gpbxEdicion->Size = System::Drawing::Size(458, 234);
+			this->gpbxEdicion->TabIndex = 9;
+			this->gpbxEdicion->TabStop = false;
+			this->gpbxEdicion->Text = L"Reporte por edicion";
+			this->gpbxEdicion->Visible = false;
+			// 
+			// listBRedicion
+			// 
+			this->listBRedicion->FormattingEnabled = true;
+			this->listBRedicion->Location = System::Drawing::Point(156, 114);
+			this->listBRedicion->Name = L"listBRedicion";
+			this->listBRedicion->Size = System::Drawing::Size(120, 95);
+			this->listBRedicion->TabIndex = 3;
+			// 
+			// btnRedicion
+			// 
+			this->btnRedicion->Location = System::Drawing::Point(137, 68);
+			this->btnRedicion->Name = L"btnRedicion";
+			this->btnRedicion->Size = System::Drawing::Size(160, 23);
+			this->btnRedicion->TabIndex = 2;
+			this->btnRedicion->Text = L"Consultar libros por edicion";
+			this->btnRedicion->UseVisualStyleBackColor = true;
+			this->btnRedicion->Click += gcnew System::EventHandler(this, &MyForm::btnRedicion_Click);
+			// 
+			// tbxRedicion
+			// 
+			this->tbxRedicion->Location = System::Drawing::Point(218, 32);
+			this->tbxRedicion->Name = L"tbxRedicion";
+			this->tbxRedicion->Size = System::Drawing::Size(176, 20);
+			this->tbxRedicion->TabIndex = 1;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(6, 32);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(206, 13);
+			this->label6->TabIndex = 0;
+			this->label6->Text = L"Ingrese la edición de los libros a consultar:";
+			// 
+			// gpbxRautor
+			// 
+			this->gpbxRautor->Controls->Add(this->listBRautor);
+			this->gpbxRautor->Controls->Add(this->btnRautor);
+			this->gpbxRautor->Controls->Add(this->tbxRautor);
+			this->gpbxRautor->Controls->Add(this->label7);
+			this->gpbxRautor->Location = System::Drawing::Point(801, 24);
+			this->gpbxRautor->Name = L"gpbxRautor";
+			this->gpbxRautor->Size = System::Drawing::Size(451, 238);
+			this->gpbxRautor->TabIndex = 10;
+			this->gpbxRautor->TabStop = false;
+			this->gpbxRautor->Text = L"Reporte por autor";
+			this->gpbxRautor->Visible = false;
+			// 
+			// listBRautor
+			// 
+			this->listBRautor->FormattingEnabled = true;
+			this->listBRautor->Location = System::Drawing::Point(167, 114);
+			this->listBRautor->Name = L"listBRautor";
+			this->listBRautor->Size = System::Drawing::Size(120, 95);
+			this->listBRautor->TabIndex = 3;
+			// 
+			// btnRautor
+			// 
+			this->btnRautor->Location = System::Drawing::Point(156, 71);
+			this->btnRautor->Name = L"btnRautor";
+			this->btnRautor->Size = System::Drawing::Size(131, 23);
+			this->btnRautor->TabIndex = 2;
+			this->btnRautor->Text = L"Buscar libros del autor";
+			this->btnRautor->UseVisualStyleBackColor = true;
+			this->btnRautor->Click += gcnew System::EventHandler(this, &MyForm::btnRautor_Click);
+			// 
+			// tbxRautor
+			// 
+			this->tbxRautor->Location = System::Drawing::Point(126, 45);
+			this->tbxRautor->Name = L"tbxRautor";
+			this->tbxRautor->Size = System::Drawing::Size(206, 20);
+			this->tbxRautor->TabIndex = 1;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(105, 29);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(249, 13);
+			this->label7->TabIndex = 0;
+			this->label7->Text = L"Ingrese el autor por el que desea buscar sus libros: ";
+			// 
+			// gpbxReditorial
+			// 
+			this->gpbxReditorial->Controls->Add(this->listBReditorial);
+			this->gpbxReditorial->Controls->Add(this->btnReditorial);
+			this->gpbxReditorial->Controls->Add(this->tbxReditorial);
+			this->gpbxReditorial->Controls->Add(this->label8);
+			this->gpbxReditorial->Location = System::Drawing::Point(79, 426);
+			this->gpbxReditorial->Name = L"gpbxReditorial";
+			this->gpbxReditorial->Size = System::Drawing::Size(472, 224);
+			this->gpbxReditorial->TabIndex = 11;
+			this->gpbxReditorial->TabStop = false;
+			this->gpbxReditorial->Text = L"Reporte por editorial";
+			this->gpbxReditorial->Visible = false;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(13, 27);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(98, 13);
+			this->label8->TabIndex = 0;
+			this->label8->Text = L"Ingrese el editorial: ";
+			this->label8->Click += gcnew System::EventHandler(this, &MyForm::label8_Click);
+			// 
+			// tbxReditorial
+			// 
+			this->tbxReditorial->Location = System::Drawing::Point(131, 27);
+			this->tbxReditorial->Name = L"tbxReditorial";
+			this->tbxReditorial->Size = System::Drawing::Size(317, 20);
+			this->tbxReditorial->TabIndex = 1;
+			// 
+			// btnReditorial
+			// 
+			this->btnReditorial->Location = System::Drawing::Point(131, 53);
+			this->btnReditorial->Name = L"btnReditorial";
+			this->btnReditorial->Size = System::Drawing::Size(229, 23);
+			this->btnReditorial->TabIndex = 2;
+			this->btnReditorial->Text = L"Busqueda de libros por su editorial";
+			this->btnReditorial->UseVisualStyleBackColor = true;
+			this->btnReditorial->Click += gcnew System::EventHandler(this, &MyForm::btnReditorial_Click);
+			// 
+			// listBReditorial
+			// 
+			this->listBReditorial->FormattingEnabled = true;
+			this->listBReditorial->Location = System::Drawing::Point(131, 93);
+			this->listBReditorial->Name = L"listBReditorial";
+			this->listBReditorial->Size = System::Drawing::Size(216, 108);
+			this->listBReditorial->TabIndex = 3;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1370, 681);
+			this->Controls->Add(this->gpbxReditorial);
+			this->Controls->Add(this->gpbxRautor);
+			this->Controls->Add(this->gpbxEdicion);
 			this->Controls->Add(this->gpbxRcategoria);
 			this->Controls->Add(this->gpbxRdestino);
 			this->Controls->Add(this->gpbxRestado);
@@ -1487,6 +1673,12 @@ private: System::Windows::Forms::ListBox^ listBox3;
 			this->gpbxRestado->PerformLayout();
 			this->gpbxRcategoria->ResumeLayout(false);
 			this->gpbxRcategoria->PerformLayout();
+			this->gpbxEdicion->ResumeLayout(false);
+			this->gpbxEdicion->PerformLayout();
+			this->gpbxRautor->ResumeLayout(false);
+			this->gpbxRautor->PerformLayout();
+			this->gpbxReditorial->ResumeLayout(false);
+			this->gpbxReditorial->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1505,6 +1697,9 @@ private: System::Void ingresarLibroToolStripMenuItem_Click(System::Object^ sende
 	gpbxRestado->Visible = false;
 	gpbxRdestino->Visible = false;
 	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -1519,6 +1714,9 @@ private: System::Void visualizarLibroToolStripMenuItem_Click(System::Object^ sen
 	gpbxRestado->Visible = false;
 	gpbxRdestino->Visible = false;
 	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -1561,6 +1759,9 @@ private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ send
 	gpbxRestado->Visible = false;
 	gpbxRdestino->Visible = false;
 	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
 }
 private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs^ e) {
 	try 
@@ -1682,6 +1883,9 @@ private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sen
 		gpbxRestado->Visible = false;
 		gpbxRdestino->Visible = false;
 		gpbxRcategoria->Visible = false;
+		gpbxEdicion->Visible = false;
+		gpbxRautor->Visible = false;
+		gpbxReditorial->Visible = false;
 		MessageBox::Show("Este es el control de los libros en el inventario bibliotecario.");
 
 	}
@@ -1782,6 +1986,9 @@ private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sende
 	gpbxRestado->Visible = false;
 	gpbxRdestino->Visible = false;
 	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
 }
 
 private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1837,6 +2044,9 @@ private: System::Void cantidadDeLibrosToolStripMenuItem_Click(System::Object^ se
 	gpbxRestado->Visible = false;
 	gpbxRdestino->Visible = false;
 	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
 
 	impcont = to_string(cont); 
 	lblresultRcantidadlibros->Text = marshal_as<String^>(impcont);
@@ -1848,6 +2058,7 @@ private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void cmbestadoModificar_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void reportePorEstadoDeLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Reporte de estado visible, los demas diseños ocultos
 	gpbmodificar->Visible = false;
 	gpbeliminar->Visible = false;
 	gpbxingreso->Visible = false;
@@ -1857,6 +2068,9 @@ private: System::Void reportePorEstadoDeLibroToolStripMenuItem_Click(System::Obj
 	gpbxRestado->Visible = true;
 	gpbxRdestino->Visible = false;
 	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
 
 }
 private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
@@ -1910,6 +2124,9 @@ private: System::Void reportePorCategoríaToolStripMenuItem_Click(System::Object^
 	gpbxRestado->Visible = false;
 	gpbxRdestino->Visible = false;
 	gpbxRcategoria->Visible = true;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
 	
 }
 private: System::Void reportePorDestinoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1922,7 +2139,9 @@ private: System::Void reportePorDestinoToolStripMenuItem_Click(System::Object^ s
 	gpbxRestado->Visible = false;
 	gpbxRdestino->Visible = true;
 	gpbxRcategoria->Visible = false;
-	
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
 	
 }
 private: System::Void gpbxRcategoria_Enter(System::Object^ sender, System::EventArgs^ e) {
@@ -2057,6 +2276,93 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 		{
 			listBox3->Items->Clear();
 			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+	}
+}
+private: System::Void reportePorEdicionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Reporte de edicion visible, los demas diseños ocultos 
+	gpbmodificar->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
+	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = true;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
+
+}
+private: System::Void btnRedicion_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	//Reporte por edicion del libro 
+	string edicionTxt = marshal_as<string>(tbxRedicion->Text); 
+	listBRedicion->Items->Clear();
+	for (int i = 0; i < 5; i++)
+	{
+		if (edicionTxt == libro[i].getEdicion())
+		{ 
+			listBRedicion->Items->Add(marshal_as<String^>(libro[i].getNombre())); 
+		}
+	}
+}
+private: System::Void reportePorAutorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Reporte de autor visible, los demas diseños ocultos
+	gpbmodificar->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
+	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = true; 
+	gpbxReditorial->Visible = false;
+
+}
+private: System::Void btnRautor_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Reporte de libros por autor 
+	string autorTxt = marshal_as<string>(tbxRautor->Text);
+	listBRautor->Items->Clear();
+	for (int i = 0; i < 5; i++)
+	{
+		if (autorTxt == libro[i].getAutor())
+		{
+			listBRautor->Items->Add(marshal_as<String^>(libro[i].getNombre()));
+		}
+	}
+}
+private: System::Void reportePorEditorialToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Reporte de editorial visible, los demas diseños ocultos
+	gpbmodificar->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
+	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = true; 
+
+}
+private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnReditorial_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Reporte de libros por autor 
+	string editorialTxt = marshal_as<string>(tbxReditorial->Text);
+	listBReditorial->Items->Clear();
+	for (int i = 0; i < 5; i++)
+	{
+		if (editorialTxt == libro[i].getEditorial())
+		{
+			listBReditorial->Items->Add(marshal_as<String^>(libro[i].getNombre()));
 		}
 	}
 }
