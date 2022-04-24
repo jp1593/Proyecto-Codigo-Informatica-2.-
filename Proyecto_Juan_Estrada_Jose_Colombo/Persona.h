@@ -12,7 +12,6 @@ public:
 	
 private: 
 
-	//Comentario de prueba de nueva descarga 
 	void verdatospersona()
 	{
 		std::string result = nombrepersona + documentoident + numtelefono + dedicacion; 

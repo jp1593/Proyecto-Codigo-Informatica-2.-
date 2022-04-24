@@ -1,5 +1,5 @@
 #pragma once
-//#include "MyForm.h"
+#include "MyForm.h"
 
 namespace ProyectoJuanEstradaJoseColombo {
 
@@ -16,9 +16,11 @@ namespace ProyectoJuanEstradaJoseColombo {
 	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
 	public:
+		//MyForm^ myform;
 		//Form^ obj; 
 		MyForm1(void)
 		{
+			//myform = gcnew MyForm();
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -133,21 +135,18 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Name = L"MyForm1";
 			this->Text = L"MyForm1";
+			this->Load += gcnew System::EventHandler(this, &MyForm1::MyForm1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		//MyForm().ShowDialog(); 
-	/*ProyectoJuanEstradaJoseColombo::MyForm^ segundoForm = gcnew ProyectoJuanEstradaJoseColombo::MyForm();
-	segundoForm->Show(); 
-		//this->Show(); 
-		//obj->Hide(); 
-		//Form^ formulario1 = gcnew MyForm(); 
-	/*	MyForm^ ventana = gcnew MyForm();
-		ventana->Show(); 
-		this->Hide(); */
-	}
+	private: 
+		Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+
+		 void mostrar(); 
+
+private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

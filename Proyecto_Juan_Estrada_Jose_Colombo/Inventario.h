@@ -2,8 +2,6 @@
 #include <iostream>
 #include <string>
 
-//Considerar el hacer otra clase para las personas que ingresen los libros. 
-
 class Inventario
 {
 private: 

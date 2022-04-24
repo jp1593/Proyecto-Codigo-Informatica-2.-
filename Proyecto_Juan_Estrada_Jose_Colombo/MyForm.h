@@ -5,6 +5,8 @@
 #include "Persona.h"
 #include <msclr\marshal.h>
 #include <msclr\marshal_cppstd.h>
+#include "MyForm1.h"
+
 
 namespace ProyectoJuanEstradaJoseColombo {
 
@@ -15,12 +17,21 @@ namespace ProyectoJuanEstradaJoseColombo {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace msclr::interop;
-	using namespace std;
-	Inventario libro[5]; 
-	int cont = 0; 
-	int cant = 0; 
-	string impcont = ""; 
+	
+	/*extern Inventario libro[];
+	extern int cont; 
+	extern int cant; 
+	extern std::string impcont; */
 
+	static Inventario libro[5];
+	static int cont = 0;
+	static int cant = 0;
+	static std::string impcont = "";
+
+	/*Inventario libro[5];
+	int cont = 0;
+	int cant = 0;
+	std::string impcont = "";*/
 
 	/// <summary>
 	/// Summary for MyForm
@@ -28,8 +39,10 @@ namespace ProyectoJuanEstradaJoseColombo {
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
+
 		MyForm(void)
 		{
+		
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -222,6 +235,7 @@ private: System::Windows::Forms::Button^ button4;
 private: System::Windows::Forms::DateTimePicker^ dtmRfecha;
 
 private: System::Windows::Forms::ListBox^ listBRfecha;
+private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuItem;
 
 
 
@@ -275,6 +289,7 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 			this->reportePorDestinoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->controlDeLibrosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->personasRegistradasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->cerrarSesionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->gpbxingreso = (gcnew System::Windows::Forms::GroupBox());
 			this->cmbcategoria = (gcnew System::Windows::Forms::ComboBox());
 			this->tbxeditorial = (gcnew System::Windows::Forms::TextBox());
@@ -408,13 +423,13 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->libroToolStripMenuItem,
-					this->reportesToolStripMenuItem, this->controlDeLibrosToolStripMenuItem, this->personasRegistradasToolStripMenuItem
+					this->reportesToolStripMenuItem, this->controlDeLibrosToolStripMenuItem, this->personasRegistradasToolStripMenuItem, this->cerrarSesionToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1370, 24);
+			this->menuStrip1->Size = System::Drawing::Size(1512, 24);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -543,6 +558,14 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 			this->personasRegistradasToolStripMenuItem->Size = System::Drawing::Size(126, 20);
 			this->personasRegistradasToolStripMenuItem->Text = L"Personas registradas";
 			// 
+			// cerrarSesionToolStripMenuItem
+			// 
+			this->cerrarSesionToolStripMenuItem->BackColor = System::Drawing::Color::Red;
+			this->cerrarSesionToolStripMenuItem->Name = L"cerrarSesionToolStripMenuItem";
+			this->cerrarSesionToolStripMenuItem->Size = System::Drawing::Size(87, 20);
+			this->cerrarSesionToolStripMenuItem->Text = L"Cerrar sesion";
+			this->cerrarSesionToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::cerrarSesionToolStripMenuItem_Click);
+			// 
 			// gpbxingreso
 			// 
 			this->gpbxingreso->Controls->Add(this->cmbcategoria);
@@ -627,7 +650,7 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 			// cmbdestino
 			// 
 			this->cmbdestino->FormattingEnabled = true;
-			this->cmbdestino->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Ingreso a biblioteca", L"Reciclaje ", L"Seccion tome 1" });
+			this->cmbdestino->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Ingreso a biblioteca", L"Reciclaje", L"Seccion tome 1" });
 			this->cmbdestino->Location = System::Drawing::Point(183, 227);
 			this->cmbdestino->Name = L"cmbdestino";
 			this->cmbdestino->Size = System::Drawing::Size(174, 21);
@@ -1023,7 +1046,7 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 			this->gpbmodificar->Controls->Add(this->lbltitautorModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitnombreModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitvreferenciaModificar);
-			this->gpbmodificar->Location = System::Drawing::Point(0, 27);
+			this->gpbmodificar->Location = System::Drawing::Point(6, 26);
 			this->gpbmodificar->Name = L"gpbmodificar";
 			this->gpbmodificar->Size = System::Drawing::Size(724, 379);
 			this->gpbmodificar->TabIndex = 4;
@@ -1509,7 +1532,7 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 			this->gpbxEdicion->Controls->Add(this->btnRedicion);
 			this->gpbxEdicion->Controls->Add(this->tbxRedicion);
 			this->gpbxEdicion->Controls->Add(this->label6);
-			this->gpbxEdicion->Location = System::Drawing::Point(810, 26);
+			this->gpbxEdicion->Location = System::Drawing::Point(815, 23);
 			this->gpbxEdicion->Name = L"gpbxEdicion";
 			this->gpbxEdicion->Size = System::Drawing::Size(458, 234);
 			this->gpbxEdicion->TabIndex = 9;
@@ -1557,7 +1580,7 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 			this->gpbxRautor->Controls->Add(this->btnRautor);
 			this->gpbxRautor->Controls->Add(this->tbxRautor);
 			this->gpbxRautor->Controls->Add(this->label7);
-			this->gpbxRautor->Location = System::Drawing::Point(801, 24);
+			this->gpbxRautor->Location = System::Drawing::Point(839, 13);
 			this->gpbxRautor->Name = L"gpbxRautor";
 			this->gpbxRautor->Size = System::Drawing::Size(451, 238);
 			this->gpbxRautor->TabIndex = 10;
@@ -1605,7 +1628,7 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 			this->gpbxReditorial->Controls->Add(this->btnReditorial);
 			this->gpbxReditorial->Controls->Add(this->tbxReditorial);
 			this->gpbxReditorial->Controls->Add(this->label8);
-			this->gpbxReditorial->Location = System::Drawing::Point(792, 27);
+			this->gpbxReditorial->Location = System::Drawing::Point(796, 17);
 			this->gpbxReditorial->Name = L"gpbxReditorial";
 			this->gpbxReditorial->Size = System::Drawing::Size(472, 224);
 			this->gpbxReditorial->TabIndex = 11;
@@ -1654,7 +1677,7 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 			this->gpbxRfecha->Controls->Add(this->button4);
 			this->gpbxRfecha->Controls->Add(this->dtmRfecha);
 			this->gpbxRfecha->Controls->Add(this->label9);
-			this->gpbxRfecha->Location = System::Drawing::Point(776, 23);
+			this->gpbxRfecha->Location = System::Drawing::Point(801, 18);
 			this->gpbxRfecha->Name = L"gpbxRfecha";
 			this->gpbxRfecha->Size = System::Drawing::Size(594, 237);
 			this->gpbxRfecha->TabIndex = 12;
@@ -1701,17 +1724,17 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1370, 681);
+			this->ClientSize = System::Drawing::Size(1512, 681);
 			this->Controls->Add(this->gpbxRfecha);
 			this->Controls->Add(this->gpbxReditorial);
 			this->Controls->Add(this->gpbxRautor);
 			this->Controls->Add(this->gpbxEdicion);
 			this->Controls->Add(this->gpbxRcategoria);
 			this->Controls->Add(this->gpbxRdestino);
+			this->Controls->Add(this->gpbmodificar);
 			this->Controls->Add(this->gpbxRestado);
 			this->Controls->Add(this->gpbxRcantidadlibro);
 			this->Controls->Add(this->dtgvcontrol);
-			this->Controls->Add(this->gpbmodificar);
 			this->Controls->Add(this->gpbeliminar);
 			this->Controls->Add(this->gpbxingreso);
 			this->Controls->Add(this->gpbVisualizar);
@@ -1751,9 +1774,14 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 
 		}
 #pragma endregion
+		
 	private: System::Void eliminarToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+
+		   void cerrar(); 
+
 private: System::Void ingresarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+
 	//Establecimiento del groupboxingreso Visible + Ocultar los demas groupbox
 	gpbxingreso->Visible = true; 
 	gpbVisualizar->Visible = false;
@@ -1772,8 +1800,9 @@ private: System::Void ingresarLibroToolStripMenuItem_Click(System::Object^ sende
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void visualizarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+
 	//Establecimiento del groupboxVisualizar Visible + Ocultar los demas groupbox
-	gpbVisualizar->Visible = true; 
+	gpbVisualizar->Visible = true;
 	gpbxingreso->Visible = false;
 	dtgvcontrol->Visible = false;
 	gpbeliminar->Visible = false;
@@ -1788,25 +1817,19 @@ private: System::Void visualizarLibroToolStripMenuItem_Click(System::Object^ sen
 	gpbxRfecha->Visible = false;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	
 	try
 	{
-		//int id = stoi(marshal_as<string>(tbxvalorreferenciaEliminar->Text));
-		//lblresultnombreEliminar->Text = marshal_as<String^>(libro[id].getNombre());
-
-		int id = stoi(marshal_as<string>(tbxvalorreferenciaEliminar->Text));
+		int id = stoi(marshal_as<std::string>(tbxvalorreferenciaEliminar->Text));
 		lblresultnombreEliminar->Text = marshal_as<String^>(libro[id].getNombre());
-
 	}
 	catch (Exception^ ex)
 	{
 		MessageBox::Show(ex->Message);
-	}try
+	}
+	try
 	{
-		//int id = stoi(marshal_as<string>(tbxvalorreferenciaEliminar->Text));
-		//lblresultnombreEliminar->Text = marshal_as<String^>(libro[id].getNombre());
-
-		int id = stoi(marshal_as<string>(tbxvalorreferenciaEliminar->Text));
+		int id = stoi(marshal_as<std::string>(tbxvalorreferenciaEliminar->Text));
 		lblresultnombreEliminar->Text = marshal_as<String^>(libro[id].getNombre());
 
 	}
@@ -1818,6 +1841,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 }
 
 private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	
 	//Establecimiento del groupboxModificar Visible + Ocultar los demas groupbox
 	gpbmodificar->Visible = true; 
 	gpbeliminar->Visible = false;
@@ -1834,11 +1858,12 @@ private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ send
 	gpbxRfecha->Visible = false;
 }
 private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs^ e) {
-	try 
+
+	//Ingreso de libros 
+	try
 	{
 		if (cont < 5)
 		{
-			//Recoleccion de datos para el data grid (Control de libros) 
 			dtgvcontrol->Rows->Add();
 			cont = dtgvcontrol->Rows->Count - 1;
 			dtgvcontrol[0, cont]->Value = tbxnombre->Text;
@@ -1850,19 +1875,17 @@ private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs
 			dtgvcontrol[6, cont]->Value = tbxeditorial->Text;
 			dtgvcontrol[7, cont]->Value = cmbcategoria->Text;
 			dtgvcontrol[8, cont]->Value = cont;
-			//marshal_as<string>(dtgvcontrol[8, cont]->Value) = marshal_as<string>(cont);
 
-			//Recoleccion de datos para el relleno de datos para el arreglo. 
 			if (libro[cont].getNombre() == "")
 			{
-				string nombre = marshal_as<string>(tbxnombre->Text); 
-				string autor = marshal_as<string>(tbxautor->Text); 
-				string fecha = marshal_as<string>(datetimepfecha->Text); 
-				string edicion = marshal_as<string>(tbxedicion->Text); 
-				string estado = marshal_as<string>(cmbestado->Text); 
-				string destino = marshal_as<string>(cmbdestino->Text); 
-				string categoria = marshal_as<string>(cmbcategoria->Text);
-				string editorial = marshal_as<string>(tbxeditorial->Text);
+				std::string nombre = marshal_as<std::string>(tbxnombre->Text); 
+				std::string autor = marshal_as<std::string>(tbxautor->Text); 
+				std::string fecha = marshal_as<std::string>(datetimepfecha->Text); 
+				std::string edicion = marshal_as<std::string>(tbxedicion->Text); 
+				std::string estado = marshal_as<std::string>(cmbestado->Text); 
+				std::string destino = marshal_as<std::string>(cmbdestino->Text); 
+				std::string categoria = marshal_as<std::string>(cmbcategoria->Text);
+				std::string editorial = marshal_as<std::string>(tbxeditorial->Text);
 				libro[cont].setNombre(nombre); 
 				libro[cont].setAutor(autor); 
 				libro[cont].setFecha(fecha); 
@@ -1914,10 +1937,11 @@ private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs
 	}
 }
 private: System::Void btnvisualizar_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	//Visualizacion de libro individual, ID especifico 
 	try
 	{
-		//Visualizacion de los datos de un libro en especifico,  segun su Id establecido al momento de ingreso. 
-		int id = stoi(marshal_as<string>(tbxvreferenciaVisualizar->Text)); 
+		int id = stoi(marshal_as<std::string>(tbxvreferenciaVisualizar->Text)); 
 		lblresultnombreVisualizar->Text = marshal_as<String^>(libro[id].getNombre());
 		lblresultautorVisualizar->Text = marshal_as<String^>(libro[id].getAutor());
 		lblresultfechaVisualizar->Text = marshal_as<String^>(libro[id].getFecha());
@@ -1936,15 +1960,9 @@ private: System::Void gpbVisualizar_Enter(System::Object^ sender, System::EventA
 }
 
 private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Visibilidad del control de libros
 	try
 	{
-		//Establecimiento del datagrid Visible + Mensaje de categoria ingresada 
-
-
-		//DATA GRID VIEW (FALTA AGREGAR EL VALOR DE REFERENCIA CORRESPONDIENTE A CADA LIBRO -> Control de libros) 
-		
-		//Cambiar de visible a invisible
-
 		gpbxingreso->Visible = false;
 		gpbVisualizar->Visible = false;
 		dtgvcontrol->Visible = true; 
@@ -1969,10 +1987,10 @@ private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sen
 private: System::Void gpbeliminar_Enter(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void btnmodificar_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	
 	try 
 	{
-		int id = stoi(marshal_as<string>(tbxvalorreferenciaModificar->Text));
+		int id = stoi(marshal_as<std::string>(tbxvalorreferenciaModificar->Text));
 		tbxnombreModificar->Text = marshal_as<String^>(libro[id].getNombre());
 		tbxautorModificar->Text = marshal_as<String^>(libro[id].getAutor());
 		datetimepfechaModificar->Text = marshal_as<String^>(libro[id].getFecha());
@@ -1981,8 +1999,6 @@ private: System::Void btnmodificar_Click(System::Object^ sender, System::EventAr
 		cmbdestinoModificar->Text = marshal_as<String^>(libro[id].getDestino());
 		cmbcategoriaModificar->Text = marshal_as<String^>(libro[id].getCategoria());
 		tbxeditorialModificar->Text = marshal_as<String^>(libro[id].getEditorial());
-		//MessageBox::Show("Libro modificado correctamente");
-		//dtgvcontrol->Rows->RemoveAt(id);
 
 	}
 	catch (Exception^ ex)
@@ -1993,18 +2009,19 @@ private: System::Void btnmodificar_Click(System::Object^ sender, System::EventAr
 private: System::Void tbxeditorialModificar_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void btnGuarLibMod_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	
+	//Modifiacion de datos de libro en el DTGV
 	try 
 	{
-		int id = stoi(marshal_as<string>(tbxvalorreferenciaModificar->Text));
-		string nombreMod = marshal_as<string>(tbxnombreModificar->Text);
-		string autorMod = marshal_as<string>(tbxautorModificar->Text);
-		string fechaMod = marshal_as<string>(datetimepfechaModificar->Text);
-		string edicionMod = marshal_as<string>(tbxedicionModificar->Text);
-		string estadoMod = marshal_as<string>(cmbestadoModificar->Text);
-		string destinoMod = marshal_as<string>(cmbdestinoModificar->Text);
-		string categoriaMod = marshal_as<string>(cmbcategoriaModificar->Text);
-		string editorialMod = marshal_as<string>(tbxeditorialModificar->Text);
+		int id = stoi(marshal_as<std::string>(tbxvalorreferenciaModificar->Text));
+		std::string nombreMod = marshal_as<std::string>(tbxnombreModificar->Text);
+		std::string autorMod = marshal_as<std::string>(tbxautorModificar->Text);
+		std::string fechaMod = marshal_as<std::string>(datetimepfechaModificar->Text);
+		std::string edicionMod = marshal_as<std::string>(tbxedicionModificar->Text);
+		std::string estadoMod = marshal_as<std::string>(cmbestadoModificar->Text);
+		std::string destinoMod = marshal_as<std::string>(cmbdestinoModificar->Text);
+		std::string categoriaMod = marshal_as<std::string>(cmbcategoriaModificar->Text);
+		std::string editorialMod = marshal_as<std::string>(tbxeditorialModificar->Text);
 		libro[id].setNombre(nombreMod);
 		libro[id].setAutor(autorMod);
 		libro[id].setFecha(fechaMod);
@@ -2015,7 +2032,6 @@ private: System::Void btnGuarLibMod_Click(System::Object^ sender, System::EventA
 		libro[id].setEditorial(editorialMod);
 		MessageBox::Show("Libro modificado correctamente");
 
-		//Modifiacion de datos de libro en el DTGV
 		dtgvcontrol[0, id]->Value = tbxnombreModificar->Text;
 		dtgvcontrol[1, id]->Value = tbxautorModificar->Text;
 		dtgvcontrol[2, id]->Value = datetimepfechaModificar->Text;
@@ -2026,7 +2042,6 @@ private: System::Void btnGuarLibMod_Click(System::Object^ sender, System::EventA
 		dtgvcontrol[7, id]->Value = cmbcategoriaModificar->Text;
 		dtgvcontrol[8, id]->Value = id;
 
-
 		tbxautorModificar->Text = ""; 
 		tbxedicionModificar->Text = "";
 		tbxeditorialModificar->Text = "";
@@ -2035,10 +2050,6 @@ private: System::Void btnGuarLibMod_Click(System::Object^ sender, System::EventA
 		cmbdestinoModificar->Text = "";
 		cmbestadoModificar->Text = ""; 
 		tbxnombreModificar->Text = ""; 
-
-
-
-
 	}
 	catch (Exception^ ex)
 	{
@@ -2047,8 +2058,8 @@ private: System::Void btnGuarLibMod_Click(System::Object^ sender, System::EventA
 }
 
 private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	//Establecimiento del groupboxeliminar Visible + Ocultar los demas groupbox
 
+	//Establecimiento del groupboxeliminar Visible + Ocultar los demas groupbox
 	gpbmodificar->Visible = false;
 	gpbeliminar->Visible = true;
 	gpbxingreso->Visible = false;
@@ -2062,14 +2073,15 @@ private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sende
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	
 }
 
 private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::EventArgs^ e) {
 
+	//Eliminacion de libro 
 	try
 	{
-		//Eliminacion de libro 
-		int id = stoi(marshal_as<string>(tbxvalorreferenciaEliminar->Text));
+		int id = stoi(marshal_as<std::string>(tbxvalorreferenciaEliminar->Text));
 
 		libro[id].setNombre("");
 		libro[id].setAutor("");
@@ -2082,24 +2094,18 @@ private: System::Void btnConfirEliLib_Click(System::Object^ sender, System::Even
 		MessageBox::Show("Libro eliminado correctamente");
 
 		cont = cont - 1; 
-		impcont = to_string(cont);
-		//lblresultRcantidadlibros->Text = marshal_as<String^>(impcont);
+		impcont = (std::to_string(cont));
 
 		lblresultnombreEliminar->Text = ""; 
 
-		//Eliminacion de libro en el control de libros 
-		//if (id == )
-
-		//Eliminacion de libro en el DTGV 
 		dtgvcontrol->Rows->RemoveAt(id); 
-		//id = id - 1; 
-
 
 	}
 	catch (Exception^ ex)
 	{
 		MessageBox::Show(ex->Message);
 	}
+
 }
 private: System::Void dtgvcontrol_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
@@ -2108,6 +2114,8 @@ private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^
 private: System::Void lbltitR_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void cantidadDeLibrosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	//Reporte de cantidad de libros 
 	gpbmodificar->Visible = false;
 	gpbeliminar->Visible = false;
 	gpbxingreso->Visible = false;
@@ -2122,9 +2130,8 @@ private: System::Void cantidadDeLibrosToolStripMenuItem_Click(System::Object^ se
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
 
-	impcont = to_string(cont); 
+	impcont = std::to_string(cont); 
 	lblresultRcantidadlibros->Text = marshal_as<String^>(impcont);
-
 	
 }
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2132,6 +2139,7 @@ private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void cmbestadoModificar_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void reportePorEstadoDeLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	
 	//Reporte de estado visible, los demas diseños ocultos
 	gpbmodificar->Visible = false;
 	gpbeliminar->Visible = false;
@@ -2149,29 +2157,14 @@ private: System::Void reportePorEstadoDeLibroToolStripMenuItem_Click(System::Obj
 
 }
 private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-
+	
 	//Reporte de libros por estado 
-	string cmbes = marshal_as<string>(cmbRestado->Text); 
+	std::string cmbes = marshal_as<std::string>(cmbRestado->Text);
+	listBox1->Items->Clear();
 	for (int i = 0; i < 5; i++)
 	{
-		if (cmbes == "Bueno" && cmbes == libro[i].getEstado())
+		if (cmbes == libro[i].getEstado())
 		{
-			listBox1->Items->Clear();
-			listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbes == "Decente" && cmbes == libro[i].getEstado())
-		{
-			listBox1->Items->Clear();
-			listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbes == "Deteriorado" && cmbes == libro[i].getEstado())
-		{
-			listBox1->Items->Clear();
-			listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbes == "Malo" && cmbes == libro[i].getEstado())
-		{
-			listBox1->Items->Clear();
 			listBox1->Items->Add(marshal_as<String^>(libro[i].getNombre()));
 		}
 	}
@@ -2190,6 +2183,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 
 }
 private: System::Void reportePorCategoríaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	
 	gpbmodificar->Visible = false;
 	gpbeliminar->Visible = false;
 	gpbxingreso->Visible = false;
@@ -2206,6 +2200,7 @@ private: System::Void reportePorCategoríaToolStripMenuItem_Click(System::Object^
 	
 }
 private: System::Void reportePorDestinoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	
 	gpbmodificar->Visible = false;
 	gpbeliminar->Visible = false;
 	gpbxingreso->Visible = false;
@@ -2226,137 +2221,34 @@ private: System::Void gpbxRcategoria_Enter(System::Object^ sender, System::Event
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	//MOSTRAR REPORTE POR DESTINO
 	
-	string cmbdes = marshal_as<string>(cmbRdestino->Text);
+	//MOSTRAR REPORTE POR DESTINO
+	std::string cmbdes = marshal_as<std::string>(cmbRdestino->Text);
+	listBox2->Items->Clear();
 	for (int i = 0; i < 5; i++)
 	{
-		if (cmbdes == "Ingreso a biblioteca" && cmbdes == libro[i].getDestino())
+		if (cmbdes == libro[i].getDestino())
 		{
-			listBox2->Items->Clear();
-			listBox2->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbdes == "Reciclaje" && cmbdes == libro[i].getDestino())
-		{
-			listBox2->Items->Clear();
-			listBox2->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbdes == "Seccion tome 1" && cmbdes == libro[i].getDestino())
-		{
-			listBox2->Items->Clear();
 			listBox2->Items->Add(marshal_as<String^>(libro[i].getNombre()));
 		}
 	}
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	//MOSTRAR REPORTE POR CATEGORIA
 
-	string cmbcat = marshal_as<string>(cmbRcategoria->Text);
+	//MOSTRAR REPORTE POR CATEGORIA
+	std::string cmbcat = marshal_as<std::string>(cmbRcategoria->Text);
+	listBox3->Items->Clear();
 	for (int i = 0; i < 5; i++)
 	{
-		if (cmbcat == "De texto" && cmbcat == libro[i].getCategoria())
+		if (cmbcat == libro[i].getCategoria())
 		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Complementario" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Consulta o referencia" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Recreativo" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Cientifico" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Instructivo" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Literarios y linguistico" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Tecnico" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Informativos" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Divulgacion" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Religioso" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Ilustrado" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Electronico" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Poetico" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Biografico" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Material auxiliar" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Didactico" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Viaje" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Artistico" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
-			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
-		}
-		else if (cmbcat == "Autoestima" && cmbcat == libro[i].getCategoria())
-		{
-			listBox3->Items->Clear();
 			listBox3->Items->Add(marshal_as<String^>(libro[i].getNombre()));
 		}
 	}
+
 }
 private: System::Void reportePorEdicionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	
 	//Reporte de edicion visible, los demas diseños ocultos 
 	gpbmodificar->Visible = false;
 	gpbeliminar->Visible = false;
@@ -2374,9 +2266,9 @@ private: System::Void reportePorEdicionToolStripMenuItem_Click(System::Object^ s
 
 }
 private: System::Void btnRedicion_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	
 	//Reporte por edicion del libro 
-	string edicionTxt = marshal_as<string>(tbxRedicion->Text); 
+	std::string edicionTxt = marshal_as<std::string>(tbxRedicion->Text); 
 	listBRedicion->Items->Clear();
 	for (int i = 0; i < 5; i++)
 	{
@@ -2387,6 +2279,7 @@ private: System::Void btnRedicion_Click(System::Object^ sender, System::EventArg
 	}
 }
 private: System::Void reportePorAutorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+
 	//Reporte de autor visible, los demas diseños ocultos
 	gpbmodificar->Visible = false;
 	gpbeliminar->Visible = false;
@@ -2401,11 +2294,12 @@ private: System::Void reportePorAutorToolStripMenuItem_Click(System::Object^ sen
 	gpbxRautor->Visible = true; 
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
-
+	
 }
 private: System::Void btnRautor_Click(System::Object^ sender, System::EventArgs^ e) {
+	
 	//Reporte de libros por autor 
-	string autorTxt = marshal_as<string>(tbxRautor->Text);
+	std::string autorTxt = marshal_as<std::string>(tbxRautor->Text);
 	listBRautor->Items->Clear();
 	for (int i = 0; i < 5; i++)
 	{
@@ -2416,6 +2310,8 @@ private: System::Void btnRautor_Click(System::Object^ sender, System::EventArgs^
 	}
 }
 private: System::Void reportePorEditorialToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	
 	//Reporte de editorial visible, los demas diseños ocultos
 	gpbmodificar->Visible = false;
 	gpbeliminar->Visible = false;
@@ -2430,13 +2326,14 @@ private: System::Void reportePorEditorialToolStripMenuItem_Click(System::Object^
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = true; 
 	gpbxRfecha->Visible = false;
-
+	
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void btnReditorial_Click(System::Object^ sender, System::EventArgs^ e) {
+	
 	//Reporte de libros por editorial 
-	string editorialTxt = marshal_as<string>(tbxReditorial->Text);
+	std::string editorialTxt = marshal_as<std::string>(tbxReditorial->Text);
 	listBReditorial->Items->Clear();
 	for (int i = 0; i < 5; i++)
 	{
@@ -2449,8 +2346,9 @@ private: System::Void btnReditorial_Click(System::Object^ sender, System::EventA
 private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+
 	//Reporte por fecha de libros 
-	string fecha = marshal_as<string>(dtmRfecha->Text); 
+	std::string fecha = marshal_as<std::string>(dtmRfecha->Text); 
 	listBRfecha->Items->Clear(); 
 	for (int i = 0; i < 5; i++)
 	{
@@ -2461,6 +2359,7 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	}
 }
 private: System::Void reportePorAñoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	
 	//Reporte de libros por fecha visible, los demas diseños ocultos 
 	gpbmodificar->Visible = false;
 	gpbeliminar->Visible = false;
@@ -2476,5 +2375,12 @@ private: System::Void reportePorAñoToolStripMenuItem_Click(System::Object^ sende
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = true; 
 }
+
+/*private: System::Void cerrarSesionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+
+}*/
+
+Void cerrarSesionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e); 
+
 };
 }
