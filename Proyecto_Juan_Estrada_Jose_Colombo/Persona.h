@@ -4,25 +4,21 @@
 
 class Persona
 {
-public: 
+private: 
 	std::string nombrepersona; 
-	std::string documentoident; 
+	int documentoident; 
 	std::string numtelefono; 
 	std::string dedicacion; 
+	std::string idingresado; 
 	
-private: 
-
-	void verdatospersona()
-	{
-		std::string result = nombrepersona + documentoident + numtelefono + dedicacion; 
-	}
+public: 
 
 	void setNombrepersona(std::string nombrepersona)
 	{
 		this->nombrepersona = nombrepersona; 
 	}
 
-	void setDocumentoident(std::string documentoident)
+	void setDocumentoident(int documentoident)
 	{
 		this->documentoident  = documentoident;
 	}
@@ -37,12 +33,22 @@ private:
 		this->dedicacion = dedicacion;
 	}
 
+	void setIdIngresado(std::string id)
+	{
+		this->idingresado = id; 
+	}
+
+	std::string getIdIngresado()
+	{
+		return this->idingresado; 
+	}
+
 	std::string getNombrePersona()
 	{
 		return this->nombrepersona; 
 	}
 
-	std::string getDocumentoIdent()
+	int getDocumentoIdent()
 	{
 		return this->documentoident;
 	}

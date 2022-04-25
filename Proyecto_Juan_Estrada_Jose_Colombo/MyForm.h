@@ -24,6 +24,8 @@ namespace ProyectoJuanEstradaJoseColombo {
 	extern std::string impcont; */
 
 	static Inventario libro[5];
+	static Persona persona[5]; 
+	static int contp = 0;
 	static int cont = 0;
 	static int cant = 0;
 	static std::string impcont = "";
@@ -162,8 +164,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ reportePorAñoToolStripMenuIt
 private: System::Windows::Forms::ToolStripMenuItem^ reportePorAutorToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ reportePorEditorialToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ reportePorCategoríaToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ reporteDeLibrosRegistradosPorPersonaToolStripMenuItem;
-private: System::Windows::Forms::ToolStripMenuItem^ personasRegistradasToolStripMenuItem;
+
+private: System::Windows::Forms::ToolStripMenuItem^ personasToolStripMenuItem;
+
 
 private: System::Windows::Forms::Button^ btnGuarLibMod;
 private: System::Windows::Forms::Button^ btnConfirEliLib;
@@ -238,6 +241,44 @@ private: System::Windows::Forms::ListBox^ listBRfecha;
 private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuItem;
 
 
+private: System::Windows::Forms::ToolStripMenuItem^ ingresarPersonaToolStripMenuItem;
+private: System::Windows::Forms::GroupBox^ gpbPersona;
+
+private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::Label^ label10;
+private: System::Windows::Forms::Label^ label12;
+private: System::Windows::Forms::TextBox^ tbxIngresoID;
+private: System::Windows::Forms::Label^ label14;
+private: System::Windows::Forms::TextBox^ tbxIngresoProfesion;
+private: System::Windows::Forms::TextBox^ tbxIngresoNumero;
+private: System::Windows::Forms::TextBox^ tbxIngresoDocIdent;
+private: System::Windows::Forms::TextBox^ tbxIngresopersona;
+private: System::Windows::Forms::Label^ label13;
+private: System::Windows::Forms::Button^ btnregistroPersona;
+private: System::Windows::Forms::DataGridView^ dtgvcontrolpersonas;
+
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
+private: System::Windows::Forms::ToolStripMenuItem^ controlDePersonasToolStripMenuItem;
+private: System::Windows::Forms::GroupBox^ gpbxPersonaindi;
+
+private: System::Windows::Forms::Label^ label15;
+private: System::Windows::Forms::Label^ lblresultVisualizarIding;
+private: System::Windows::Forms::Label^ lblresultVisualizarprofesion;
+private: System::Windows::Forms::Label^ lblresultVisualizarnumero;
+private: System::Windows::Forms::Label^ lblresultVisualizardocum;
+private: System::Windows::Forms::Label^ label19;
+private: System::Windows::Forms::Label^ label18;
+private: System::Windows::Forms::Label^ label17;
+private: System::Windows::Forms::Label^ label16;
+private: System::Windows::Forms::TextBox^ tbxVisualizarnombrePersona;
+private: System::Windows::Forms::Button^ btnVisualizarP;
+private: System::Windows::Forms::ToolStripMenuItem^ visualizarPersonaIndividualmenteToolStripMenuItem;
+
+
 
 
 
@@ -270,7 +311,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->libroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ingresarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -285,10 +326,12 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->reportePorAutorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->reportePorEditorialToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->reportePorCategoríaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->reportePorDestinoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->controlDeLibrosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->personasRegistradasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->personasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ingresarPersonaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->visualizarPersonaIndividualmenteToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->controlDePersonasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->cerrarSesionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->gpbxingreso = (gcnew System::Windows::Forms::GroupBox());
 			this->cmbcategoria = (gcnew System::Windows::Forms::ComboBox());
@@ -356,6 +399,18 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->lbltitautorModificar = (gcnew System::Windows::Forms::Label());
 			this->lbltitnombreModificar = (gcnew System::Windows::Forms::Label());
 			this->lbltitvreferenciaModificar = (gcnew System::Windows::Forms::Label());
+			this->gpbPersona = (gcnew System::Windows::Forms::GroupBox());
+			this->btnregistroPersona = (gcnew System::Windows::Forms::Button());
+			this->tbxIngresoID = (gcnew System::Windows::Forms::TextBox());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->tbxIngresoProfesion = (gcnew System::Windows::Forms::TextBox());
+			this->tbxIngresoNumero = (gcnew System::Windows::Forms::TextBox());
+			this->tbxIngresoDocIdent = (gcnew System::Windows::Forms::TextBox());
+			this->tbxIngresopersona = (gcnew System::Windows::Forms::TextBox());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->gpbxRdestino = (gcnew System::Windows::Forms::GroupBox());
 			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -405,11 +460,30 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->dtmRfecha = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->dtgvcontrolpersonas = (gcnew System::Windows::Forms::DataGridView());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->gpbxPersonaindi = (gcnew System::Windows::Forms::GroupBox());
+			this->btnVisualizarP = (gcnew System::Windows::Forms::Button());
+			this->lblresultVisualizarIding = (gcnew System::Windows::Forms::Label());
+			this->lblresultVisualizarprofesion = (gcnew System::Windows::Forms::Label());
+			this->lblresultVisualizarnumero = (gcnew System::Windows::Forms::Label());
+			this->lblresultVisualizardocum = (gcnew System::Windows::Forms::Label());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->tbxVisualizarnombrePersona = (gcnew System::Windows::Forms::TextBox());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
 			this->gpbxingreso->SuspendLayout();
 			this->gpbVisualizar->SuspendLayout();
 			this->gpbeliminar->SuspendLayout();
 			this->gpbmodificar->SuspendLayout();
+			this->gpbPersona->SuspendLayout();
 			this->gpbxRdestino->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dtgvcontrol))->BeginInit();
 			this->gpbxRcantidadlibro->SuspendLayout();
@@ -419,13 +493,16 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->gpbxRautor->SuspendLayout();
 			this->gpbxReditorial->SuspendLayout();
 			this->gpbxRfecha->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dtgvcontrolpersonas))->BeginInit();
+			this->gpbxPersonaindi->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(6) {
 				this->libroToolStripMenuItem,
-					this->reportesToolStripMenuItem, this->controlDeLibrosToolStripMenuItem, this->personasRegistradasToolStripMenuItem, this->cerrarSesionToolStripMenuItem
+					this->reportesToolStripMenuItem, this->controlDeLibrosToolStripMenuItem, this->personasToolStripMenuItem, this->controlDePersonasToolStripMenuItem,
+					this->cerrarSesionToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -473,11 +550,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			// 
 			// reportesToolStripMenuItem
 			// 
-			this->reportesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(9) {
+			this->reportesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(8) {
 				this->cantidadDeLibrosToolStripMenuItem,
 					this->reportePorEstadoDeLibroToolStripMenuItem, this->reportePorEdicionToolStripMenuItem, this->reportePorAñoToolStripMenuItem,
 					this->reportePorAutorToolStripMenuItem, this->reportePorEditorialToolStripMenuItem, this->reportePorCategoríaToolStripMenuItem,
-					this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem, this->reportePorDestinoToolStripMenuItem
+					this->reportePorDestinoToolStripMenuItem
 			});
 			this->reportesToolStripMenuItem->Name = L"reportesToolStripMenuItem";
 			this->reportesToolStripMenuItem->Size = System::Drawing::Size(65, 20);
@@ -532,12 +609,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->reportePorCategoríaToolStripMenuItem->Text = L"Reporte por categoría";
 			this->reportePorCategoríaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorCategoríaToolStripMenuItem_Click);
 			// 
-			// reporteDeLibrosRegistradosPorPersonaToolStripMenuItem
-			// 
-			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Name = L"reporteDeLibrosRegistradosPorPersonaToolStripMenuItem";
-			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Size = System::Drawing::Size(290, 22);
-			this->reporteDeLibrosRegistradosPorPersonaToolStripMenuItem->Text = L"Reporte de libros registrados por persona";
-			// 
 			// reportePorDestinoToolStripMenuItem
 			// 
 			this->reportePorDestinoToolStripMenuItem->Name = L"reportePorDestinoToolStripMenuItem";
@@ -552,11 +623,36 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->controlDeLibrosToolStripMenuItem->Text = L"Control de libros";
 			this->controlDeLibrosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::controlDeLibrosToolStripMenuItem_Click);
 			// 
-			// personasRegistradasToolStripMenuItem
+			// personasToolStripMenuItem
 			// 
-			this->personasRegistradasToolStripMenuItem->Name = L"personasRegistradasToolStripMenuItem";
-			this->personasRegistradasToolStripMenuItem->Size = System::Drawing::Size(126, 20);
-			this->personasRegistradasToolStripMenuItem->Text = L"Personas registradas";
+			this->personasToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->ingresarPersonaToolStripMenuItem,
+					this->visualizarPersonaIndividualmenteToolStripMenuItem
+			});
+			this->personasToolStripMenuItem->Name = L"personasToolStripMenuItem";
+			this->personasToolStripMenuItem->Size = System::Drawing::Size(66, 20);
+			this->personasToolStripMenuItem->Text = L"Personas";
+			// 
+			// ingresarPersonaToolStripMenuItem
+			// 
+			this->ingresarPersonaToolStripMenuItem->Name = L"ingresarPersonaToolStripMenuItem";
+			this->ingresarPersonaToolStripMenuItem->Size = System::Drawing::Size(257, 22);
+			this->ingresarPersonaToolStripMenuItem->Text = L"Ingresar Persona";
+			this->ingresarPersonaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ingresarPersonaToolStripMenuItem_Click);
+			// 
+			// visualizarPersonaIndividualmenteToolStripMenuItem
+			// 
+			this->visualizarPersonaIndividualmenteToolStripMenuItem->Name = L"visualizarPersonaIndividualmenteToolStripMenuItem";
+			this->visualizarPersonaIndividualmenteToolStripMenuItem->Size = System::Drawing::Size(257, 22);
+			this->visualizarPersonaIndividualmenteToolStripMenuItem->Text = L"Visualizar persona individualmente";
+			this->visualizarPersonaIndividualmenteToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::visualizarPersonaIndividualmenteToolStripMenuItem_Click);
+			// 
+			// controlDePersonasToolStripMenuItem
+			// 
+			this->controlDePersonasToolStripMenuItem->Name = L"controlDePersonasToolStripMenuItem";
+			this->controlDePersonasToolStripMenuItem->Size = System::Drawing::Size(125, 20);
+			this->controlDePersonasToolStripMenuItem->Text = L"Control de personas";
+			this->controlDePersonasToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::controlDePersonasToolStripMenuItem_Click);
 			// 
 			// cerrarSesionToolStripMenuItem
 			// 
@@ -587,7 +683,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->gpbxingreso->Controls->Add(this->lbltitnombre);
 			this->gpbxingreso->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gpbxingreso->Location = System::Drawing::Point(0, 43);
+			this->gpbxingreso->Location = System::Drawing::Point(6, 29);
 			this->gpbxingreso->Name = L"gpbxingreso";
 			this->gpbxingreso->Size = System::Drawing::Size(724, 314);
 			this->gpbxingreso->TabIndex = 1;
@@ -954,7 +1050,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->gpbeliminar->Controls->Add(this->lbltitnombreeliminar);
 			this->gpbeliminar->Controls->Add(this->tbxvalorreferenciaEliminar);
 			this->gpbeliminar->Controls->Add(this->lbltitvreferencia);
-			this->gpbeliminar->Location = System::Drawing::Point(0, 27);
+			this->gpbeliminar->Location = System::Drawing::Point(12, 27);
 			this->gpbeliminar->Name = L"gpbeliminar";
 			this->gpbeliminar->Size = System::Drawing::Size(529, 164);
 			this->gpbeliminar->TabIndex = 3;
@@ -1046,7 +1142,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->gpbmodificar->Controls->Add(this->lbltitautorModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitnombreModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitvreferenciaModificar);
-			this->gpbmodificar->Location = System::Drawing::Point(6, 26);
+			this->gpbmodificar->Location = System::Drawing::Point(12, 29);
 			this->gpbmodificar->Name = L"gpbmodificar";
 			this->gpbmodificar->Size = System::Drawing::Size(724, 379);
 			this->gpbmodificar->TabIndex = 4;
@@ -1244,6 +1340,121 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->lbltitvreferenciaModificar->TabIndex = 0;
 			this->lbltitvreferenciaModificar->Text = L"Ingrese el valor de referencia del libro a modificar:";
 			// 
+			// gpbPersona
+			// 
+			this->gpbPersona->Controls->Add(this->btnregistroPersona);
+			this->gpbPersona->Controls->Add(this->tbxIngresoID);
+			this->gpbPersona->Controls->Add(this->label14);
+			this->gpbPersona->Controls->Add(this->tbxIngresoProfesion);
+			this->gpbPersona->Controls->Add(this->tbxIngresoNumero);
+			this->gpbPersona->Controls->Add(this->tbxIngresoDocIdent);
+			this->gpbPersona->Controls->Add(this->tbxIngresopersona);
+			this->gpbPersona->Controls->Add(this->label13);
+			this->gpbPersona->Controls->Add(this->label12);
+			this->gpbPersona->Controls->Add(this->label11);
+			this->gpbPersona->Controls->Add(this->label10);
+			this->gpbPersona->Location = System::Drawing::Point(30, 25);
+			this->gpbPersona->Name = L"gpbPersona";
+			this->gpbPersona->Size = System::Drawing::Size(532, 293);
+			this->gpbPersona->TabIndex = 14;
+			this->gpbPersona->TabStop = false;
+			this->gpbPersona->Text = L"Ingrese los datos de la persona";
+			this->gpbPersona->Visible = false;
+			// 
+			// btnregistroPersona
+			// 
+			this->btnregistroPersona->BackColor = System::Drawing::SystemColors::HotTrack;
+			this->btnregistroPersona->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->btnregistroPersona->ForeColor = System::Drawing::SystemColors::HighlightText;
+			this->btnregistroPersona->Location = System::Drawing::Point(218, 238);
+			this->btnregistroPersona->Name = L"btnregistroPersona";
+			this->btnregistroPersona->Size = System::Drawing::Size(114, 33);
+			this->btnregistroPersona->TabIndex = 10;
+			this->btnregistroPersona->Text = L"Registrar persona";
+			this->btnregistroPersona->UseVisualStyleBackColor = false;
+			this->btnregistroPersona->Click += gcnew System::EventHandler(this, &MyForm::btnregistroPersona_Click);
+			// 
+			// tbxIngresoID
+			// 
+			this->tbxIngresoID->Location = System::Drawing::Point(272, 200);
+			this->tbxIngresoID->Name = L"tbxIngresoID";
+			this->tbxIngresoID->Size = System::Drawing::Size(227, 20);
+			this->tbxIngresoID->TabIndex = 9;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(18, 207);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(216, 13);
+			this->label14->TabIndex = 8;
+			this->label14->Text = L"Id de libros ingresados (Valor de referencia): ";
+			// 
+			// tbxIngresoProfesion
+			// 
+			this->tbxIngresoProfesion->Location = System::Drawing::Point(272, 160);
+			this->tbxIngresoProfesion->Name = L"tbxIngresoProfesion";
+			this->tbxIngresoProfesion->Size = System::Drawing::Size(227, 20);
+			this->tbxIngresoProfesion->TabIndex = 7;
+			// 
+			// tbxIngresoNumero
+			// 
+			this->tbxIngresoNumero->Location = System::Drawing::Point(272, 122);
+			this->tbxIngresoNumero->Name = L"tbxIngresoNumero";
+			this->tbxIngresoNumero->Size = System::Drawing::Size(227, 20);
+			this->tbxIngresoNumero->TabIndex = 6;
+			// 
+			// tbxIngresoDocIdent
+			// 
+			this->tbxIngresoDocIdent->Location = System::Drawing::Point(272, 86);
+			this->tbxIngresoDocIdent->Name = L"tbxIngresoDocIdent";
+			this->tbxIngresoDocIdent->Size = System::Drawing::Size(227, 20);
+			this->tbxIngresoDocIdent->TabIndex = 5;
+			// 
+			// tbxIngresopersona
+			// 
+			this->tbxIngresopersona->Location = System::Drawing::Point(272, 41);
+			this->tbxIngresopersona->Name = L"tbxIngresopersona";
+			this->tbxIngresopersona->Size = System::Drawing::Size(227, 20);
+			this->tbxIngresopersona->TabIndex = 4;
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(21, 163);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(120, 13);
+			this->label13->TabIndex = 3;
+			this->label13->Text = L"Dedicacion (Profesion): ";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(21, 123);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(106, 13);
+			this->label12->TabIndex = 2;
+			this->label12->Text = L"Numero de telefono: ";
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(18, 89);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(133, 13);
+			this->label11->TabIndex = 1;
+			this->label11->Text = L"Documento identificacion: ";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(18, 48);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(117, 13);
+			this->label10->TabIndex = 0;
+			this->label10->Text = L"Nombre de la persona: ";
+			// 
 			// gpbxRdestino
 			// 
 			this->gpbxRdestino->Controls->Add(this->listBox2);
@@ -1308,15 +1519,15 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->dtgvcontrol->Location = System::Drawing::Point(209, 434);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this->dtgvcontrol->Size = System::Drawing::Size(943, 200);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
@@ -1720,14 +1931,186 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->label9->Text = L"Ingrese la fecha de publicacion de los libros: ";
 			this->label9->Click += gcnew System::EventHandler(this, &MyForm::label9_Click);
 			// 
+			// dtgvcontrolpersonas
+			// 
+			this->dtgvcontrolpersonas->AllowUserToAddRows = false;
+			this->dtgvcontrolpersonas->AllowUserToDeleteRows = false;
+			this->dtgvcontrolpersonas->AllowUserToOrderColumns = true;
+			this->dtgvcontrolpersonas->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dtgvcontrolpersonas->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+				this->Column1,
+					this->Column2, this->Column3, this->Column4, this->Column5
+			});
+			this->dtgvcontrolpersonas->Location = System::Drawing::Point(422, 410);
+			this->dtgvcontrolpersonas->Name = L"dtgvcontrolpersonas";
+			this->dtgvcontrolpersonas->ReadOnly = true;
+			this->dtgvcontrolpersonas->Size = System::Drawing::Size(546, 215);
+			this->dtgvcontrolpersonas->TabIndex = 15;
+			this->dtgvcontrolpersonas->Visible = false;
+			this->dtgvcontrolpersonas->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Nombre ";
+			this->Column1->Name = L"Column1";
+			this->Column1->ReadOnly = true;
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Documento de identificacion";
+			this->Column2->Name = L"Column2";
+			this->Column2->ReadOnly = true;
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"Numero de telefono";
+			this->Column3->Name = L"Column3";
+			this->Column3->ReadOnly = true;
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"Dedicacion";
+			this->Column4->Name = L"Column4";
+			this->Column4->ReadOnly = true;
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"Valor de referencia de los libros ingresados por la persona";
+			this->Column5->Name = L"Column5";
+			this->Column5->ReadOnly = true;
+			// 
+			// gpbxPersonaindi
+			// 
+			this->gpbxPersonaindi->Controls->Add(this->btnVisualizarP);
+			this->gpbxPersonaindi->Controls->Add(this->lblresultVisualizarIding);
+			this->gpbxPersonaindi->Controls->Add(this->lblresultVisualizarprofesion);
+			this->gpbxPersonaindi->Controls->Add(this->lblresultVisualizarnumero);
+			this->gpbxPersonaindi->Controls->Add(this->lblresultVisualizardocum);
+			this->gpbxPersonaindi->Controls->Add(this->label19);
+			this->gpbxPersonaindi->Controls->Add(this->label18);
+			this->gpbxPersonaindi->Controls->Add(this->label17);
+			this->gpbxPersonaindi->Controls->Add(this->label16);
+			this->gpbxPersonaindi->Controls->Add(this->tbxVisualizarnombrePersona);
+			this->gpbxPersonaindi->Controls->Add(this->label15);
+			this->gpbxPersonaindi->Location = System::Drawing::Point(6, 25);
+			this->gpbxPersonaindi->Name = L"gpbxPersonaindi";
+			this->gpbxPersonaindi->Size = System::Drawing::Size(418, 317);
+			this->gpbxPersonaindi->TabIndex = 16;
+			this->gpbxPersonaindi->TabStop = false;
+			this->gpbxPersonaindi->Text = L"Visualizar datos de persona individualmente";
+			this->gpbxPersonaindi->Visible = false;
+			this->gpbxPersonaindi->Enter += gcnew System::EventHandler(this, &MyForm::grpxPersonaindi_Enter);
+			// 
+			// btnVisualizarP
+			// 
+			this->btnVisualizarP->BackColor = System::Drawing::Color::LimeGreen;
+			this->btnVisualizarP->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnVisualizarP->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->btnVisualizarP->Location = System::Drawing::Point(104, 264);
+			this->btnVisualizarP->Name = L"btnVisualizarP";
+			this->btnVisualizarP->Size = System::Drawing::Size(234, 30);
+			this->btnVisualizarP->TabIndex = 10;
+			this->btnVisualizarP->Text = L"Visualizar datos de persona";
+			this->btnVisualizarP->UseVisualStyleBackColor = false;
+			this->btnVisualizarP->Click += gcnew System::EventHandler(this, &MyForm::btnVisualizarP_Click);
+			// 
+			// lblresultVisualizarIding
+			// 
+			this->lblresultVisualizarIding->AutoSize = true;
+			this->lblresultVisualizarIding->Location = System::Drawing::Point(182, 212);
+			this->lblresultVisualizarIding->Name = L"lblresultVisualizarIding";
+			this->lblresultVisualizarIding->Size = System::Drawing::Size(0, 13);
+			this->lblresultVisualizarIding->TabIndex = 9;
+			// 
+			// lblresultVisualizarprofesion
+			// 
+			this->lblresultVisualizarprofesion->AutoSize = true;
+			this->lblresultVisualizarprofesion->Location = System::Drawing::Point(182, 163);
+			this->lblresultVisualizarprofesion->Name = L"lblresultVisualizarprofesion";
+			this->lblresultVisualizarprofesion->Size = System::Drawing::Size(0, 13);
+			this->lblresultVisualizarprofesion->TabIndex = 8;
+			// 
+			// lblresultVisualizarnumero
+			// 
+			this->lblresultVisualizarnumero->AutoSize = true;
+			this->lblresultVisualizarnumero->Location = System::Drawing::Point(180, 126);
+			this->lblresultVisualizarnumero->Name = L"lblresultVisualizarnumero";
+			this->lblresultVisualizarnumero->Size = System::Drawing::Size(0, 13);
+			this->lblresultVisualizarnumero->TabIndex = 7;
+			// 
+			// lblresultVisualizardocum
+			// 
+			this->lblresultVisualizardocum->AutoSize = true;
+			this->lblresultVisualizardocum->Location = System::Drawing::Point(180, 82);
+			this->lblresultVisualizardocum->Name = L"lblresultVisualizardocum";
+			this->lblresultVisualizardocum->Size = System::Drawing::Size(0, 13);
+			this->lblresultVisualizardocum->TabIndex = 6;
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(21, 212);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(118, 13);
+			this->label19->TabIndex = 5;
+			this->label19->Text = L"Id de libros ingresados: ";
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(21, 163);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(119, 13);
+			this->label18->TabIndex = 4;
+			this->label18->Text = L"Dedicación (profesion): ";
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(18, 126);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(106, 13);
+			this->label17->TabIndex = 3;
+			this->label17->Text = L"Numero de telefonó: ";
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(18, 82);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(133, 13);
+			this->label16->TabIndex = 2;
+			this->label16->Text = L"Documento identificación: ";
+			// 
+			// tbxVisualizarnombrePersona
+			// 
+			this->tbxVisualizarnombrePersona->Location = System::Drawing::Point(183, 36);
+			this->tbxVisualizarnombrePersona->Name = L"tbxVisualizarnombrePersona";
+			this->tbxVisualizarnombrePersona->Size = System::Drawing::Size(203, 20);
+			this->tbxVisualizarnombrePersona->TabIndex = 1;
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(15, 36);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(161, 13);
+			this->label15->TabIndex = 0;
+			this->label15->Text = L"Ingrese el nombre de la pesona: ";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1512, 681);
+			this->Controls->Add(this->gpbxPersonaindi);
+			this->Controls->Add(this->dtgvcontrolpersonas);
+			this->Controls->Add(this->gpbPersona);
 			this->Controls->Add(this->gpbxRfecha);
 			this->Controls->Add(this->gpbxReditorial);
 			this->Controls->Add(this->gpbxRautor);
+			this->Controls->Add(this->gpbxingreso);
 			this->Controls->Add(this->gpbxEdicion);
 			this->Controls->Add(this->gpbxRcategoria);
 			this->Controls->Add(this->gpbxRdestino);
@@ -1736,7 +2119,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->Controls->Add(this->gpbxRcantidadlibro);
 			this->Controls->Add(this->dtgvcontrol);
 			this->Controls->Add(this->gpbeliminar);
-			this->Controls->Add(this->gpbxingreso);
 			this->Controls->Add(this->gpbVisualizar);
 			this->Controls->Add(this->menuStrip1);
 			this->Name = L"MyForm";
@@ -1752,6 +2134,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->gpbeliminar->PerformLayout();
 			this->gpbmodificar->ResumeLayout(false);
 			this->gpbmodificar->PerformLayout();
+			this->gpbPersona->ResumeLayout(false);
+			this->gpbPersona->PerformLayout();
 			this->gpbxRdestino->ResumeLayout(false);
 			this->gpbxRdestino->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dtgvcontrol))->EndInit();
@@ -1769,6 +2153,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 			this->gpbxReditorial->PerformLayout();
 			this->gpbxRfecha->ResumeLayout(false);
 			this->gpbxRfecha->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dtgvcontrolpersonas))->EndInit();
+			this->gpbxPersonaindi->ResumeLayout(false);
+			this->gpbxPersonaindi->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1779,6 +2166,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarSesionToolStripMenuIte
 	}
 
 		   void cerrar(); 
+		   //void cambiousuario();
 
 private: System::Void ingresarLibroToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -1796,6 +2184,9 @@ private: System::Void ingresarLibroToolStripMenuItem_Click(System::Object^ sende
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -1815,6 +2206,9 @@ private: System::Void visualizarLibroToolStripMenuItem_Click(System::Object^ sen
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 	
@@ -1856,6 +2250,9 @@ private: System::Void modificarLibroToolStripMenuItem_Click(System::Object^ send
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 }
 private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -1928,6 +2325,9 @@ private: System::Void btnguardar_Click(System::Object^ sender, System::EventArgs
 			cmbcategoria->Visible = false;
 			tbxeditorial->Visible = false;
 			gpbxRfecha->Visible = false;
+			gpbPersona->Visible = false;
+			dtgvcontrolpersonas->Visible = false;
+			gpbxPersonaindi->Visible = false;
 		}
 
 	}
@@ -1976,6 +2376,9 @@ private: System::Void controlDeLibrosToolStripMenuItem_Click(System::Object^ sen
 		gpbxRautor->Visible = false;
 		gpbxReditorial->Visible = false;
 		gpbxRfecha->Visible = false;
+		gpbPersona->Visible = false;
+		dtgvcontrolpersonas->Visible = false;
+		gpbxPersonaindi->Visible = false;
 		MessageBox::Show("Este es el control de los libros en el inventario bibliotecario.");
 
 	}
@@ -2073,6 +2476,9 @@ private: System::Void eliminarLibroToolStripMenuItem_Click(System::Object^ sende
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 	
 }
 
@@ -2129,6 +2535,9 @@ private: System::Void cantidadDeLibrosToolStripMenuItem_Click(System::Object^ se
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 
 	impcont = std::to_string(cont); 
 	lblresultRcantidadlibros->Text = marshal_as<String^>(impcont);
@@ -2154,6 +2563,9 @@ private: System::Void reportePorEstadoDeLibroToolStripMenuItem_Click(System::Obj
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 
 }
 private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
@@ -2197,6 +2609,9 @@ private: System::Void reportePorCategoríaToolStripMenuItem_Click(System::Object^
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 	
 }
 private: System::Void reportePorDestinoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2214,6 +2629,9 @@ private: System::Void reportePorDestinoToolStripMenuItem_Click(System::Object^ s
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 	
 }
 private: System::Void gpbxRcategoria_Enter(System::Object^ sender, System::EventArgs^ e) {
@@ -2263,6 +2681,9 @@ private: System::Void reportePorEdicionToolStripMenuItem_Click(System::Object^ s
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 
 }
 private: System::Void btnRedicion_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2294,6 +2715,9 @@ private: System::Void reportePorAutorToolStripMenuItem_Click(System::Object^ sen
 	gpbxRautor->Visible = true; 
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 	
 }
 private: System::Void btnRautor_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2326,6 +2750,9 @@ private: System::Void reportePorEditorialToolStripMenuItem_Click(System::Object^
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = true; 
 	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 	
 }
 private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2374,6 +2801,9 @@ private: System::Void reportePorAñoToolStripMenuItem_Click(System::Object^ sende
 	gpbxRautor->Visible = false;
 	gpbxReditorial->Visible = false;
 	gpbxRfecha->Visible = true; 
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
 }
 
 /*private: System::Void cerrarSesionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2382,5 +2812,146 @@ private: System::Void reportePorAñoToolStripMenuItem_Click(System::Object^ sende
 
 Void cerrarSesionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e); 
 
+private: System::Void ingresarPersonaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Reporte de ingreso de personas, los demas diseños ocultos 
+	gpbmodificar->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
+	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = true; 
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = false;
+}
+private: System::Void btnregistroPersona_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Registro de personas
+	try
+	{
+		if (contp < 5)
+		{
+			dtgvcontrolpersonas->Rows->Add();
+			contp = dtgvcontrolpersonas->Rows->Count - 1;
+			dtgvcontrolpersonas[0, contp]->Value = tbxIngresopersona->Text;
+			dtgvcontrolpersonas[1, contp]->Value = tbxIngresoDocIdent->Text;
+			dtgvcontrolpersonas[2, contp]->Value = tbxIngresoNumero->Text;
+			dtgvcontrolpersonas[3, contp]->Value = tbxIngresoProfesion->Text;
+			dtgvcontrolpersonas[4, contp]->Value = tbxIngresoID->Text;
+
+			if (persona[contp].getNombrePersona() == "")
+			{
+				std::string nombrepersona = marshal_as<std::string>(tbxIngresopersona->Text);
+				int documentoident= std::stoi(marshal_as<std::string>(tbxIngresoDocIdent->Text));
+				std::string numtelefono = marshal_as<std::string>(tbxIngresoNumero->Text);
+				std::string dedicacion = marshal_as<std::string>(tbxIngresoProfesion->Text);
+				std::string idingresado = marshal_as<std::string>(tbxIngresoID->Text);
+
+				persona[contp].setNombrepersona(nombrepersona); 
+				persona[contp].setDocumentoident(documentoident);
+				persona[contp].setNumtelefono(numtelefono);
+				persona[contp].setDedicacion(dedicacion);
+				persona[contp].setIdIngresado(idingresado);
+
+				MessageBox::Show("El registro de la persona ha sido exitoso");
+			}
+			contp++;
+			tbxIngresopersona->Text = "";
+			tbxIngresoDocIdent->Text = "";
+			tbxIngresoNumero->Text = "";
+			tbxIngresoProfesion->Text = "";
+			tbxIngresoID->Text = "";
+		}
+		else
+		{
+			//Mensaje de declaracion de llenado de registro de personas 
+			MessageBox::Show("El registro de personas esta lleno");
+			tbxIngresopersona->Text = "";
+			tbxIngresoDocIdent->Text = "";
+			tbxIngresoNumero->Text = "";
+			tbxIngresoProfesion->Text = "";
+			tbxIngresoID->Text = "";
+
+			tbxIngresopersona->Visible = false;
+			tbxIngresoDocIdent->Visible = false;
+			tbxIngresoNumero->Visible = false;
+			tbxIngresoProfesion->Visible = false;
+			tbxIngresoID->Visible = false;
+		}
+
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show("¡Aviso: Uno de los datos de la persona ha sido llenado incorrectamente!");
+	}
+}
+private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void controlDePersonasToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Habilitacion de visibilidad del control de personas + ocultar demas disenos 
+	gpbmodificar->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
+	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = true; 
+	gpbxPersonaindi->Visible = false;
+}
+private: System::Void grpxPersonaindi_Enter(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnVisualizarP_Click(System::Object^ sender, System::EventArgs^ e) {
+	//Visualizacion individual de personas 
+	try
+	{
+		for (int i = 0; i < 5; i++)
+		{
+			if ((marshal_as<std::string>(tbxVisualizarnombrePersona->Text)) == persona[i].getNombrePersona())
+			{
+				lblresultVisualizarIding->Text = marshal_as<String^>(persona[i].getIdIngresado());
+				lblresultVisualizardocum->Text = marshal_as<String^>(std::to_string(persona[i].getDocumentoIdent()));
+				lblresultVisualizarnumero->Text = marshal_as<String^>(persona[i].getNumtelefono());
+				lblresultVisualizarprofesion->Text = marshal_as<String^>(persona[i].getDedicacion());
+			}
+		}
+		
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
+	}
+}
+private: System::Void visualizarPersonaIndividualmenteToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	gpbmodificar->Visible = false;
+	gpbeliminar->Visible = false;
+	gpbxingreso->Visible = false;
+	gpbVisualizar->Visible = false;
+	dtgvcontrol->Visible = false;
+	gpbxRcantidadlibro->Visible = false;
+	gpbxRestado->Visible = false;
+	gpbxRdestino->Visible = false;
+	gpbxRcategoria->Visible = false;
+	gpbxEdicion->Visible = false;
+	gpbxRautor->Visible = false;
+	gpbxReditorial->Visible = false;
+	gpbxRfecha->Visible = false;
+	gpbPersona->Visible = false;
+	dtgvcontrolpersonas->Visible = false;
+	gpbxPersonaindi->Visible = true; 
+}
 };
 }

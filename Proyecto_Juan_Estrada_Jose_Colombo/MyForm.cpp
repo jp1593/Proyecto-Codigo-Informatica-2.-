@@ -1,6 +1,8 @@
 #pragma once
 #include "MyForm.h"
 #include "MyForm1.h"
+#include <msclr\marshal.h>
+#include <msclr\marshal_cppstd.h>
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -20,6 +22,15 @@ void MyForm::cerrarSesionToolStripMenuItem_Click(System::Object^ sender, System:
 {
 	cerrar(); 
 }
+
+/*void MyForm::cambiousuario()
+{
+	MyForm1^ segundoform = gcnew MyForm1();
+	segundoform->Show();
+	
+	
+
+}*/
 
 void MyForm::cerrar()
 {

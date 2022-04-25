@@ -146,6 +146,8 @@ namespace ProyectoJuanEstradaJoseColombo {
 
 		 void mostrar(); 
 
+	//	 void cambioC(std::string* u, std::string* c);
+
 private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
