@@ -339,7 +339,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->libroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ingresarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -765,7 +765,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbxingreso->Controls->Add(this->lbltitnombre);
 			this->gpbxingreso->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gpbxingreso->Location = System::Drawing::Point(12, 50);
+			this->gpbxingreso->Location = System::Drawing::Point(6, 42);
 			this->gpbxingreso->Name = L"gpbxingreso";
 			this->gpbxingreso->Size = System::Drawing::Size(724, 314);
 			this->gpbxingreso->TabIndex = 1;
@@ -938,7 +938,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbxPersonaindi->Controls->Add(this->label16);
 			this->gpbxPersonaindi->Controls->Add(this->tbxVisualizarnombrePersona);
 			this->gpbxPersonaindi->Controls->Add(this->label15);
-			this->gpbxPersonaindi->Location = System::Drawing::Point(752, 336);
+			this->gpbxPersonaindi->Location = System::Drawing::Point(8, 374);
 			this->gpbxPersonaindi->Name = L"gpbxPersonaindi";
 			this->gpbxPersonaindi->Size = System::Drawing::Size(418, 317);
 			this->gpbxPersonaindi->TabIndex = 16;
@@ -1058,7 +1058,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbPersona->Controls->Add(this->label12);
 			this->gpbPersona->Controls->Add(this->label11);
 			this->gpbPersona->Controls->Add(this->label10);
-			this->gpbPersona->Location = System::Drawing::Point(752, 46);
+			this->gpbPersona->Location = System::Drawing::Point(18, 383);
 			this->gpbPersona->Name = L"gpbPersona";
 			this->gpbPersona->Size = System::Drawing::Size(532, 284);
 			this->gpbPersona->TabIndex = 14;
@@ -1162,13 +1162,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			// gpbVisualizar
 			// 
-			this->gpbVisualizar->Controls->Add(this->gpbxModificarPersona);
 			this->gpbVisualizar->Controls->Add(this->lblresulteditorialVisualizar);
 			this->gpbVisualizar->Controls->Add(this->label1);
 			this->gpbVisualizar->Controls->Add(this->lblresultcatgoriaVisualizar);
 			this->gpbVisualizar->Controls->Add(this->lbltitcategoriaVisualizar);
 			this->gpbVisualizar->Controls->Add(this->tbxvreferenciaVisualizar);
-			this->gpbVisualizar->Controls->Add(this->gpbmodificar);
 			this->gpbVisualizar->Controls->Add(this->btnvisualizar);
 			this->gpbVisualizar->Controls->Add(this->lblresultdestinoVisualizar);
 			this->gpbVisualizar->Controls->Add(this->lblresultestadoVisualizar);
@@ -1185,7 +1183,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbVisualizar->Controls->Add(this->lbltitrefrenciadelibrovisualizar);
 			this->gpbVisualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gpbVisualizar->Location = System::Drawing::Point(12, 43);
+			this->gpbVisualizar->Location = System::Drawing::Point(18, 48);
 			this->gpbVisualizar->Name = L"gpbVisualizar";
 			this->gpbVisualizar->Size = System::Drawing::Size(647, 324);
 			this->gpbVisualizar->TabIndex = 2;
@@ -1200,7 +1198,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbxModificarPersona->Controls->Add(this->txtModificarDocIden);
 			this->gpbxModificarPersona->Controls->Add(this->txtModificarProf);
 			this->gpbxModificarPersona->Controls->Add(this->txtModificarNumTel);
-			this->gpbxModificarPersona->Controls->Add(this->gpbeliminar);
 			this->gpbxModificarPersona->Controls->Add(this->btnModificarPersona);
 			this->gpbxModificarPersona->Controls->Add(this->button5);
 			this->gpbxModificarPersona->Controls->Add(this->label24);
@@ -1209,7 +1206,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbxModificarPersona->Controls->Add(this->label27);
 			this->gpbxModificarPersona->Controls->Add(this->txtModificarPer);
 			this->gpbxModificarPersona->Controls->Add(this->label28);
-			this->gpbxModificarPersona->Location = System::Drawing::Point(0, 1);
+			this->gpbxModificarPersona->Location = System::Drawing::Point(0, 402);
 			this->gpbxModificarPersona->Name = L"gpbxModificarPersona";
 			this->gpbxModificarPersona->Size = System::Drawing::Size(576, 303);
 			this->gpbxModificarPersona->TabIndex = 17;
@@ -1253,7 +1250,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbeliminar->Controls->Add(this->lbltitnombreeliminar);
 			this->gpbeliminar->Controls->Add(this->tbxvalorreferenciaEliminar);
 			this->gpbeliminar->Controls->Add(this->lbltitvreferencia);
-			this->gpbeliminar->Location = System::Drawing::Point(6, 4);
+			this->gpbeliminar->Location = System::Drawing::Point(6, 28);
 			this->gpbeliminar->Name = L"gpbeliminar";
 			this->gpbeliminar->Size = System::Drawing::Size(529, 164);
 			this->gpbeliminar->TabIndex = 3;
@@ -1458,7 +1455,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbmodificar->Controls->Add(this->lbltitautorModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitnombreModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitvreferenciaModificar);
-			this->gpbmodificar->Location = System::Drawing::Point(214, 225);
+			this->gpbmodificar->Location = System::Drawing::Point(12, 49);
 			this->gpbmodificar->Name = L"gpbmodificar";
 			this->gpbmodificar->Size = System::Drawing::Size(724, 379);
 			this->gpbmodificar->TabIndex = 4;
@@ -1846,15 +1843,15 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->dtgvcontrol->Location = System::Drawing::Point(209, 434);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this->dtgvcontrol->Size = System::Drawing::Size(943, 200);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
@@ -2163,7 +2160,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// gpbxReditorial
 			// 
 			this->gpbxReditorial->Controls->Add(this->listBReditorial);
-			this->gpbxReditorial->Controls->Add(this->gpbxRfecha);
 			this->gpbxReditorial->Controls->Add(this->btnReditorial);
 			this->gpbxReditorial->Controls->Add(this->tbxReditorial);
 			this->gpbxReditorial->Controls->Add(this->label8);
@@ -2189,7 +2185,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbxRfecha->Controls->Add(this->button4);
 			this->gpbxRfecha->Controls->Add(this->dtmRfecha);
 			this->gpbxRfecha->Controls->Add(this->label9);
-			this->gpbxRfecha->Location = System::Drawing::Point(0, 1);
+			this->gpbxRfecha->Location = System::Drawing::Point(776, 14);
 			this->gpbxRfecha->Name = L"gpbxRfecha";
 			this->gpbxRfecha->Size = System::Drawing::Size(594, 237);
 			this->gpbxRfecha->TabIndex = 12;
@@ -2315,7 +2311,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbxEliminarPersona->Controls->Add(this->label21);
 			this->gpbxEliminarPersona->Controls->Add(this->txtEliminarPersona);
 			this->gpbxEliminarPersona->Controls->Add(this->label22);
-			this->gpbxEliminarPersona->Location = System::Drawing::Point(12, 42);
+			this->gpbxEliminarPersona->Location = System::Drawing::Point(6, 378);
 			this->gpbxEliminarPersona->Name = L"gpbxEliminarPersona";
 			this->gpbxEliminarPersona->Size = System::Drawing::Size(483, 199);
 			this->gpbxEliminarPersona->TabIndex = 16;
@@ -2389,15 +2385,19 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1370, 749);
-			this->Controls->Add(this->gpbxPersonaindi);
+			this->Controls->Add(this->gpbxModificarPersona);
 			this->Controls->Add(this->gpbxEliminarPersona);
+			this->Controls->Add(this->gpbxPersonaindi);
+			this->Controls->Add(this->gpbxRfecha);
 			this->Controls->Add(this->gpbPersona);
 			this->Controls->Add(this->dtgvcontrolpersonas);
+			this->Controls->Add(this->gpbeliminar);
 			this->Controls->Add(this->gpbxReditorial);
+			this->Controls->Add(this->gpbmodificar);
+			this->Controls->Add(this->gpbxingreso);
 			this->Controls->Add(this->gpbxRautor);
 			this->Controls->Add(this->gpbxEdicion);
 			this->Controls->Add(this->gpbxRcategoria);
-			this->Controls->Add(this->gpbxingreso);
 			this->Controls->Add(this->gpbxRdestino);
 			this->Controls->Add(this->gpbxRestado);
 			this->Controls->Add(this->gpbxRcantidadlibro);
