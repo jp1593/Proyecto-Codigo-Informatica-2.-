@@ -98,8 +98,10 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// 
 			this->tbxcontraseña->Location = System::Drawing::Point(579, 254);
 			this->tbxcontraseña->Name = L"tbxcontraseña";
+			this->tbxcontraseña->PasswordChar = '*';
 			this->tbxcontraseña->Size = System::Drawing::Size(201, 20);
 			this->tbxcontraseña->TabIndex = 2;
+			this->tbxcontraseña->TextChanged += gcnew System::EventHandler(this, &MyForm1::tbxcontraseña_TextChanged);
 			// 
 			// lbltitcontrasena
 			// 
@@ -168,6 +170,8 @@ namespace ProyectoJuanEstradaJoseColombo {
 private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void tbxcontraseña_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
