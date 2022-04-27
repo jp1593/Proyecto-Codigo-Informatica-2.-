@@ -2315,7 +2315,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbxEliminarPersona->Controls->Add(this->label21);
 			this->gpbxEliminarPersona->Controls->Add(this->txtEliminarPersona);
 			this->gpbxEliminarPersona->Controls->Add(this->label22);
-			this->gpbxEliminarPersona->Location = System::Drawing::Point(91, 413);
+			this->gpbxEliminarPersona->Location = System::Drawing::Point(12, 42);
 			this->gpbxEliminarPersona->Name = L"gpbxEliminarPersona";
 			this->gpbxEliminarPersona->Size = System::Drawing::Size(483, 199);
 			this->gpbxEliminarPersona->TabIndex = 16;

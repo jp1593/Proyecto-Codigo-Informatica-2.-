@@ -81,7 +81,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->lbltitusuario->AutoSize = true;
 			this->lbltitusuario->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbltitusuario->Location = System::Drawing::Point(445, 199);
+			this->lbltitusuario->Location = System::Drawing::Point(95, 179);
 			this->lbltitusuario->Name = L"lbltitusuario";
 			this->lbltitusuario->Size = System::Drawing::Size(93, 24);
 			this->lbltitusuario->TabIndex = 0;
@@ -89,14 +89,14 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// 
 			// tbxUusario
 			// 
-			this->tbxUusario->Location = System::Drawing::Point(579, 199);
+			this->tbxUusario->Location = System::Drawing::Point(229, 179);
 			this->tbxUusario->Name = L"tbxUusario";
 			this->tbxUusario->Size = System::Drawing::Size(201, 20);
 			this->tbxUusario->TabIndex = 1;
 			// 
 			// tbxcontraseña
 			// 
-			this->tbxcontraseña->Location = System::Drawing::Point(579, 254);
+			this->tbxcontraseña->Location = System::Drawing::Point(229, 234);
 			this->tbxcontraseña->Name = L"tbxcontraseña";
 			this->tbxcontraseña->PasswordChar = '*';
 			this->tbxcontraseña->Size = System::Drawing::Size(201, 20);
@@ -108,7 +108,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->lbltitcontrasena->AutoSize = true;
 			this->lbltitcontrasena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbltitcontrasena->Location = System::Drawing::Point(445, 249);
+			this->lbltitcontrasena->Location = System::Drawing::Point(95, 229);
 			this->lbltitcontrasena->Name = L"lbltitcontrasena";
 			this->lbltitcontrasena->Size = System::Drawing::Size(128, 24);
 			this->lbltitcontrasena->TabIndex = 3;
@@ -120,7 +120,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::Red;
-			this->button1->Location = System::Drawing::Point(592, 302);
+			this->button1->Location = System::Drawing::Point(242, 282);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(163, 43);
 			this->button1->TabIndex = 4;
@@ -131,9 +131,9 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(22, 51);
+			this->pictureBox1->Location = System::Drawing::Point(12, 12);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(397, 394);
+			this->pictureBox1->Size = System::Drawing::Size(495, 482);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 5;
 			this->pictureBox1->TabStop = false;
@@ -142,14 +142,15 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoValidate = System::Windows::Forms::AutoValidate::Disable;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(811, 506);
-			this->Controls->Add(this->pictureBox1);
+			this->ClientSize = System::Drawing::Size(508, 506);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->lbltitcontrasena);
 			this->Controls->Add(this->tbxcontraseña);
 			this->Controls->Add(this->tbxUusario);
 			this->Controls->Add(this->lbltitusuario);
+			this->Controls->Add(this->pictureBox1);
 			this->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Name = L"MyForm1";
 			this->Text = L"MyForm1";
