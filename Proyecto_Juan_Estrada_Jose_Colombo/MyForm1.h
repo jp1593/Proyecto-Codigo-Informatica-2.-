@@ -50,6 +50,8 @@ namespace ProyectoJuanEstradaJoseColombo {
 	private: System::Windows::Forms::TextBox^ tbxcontraseña;
 	private: System::Windows::Forms::Label^ lbltitcontrasena;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+
 
 	private:
 		/// <summary>
@@ -64,11 +66,14 @@ namespace ProyectoJuanEstradaJoseColombo {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm1::typeid));
 			this->lbltitusuario = (gcnew System::Windows::Forms::Label());
 			this->tbxUusario = (gcnew System::Windows::Forms::TextBox());
 			this->tbxcontraseña = (gcnew System::Windows::Forms::TextBox());
 			this->lbltitcontrasena = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// lbltitusuario
@@ -76,7 +81,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->lbltitusuario->AutoSize = true;
 			this->lbltitusuario->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbltitusuario->Location = System::Drawing::Point(161, 138);
+			this->lbltitusuario->Location = System::Drawing::Point(445, 199);
 			this->lbltitusuario->Name = L"lbltitusuario";
 			this->lbltitusuario->Size = System::Drawing::Size(93, 24);
 			this->lbltitusuario->TabIndex = 0;
@@ -84,14 +89,14 @@ namespace ProyectoJuanEstradaJoseColombo {
 			// 
 			// tbxUusario
 			// 
-			this->tbxUusario->Location = System::Drawing::Point(295, 138);
+			this->tbxUusario->Location = System::Drawing::Point(579, 199);
 			this->tbxUusario->Name = L"tbxUusario";
 			this->tbxUusario->Size = System::Drawing::Size(201, 20);
 			this->tbxUusario->TabIndex = 1;
 			// 
 			// tbxcontraseña
 			// 
-			this->tbxcontraseña->Location = System::Drawing::Point(295, 193);
+			this->tbxcontraseña->Location = System::Drawing::Point(579, 254);
 			this->tbxcontraseña->Name = L"tbxcontraseña";
 			this->tbxcontraseña->Size = System::Drawing::Size(201, 20);
 			this->tbxcontraseña->TabIndex = 2;
@@ -101,7 +106,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->lbltitcontrasena->AutoSize = true;
 			this->lbltitcontrasena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lbltitcontrasena->Location = System::Drawing::Point(161, 188);
+			this->lbltitcontrasena->Location = System::Drawing::Point(445, 249);
 			this->lbltitcontrasena->Name = L"lbltitcontrasena";
 			this->lbltitcontrasena->Size = System::Drawing::Size(128, 24);
 			this->lbltitcontrasena->TabIndex = 3;
@@ -113,7 +118,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::Red;
-			this->button1->Location = System::Drawing::Point(307, 257);
+			this->button1->Location = System::Drawing::Point(592, 302);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(163, 43);
 			this->button1->TabIndex = 4;
@@ -121,12 +126,23 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click);
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(22, 51);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(397, 394);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 5;
+			this->pictureBox1->TabStop = false;
+			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::Menu;
+			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(811, 506);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->lbltitcontrasena);
 			this->Controls->Add(this->tbxcontraseña);
@@ -136,6 +152,7 @@ namespace ProyectoJuanEstradaJoseColombo {
 			this->Name = L"MyForm1";
 			this->Text = L"MyForm1";
 			this->Load += gcnew System::EventHandler(this, &MyForm1::MyForm1_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -149,6 +166,8 @@ namespace ProyectoJuanEstradaJoseColombo {
 	//	 void cambioC(std::string* u, std::string* c);
 
 private: System::Void MyForm1_Load(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
