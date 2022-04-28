@@ -339,7 +339,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->libroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ingresarLibroToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -408,18 +408,30 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->gpbVisualizar = (gcnew System::Windows::Forms::GroupBox());
+			this->lblresulteditorialVisualizar = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->lblresultcatgoriaVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lbltitcategoriaVisualizar = (gcnew System::Windows::Forms::Label());
+			this->tbxvreferenciaVisualizar = (gcnew System::Windows::Forms::TextBox());
+			this->btnvisualizar = (gcnew System::Windows::Forms::Button());
+			this->lblresultdestinoVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lblresultestadoVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lblresultedicionVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lblresultfechaVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lblresultautorVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lblresultnombreVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lbltitdestinoVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lbltitestadoVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lbltitedicionVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lbltitfechaVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lbltitautorVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lblnombreVisualizar = (gcnew System::Windows::Forms::Label());
+			this->lbltitrefrenciadelibrovisualizar = (gcnew System::Windows::Forms::Label());
 			this->gpbxModificarPersona = (gcnew System::Windows::Forms::GroupBox());
 			this->txtModificarIdLib = (gcnew System::Windows::Forms::TextBox());
 			this->txtModificarDocIden = (gcnew System::Windows::Forms::TextBox());
 			this->txtModificarProf = (gcnew System::Windows::Forms::TextBox());
 			this->txtModificarNumTel = (gcnew System::Windows::Forms::TextBox());
-			this->gpbeliminar = (gcnew System::Windows::Forms::GroupBox());
-			this->btnConfirEliLib = (gcnew System::Windows::Forms::Button());
-			this->btnEliminarLibro = (gcnew System::Windows::Forms::Button());
-			this->lblresultnombreEliminar = (gcnew System::Windows::Forms::Label());
-			this->lbltitnombreeliminar = (gcnew System::Windows::Forms::Label());
-			this->tbxvalorreferenciaEliminar = (gcnew System::Windows::Forms::TextBox());
-			this->lbltitvreferencia = (gcnew System::Windows::Forms::Label());
 			this->btnModificarPersona = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label24 = (gcnew System::Windows::Forms::Label());
@@ -428,11 +440,13 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->label27 = (gcnew System::Windows::Forms::Label());
 			this->txtModificarPer = (gcnew System::Windows::Forms::TextBox());
 			this->label28 = (gcnew System::Windows::Forms::Label());
-			this->lblresulteditorialVisualizar = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->lblresultcatgoriaVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lbltitcategoriaVisualizar = (gcnew System::Windows::Forms::Label());
-			this->tbxvreferenciaVisualizar = (gcnew System::Windows::Forms::TextBox());
+			this->gpbeliminar = (gcnew System::Windows::Forms::GroupBox());
+			this->btnConfirEliLib = (gcnew System::Windows::Forms::Button());
+			this->btnEliminarLibro = (gcnew System::Windows::Forms::Button());
+			this->lblresultnombreEliminar = (gcnew System::Windows::Forms::Label());
+			this->lbltitnombreeliminar = (gcnew System::Windows::Forms::Label());
+			this->tbxvalorreferenciaEliminar = (gcnew System::Windows::Forms::TextBox());
+			this->lbltitvreferencia = (gcnew System::Windows::Forms::Label());
 			this->gpbmodificar = (gcnew System::Windows::Forms::GroupBox());
 			this->btnGuarLibMod = (gcnew System::Windows::Forms::Button());
 			this->lbltitcategoriaModificar = (gcnew System::Windows::Forms::Label());
@@ -454,20 +468,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->lbltitautorModificar = (gcnew System::Windows::Forms::Label());
 			this->lbltitnombreModificar = (gcnew System::Windows::Forms::Label());
 			this->lbltitvreferenciaModificar = (gcnew System::Windows::Forms::Label());
-			this->btnvisualizar = (gcnew System::Windows::Forms::Button());
-			this->lblresultdestinoVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lblresultestadoVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lblresultedicionVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lblresultfechaVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lblresultautorVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lblresultnombreVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lbltitdestinoVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lbltitestadoVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lbltitedicionVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lbltitfechaVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lbltitautorVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lblnombreVisualizar = (gcnew System::Windows::Forms::Label());
-			this->lbltitrefrenciadelibrovisualizar = (gcnew System::Windows::Forms::Label());
 			this->gpbxRdestino = (gcnew System::Windows::Forms::GroupBox());
 			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -509,14 +509,14 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->gpbxReditorial = (gcnew System::Windows::Forms::GroupBox());
 			this->listBReditorial = (gcnew System::Windows::Forms::ListBox());
+			this->btnReditorial = (gcnew System::Windows::Forms::Button());
+			this->tbxReditorial = (gcnew System::Windows::Forms::TextBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->gpbxRfecha = (gcnew System::Windows::Forms::GroupBox());
 			this->listBRfecha = (gcnew System::Windows::Forms::ListBox());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->dtmRfecha = (gcnew System::Windows::Forms::DateTimePicker());
 			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->btnReditorial = (gcnew System::Windows::Forms::Button());
-			this->tbxReditorial = (gcnew System::Windows::Forms::TextBox());
-			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->dtgvcontrolpersonas = (gcnew System::Windows::Forms::DataGridView());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -553,6 +553,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
 				this->libroToolStripMenuItem,
 					this->reportesToolStripMenuItem, this->controlDeLibrosToolStripMenuItem, this->personasToolStripMenuItem, this->controlDePersonasToolStripMenuItem,
@@ -560,50 +561,52 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1370, 24);
+			this->menuStrip1->Size = System::Drawing::Size(1827, 30);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// libroToolStripMenuItem
 			// 
+			this->libroToolStripMenuItem->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->libroToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->ingresarLibroToolStripMenuItem,
 					this->modificarLibroToolStripMenuItem, this->visualizarLibroToolStripMenuItem, this->eliminarLibroToolStripMenuItem
 			});
 			this->libroToolStripMenuItem->Name = L"libroToolStripMenuItem";
-			this->libroToolStripMenuItem->Size = System::Drawing::Size(46, 20);
+			this->libroToolStripMenuItem->Size = System::Drawing::Size(57, 26);
 			this->libroToolStripMenuItem->Text = L"Libro";
 			// 
 			// ingresarLibroToolStripMenuItem
 			// 
 			this->ingresarLibroToolStripMenuItem->Name = L"ingresarLibroToolStripMenuItem";
-			this->ingresarLibroToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->ingresarLibroToolStripMenuItem->Size = System::Drawing::Size(224, 26);
 			this->ingresarLibroToolStripMenuItem->Text = L"Ingresar libro";
 			this->ingresarLibroToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ingresarLibroToolStripMenuItem_Click);
 			// 
 			// modificarLibroToolStripMenuItem
 			// 
 			this->modificarLibroToolStripMenuItem->Name = L"modificarLibroToolStripMenuItem";
-			this->modificarLibroToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->modificarLibroToolStripMenuItem->Size = System::Drawing::Size(224, 26);
 			this->modificarLibroToolStripMenuItem->Text = L"Modificar libro";
 			this->modificarLibroToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::modificarLibroToolStripMenuItem_Click);
 			// 
 			// visualizarLibroToolStripMenuItem
 			// 
 			this->visualizarLibroToolStripMenuItem->Name = L"visualizarLibroToolStripMenuItem";
-			this->visualizarLibroToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->visualizarLibroToolStripMenuItem->Size = System::Drawing::Size(224, 26);
 			this->visualizarLibroToolStripMenuItem->Text = L"Visualizar libro";
 			this->visualizarLibroToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::visualizarLibroToolStripMenuItem_Click);
 			// 
 			// eliminarLibroToolStripMenuItem
 			// 
 			this->eliminarLibroToolStripMenuItem->Name = L"eliminarLibroToolStripMenuItem";
-			this->eliminarLibroToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->eliminarLibroToolStripMenuItem->Size = System::Drawing::Size(224, 26);
 			this->eliminarLibroToolStripMenuItem->Text = L"Eliminar libro";
 			this->eliminarLibroToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::eliminarLibroToolStripMenuItem_Click);
 			// 
 			// reportesToolStripMenuItem
 			// 
+			this->reportesToolStripMenuItem->BackColor = System::Drawing::Color::LightYellow;
 			this->reportesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(8) {
 				this->cantidadDeLibrosToolStripMenuItem,
 					this->reportePorEstadoDeLibroToolStripMenuItem, this->reportePorEdicionToolStripMenuItem, this->reportePorAñoToolStripMenuItem,
@@ -611,114 +614,117 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 					this->reportePorDestinoToolStripMenuItem
 			});
 			this->reportesToolStripMenuItem->Name = L"reportesToolStripMenuItem";
-			this->reportesToolStripMenuItem->Size = System::Drawing::Size(65, 20);
+			this->reportesToolStripMenuItem->Size = System::Drawing::Size(82, 26);
 			this->reportesToolStripMenuItem->Text = L"Reportes";
 			// 
 			// cantidadDeLibrosToolStripMenuItem
 			// 
 			this->cantidadDeLibrosToolStripMenuItem->Name = L"cantidadDeLibrosToolStripMenuItem";
-			this->cantidadDeLibrosToolStripMenuItem->Size = System::Drawing::Size(188, 22);
+			this->cantidadDeLibrosToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->cantidadDeLibrosToolStripMenuItem->Text = L"Cantidad de libros";
 			this->cantidadDeLibrosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::cantidadDeLibrosToolStripMenuItem_Click);
 			// 
 			// reportePorEstadoDeLibroToolStripMenuItem
 			// 
 			this->reportePorEstadoDeLibroToolStripMenuItem->Name = L"reportePorEstadoDeLibroToolStripMenuItem";
-			this->reportePorEstadoDeLibroToolStripMenuItem->Size = System::Drawing::Size(188, 22);
+			this->reportePorEstadoDeLibroToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->reportePorEstadoDeLibroToolStripMenuItem->Text = L"Reporte por estado ";
 			this->reportePorEstadoDeLibroToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorEstadoDeLibroToolStripMenuItem_Click);
 			// 
 			// reportePorEdicionToolStripMenuItem
 			// 
 			this->reportePorEdicionToolStripMenuItem->Name = L"reportePorEdicionToolStripMenuItem";
-			this->reportePorEdicionToolStripMenuItem->Size = System::Drawing::Size(188, 22);
+			this->reportePorEdicionToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->reportePorEdicionToolStripMenuItem->Text = L"Reporte por edicion";
 			this->reportePorEdicionToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorEdicionToolStripMenuItem_Click);
 			// 
 			// reportePorAñoToolStripMenuItem
 			// 
 			this->reportePorAñoToolStripMenuItem->Name = L"reportePorAñoToolStripMenuItem";
-			this->reportePorAñoToolStripMenuItem->Size = System::Drawing::Size(188, 22);
+			this->reportePorAñoToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->reportePorAñoToolStripMenuItem->Text = L"Reporte por fecha";
 			this->reportePorAñoToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorAñoToolStripMenuItem_Click);
 			// 
 			// reportePorAutorToolStripMenuItem
 			// 
 			this->reportePorAutorToolStripMenuItem->Name = L"reportePorAutorToolStripMenuItem";
-			this->reportePorAutorToolStripMenuItem->Size = System::Drawing::Size(188, 22);
+			this->reportePorAutorToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->reportePorAutorToolStripMenuItem->Text = L"Reporte por autor ";
 			this->reportePorAutorToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorAutorToolStripMenuItem_Click);
 			// 
 			// reportePorEditorialToolStripMenuItem
 			// 
 			this->reportePorEditorialToolStripMenuItem->Name = L"reportePorEditorialToolStripMenuItem";
-			this->reportePorEditorialToolStripMenuItem->Size = System::Drawing::Size(188, 22);
+			this->reportePorEditorialToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->reportePorEditorialToolStripMenuItem->Text = L"Reporte por editorial";
 			this->reportePorEditorialToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorEditorialToolStripMenuItem_Click);
 			// 
 			// reportePorCategoríaToolStripMenuItem
 			// 
 			this->reportePorCategoríaToolStripMenuItem->Name = L"reportePorCategoríaToolStripMenuItem";
-			this->reportePorCategoríaToolStripMenuItem->Size = System::Drawing::Size(188, 22);
+			this->reportePorCategoríaToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->reportePorCategoríaToolStripMenuItem->Text = L"Reporte por categoría";
 			this->reportePorCategoríaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorCategoríaToolStripMenuItem_Click);
 			// 
 			// reportePorDestinoToolStripMenuItem
 			// 
 			this->reportePorDestinoToolStripMenuItem->Name = L"reportePorDestinoToolStripMenuItem";
-			this->reportePorDestinoToolStripMenuItem->Size = System::Drawing::Size(188, 22);
+			this->reportePorDestinoToolStripMenuItem->Size = System::Drawing::Size(239, 26);
 			this->reportePorDestinoToolStripMenuItem->Text = L"Reporte por destino";
 			this->reportePorDestinoToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::reportePorDestinoToolStripMenuItem_Click);
 			// 
 			// controlDeLibrosToolStripMenuItem
 			// 
+			this->controlDeLibrosToolStripMenuItem->BackColor = System::Drawing::Color::LightGreen;
 			this->controlDeLibrosToolStripMenuItem->Name = L"controlDeLibrosToolStripMenuItem";
-			this->controlDeLibrosToolStripMenuItem->Size = System::Drawing::Size(107, 20);
+			this->controlDeLibrosToolStripMenuItem->Size = System::Drawing::Size(134, 26);
 			this->controlDeLibrosToolStripMenuItem->Text = L"Control de libros";
 			this->controlDeLibrosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::controlDeLibrosToolStripMenuItem_Click);
 			// 
 			// personasToolStripMenuItem
 			// 
+			this->personasToolStripMenuItem->BackColor = System::Drawing::Color::Linen;
 			this->personasToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->ingresarPersonaToolStripMenuItem,
 					this->visualizarPersonaIndividualmenteToolStripMenuItem, this->modificarPersonaToolStripMenuItem, this->eliminarPersonaToolStripMenuItem
 			});
 			this->personasToolStripMenuItem->Name = L"personasToolStripMenuItem";
-			this->personasToolStripMenuItem->Size = System::Drawing::Size(66, 20);
+			this->personasToolStripMenuItem->Size = System::Drawing::Size(80, 26);
 			this->personasToolStripMenuItem->Text = L"Personas";
 			// 
 			// ingresarPersonaToolStripMenuItem
 			// 
 			this->ingresarPersonaToolStripMenuItem->Name = L"ingresarPersonaToolStripMenuItem";
-			this->ingresarPersonaToolStripMenuItem->Size = System::Drawing::Size(257, 22);
+			this->ingresarPersonaToolStripMenuItem->Size = System::Drawing::Size(323, 26);
 			this->ingresarPersonaToolStripMenuItem->Text = L"Ingresar Persona";
 			this->ingresarPersonaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ingresarPersonaToolStripMenuItem_Click);
 			// 
 			// visualizarPersonaIndividualmenteToolStripMenuItem
 			// 
 			this->visualizarPersonaIndividualmenteToolStripMenuItem->Name = L"visualizarPersonaIndividualmenteToolStripMenuItem";
-			this->visualizarPersonaIndividualmenteToolStripMenuItem->Size = System::Drawing::Size(257, 22);
+			this->visualizarPersonaIndividualmenteToolStripMenuItem->Size = System::Drawing::Size(323, 26);
 			this->visualizarPersonaIndividualmenteToolStripMenuItem->Text = L"Visualizar persona individualmente";
 			this->visualizarPersonaIndividualmenteToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::visualizarPersonaIndividualmenteToolStripMenuItem_Click);
 			// 
 			// modificarPersonaToolStripMenuItem
 			// 
 			this->modificarPersonaToolStripMenuItem->Name = L"modificarPersonaToolStripMenuItem";
-			this->modificarPersonaToolStripMenuItem->Size = System::Drawing::Size(257, 22);
+			this->modificarPersonaToolStripMenuItem->Size = System::Drawing::Size(323, 26);
 			this->modificarPersonaToolStripMenuItem->Text = L"Modificar Persona";
 			this->modificarPersonaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::modificarPersonaToolStripMenuItem_Click);
 			// 
 			// eliminarPersonaToolStripMenuItem
 			// 
 			this->eliminarPersonaToolStripMenuItem->Name = L"eliminarPersonaToolStripMenuItem";
-			this->eliminarPersonaToolStripMenuItem->Size = System::Drawing::Size(257, 22);
+			this->eliminarPersonaToolStripMenuItem->Size = System::Drawing::Size(323, 26);
 			this->eliminarPersonaToolStripMenuItem->Text = L"Eliminar Persona";
 			this->eliminarPersonaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::eliminarPersonaToolStripMenuItem_Click);
 			// 
 			// controlDePersonasToolStripMenuItem
 			// 
+			this->controlDePersonasToolStripMenuItem->BackColor = System::Drawing::Color::LightGreen;
 			this->controlDePersonasToolStripMenuItem->Name = L"controlDePersonasToolStripMenuItem";
-			this->controlDePersonasToolStripMenuItem->Size = System::Drawing::Size(125, 20);
+			this->controlDePersonasToolStripMenuItem->Size = System::Drawing::Size(156, 26);
 			this->controlDePersonasToolStripMenuItem->Text = L"Control de personas";
 			this->controlDePersonasToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::controlDePersonasToolStripMenuItem_Click);
 			// 
@@ -726,26 +732,28 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			this->cerrarSesionToolStripMenuItem->BackColor = System::Drawing::Color::Red;
 			this->cerrarSesionToolStripMenuItem->Name = L"cerrarSesionToolStripMenuItem";
-			this->cerrarSesionToolStripMenuItem->Size = System::Drawing::Size(87, 20);
+			this->cerrarSesionToolStripMenuItem->Size = System::Drawing::Size(108, 26);
 			this->cerrarSesionToolStripMenuItem->Text = L"Cerrar sesion";
 			this->cerrarSesionToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::cerrarSesionToolStripMenuItem_Click);
 			// 
 			// salirToolStripMenuItem
 			// 
+			this->salirToolStripMenuItem->BackColor = System::Drawing::Color::Violet;
 			this->salirToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->cerrarElProgramaToolStripMenuItem });
 			this->salirToolStripMenuItem->Name = L"salirToolStripMenuItem";
-			this->salirToolStripMenuItem->Size = System::Drawing::Size(41, 20);
+			this->salirToolStripMenuItem->Size = System::Drawing::Size(52, 26);
 			this->salirToolStripMenuItem->Text = L"Salir";
 			// 
 			// cerrarElProgramaToolStripMenuItem
 			// 
 			this->cerrarElProgramaToolStripMenuItem->Name = L"cerrarElProgramaToolStripMenuItem";
-			this->cerrarElProgramaToolStripMenuItem->Size = System::Drawing::Size(173, 22);
+			this->cerrarElProgramaToolStripMenuItem->Size = System::Drawing::Size(224, 26);
 			this->cerrarElProgramaToolStripMenuItem->Text = L"Cerrar el programa";
 			this->cerrarElProgramaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::cerrarElProgramaToolStripMenuItem_Click);
 			// 
 			// gpbxingreso
 			// 
+			this->gpbxingreso->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->gpbxingreso->Controls->Add(this->cmbcategoria);
 			this->gpbxingreso->Controls->Add(this->tbxeditorial);
 			this->gpbxingreso->Controls->Add(this->lbleditorial);
@@ -765,9 +773,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbxingreso->Controls->Add(this->lbltitnombre);
 			this->gpbxingreso->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gpbxingreso->Location = System::Drawing::Point(6, 42);
+			this->gpbxingreso->Location = System::Drawing::Point(16, 51);
+			this->gpbxingreso->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxingreso->Name = L"gpbxingreso";
-			this->gpbxingreso->Size = System::Drawing::Size(724, 314);
+			this->gpbxingreso->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxingreso->Size = System::Drawing::Size(965, 386);
 			this->gpbxingreso->TabIndex = 1;
 			this->gpbxingreso->TabStop = false;
 			this->gpbxingreso->Text = L"Ingreso de libro";
@@ -781,33 +791,37 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 					L"Recreativo", L"Cientifico", L"Instructivo", L"Literariosy linguistico", L"Tecnico", L"Informativos", L"Divulgacion", L"Religioso",
 					L"Ilustrado", L"Electronico", L"Poetico", L"Biografico", L"Material auxiliar", L"Didactico", L"Viaje", L"Artistico", L"Autoestima"
 			});
-			this->cmbcategoria->Location = System::Drawing::Point(183, 257);
+			this->cmbcategoria->Location = System::Drawing::Point(244, 316);
+			this->cmbcategoria->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cmbcategoria->Name = L"cmbcategoria";
-			this->cmbcategoria->Size = System::Drawing::Size(174, 21);
+			this->cmbcategoria->Size = System::Drawing::Size(231, 25);
 			this->cmbcategoria->TabIndex = 17;
 			// 
 			// tbxeditorial
 			// 
-			this->tbxeditorial->Location = System::Drawing::Point(183, 168);
+			this->tbxeditorial->Location = System::Drawing::Point(244, 207);
+			this->tbxeditorial->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxeditorial->Name = L"tbxeditorial";
-			this->tbxeditorial->Size = System::Drawing::Size(474, 20);
+			this->tbxeditorial->Size = System::Drawing::Size(631, 23);
 			this->tbxeditorial->TabIndex = 16;
 			// 
 			// lbleditorial
 			// 
 			this->lbleditorial->AutoSize = true;
-			this->lbleditorial->Location = System::Drawing::Point(18, 168);
+			this->lbleditorial->Location = System::Drawing::Point(24, 207);
+			this->lbleditorial->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbleditorial->Name = L"lbleditorial";
-			this->lbleditorial->Size = System::Drawing::Size(47, 13);
+			this->lbleditorial->Size = System::Drawing::Size(63, 17);
 			this->lbleditorial->TabIndex = 15;
 			this->lbleditorial->Text = L"Editorial:";
 			// 
 			// lblcategoria
 			// 
 			this->lblcategoria->AutoSize = true;
-			this->lblcategoria->Location = System::Drawing::Point(19, 265);
+			this->lblcategoria->Location = System::Drawing::Point(25, 326);
+			this->lblcategoria->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblcategoria->Name = L"lblcategoria";
-			this->lblcategoria->Size = System::Drawing::Size(55, 13);
+			this->lblcategoria->Size = System::Drawing::Size(73, 17);
 			this->lblcategoria->TabIndex = 14;
 			this->lblcategoria->Text = L"Categoria:";
 			// 
@@ -817,9 +831,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->btnguardar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnguardar->ForeColor = System::Drawing::Color::RoyalBlue;
-			this->btnguardar->Location = System::Drawing::Point(550, 247);
+			this->btnguardar->Location = System::Drawing::Point(733, 304);
+			this->btnguardar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btnguardar->Name = L"btnguardar";
-			this->btnguardar->Size = System::Drawing::Size(135, 31);
+			this->btnguardar->Size = System::Drawing::Size(180, 38);
 			this->btnguardar->TabIndex = 13;
 			this->btnguardar->Text = L"Guardar libro";
 			this->btnguardar->UseVisualStyleBackColor = false;
@@ -829,104 +844,117 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			this->cmbdestino->FormattingEnabled = true;
 			this->cmbdestino->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Ingreso a biblioteca", L"Reciclaje", L"Seccion tome 1" });
-			this->cmbdestino->Location = System::Drawing::Point(183, 227);
+			this->cmbdestino->Location = System::Drawing::Point(244, 279);
+			this->cmbdestino->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cmbdestino->Name = L"cmbdestino";
-			this->cmbdestino->Size = System::Drawing::Size(174, 21);
+			this->cmbdestino->Size = System::Drawing::Size(231, 25);
 			this->cmbdestino->TabIndex = 12;
 			// 
 			// cmbestado
 			// 
 			this->cmbestado->FormattingEnabled = true;
 			this->cmbestado->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Bueno", L"Decente", L"Deteriorado", L"Malo" });
-			this->cmbestado->Location = System::Drawing::Point(183, 193);
+			this->cmbestado->Location = System::Drawing::Point(244, 238);
+			this->cmbestado->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cmbestado->Name = L"cmbestado";
-			this->cmbestado->Size = System::Drawing::Size(174, 21);
+			this->cmbestado->Size = System::Drawing::Size(231, 25);
 			this->cmbestado->TabIndex = 11;
 			// 
 			// tbxedicion
 			// 
-			this->tbxedicion->Location = System::Drawing::Point(183, 137);
+			this->tbxedicion->Location = System::Drawing::Point(244, 169);
+			this->tbxedicion->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxedicion->Name = L"tbxedicion";
-			this->tbxedicion->Size = System::Drawing::Size(474, 20);
+			this->tbxedicion->Size = System::Drawing::Size(631, 23);
 			this->tbxedicion->TabIndex = 10;
 			// 
 			// datetimepfecha
 			// 
-			this->datetimepfecha->Location = System::Drawing::Point(183, 97);
+			this->datetimepfecha->Location = System::Drawing::Point(244, 119);
+			this->datetimepfecha->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->datetimepfecha->Name = L"datetimepfecha";
-			this->datetimepfecha->Size = System::Drawing::Size(474, 20);
+			this->datetimepfecha->Size = System::Drawing::Size(631, 23);
 			this->datetimepfecha->TabIndex = 9;
 			// 
 			// tbxautor
 			// 
-			this->tbxautor->Location = System::Drawing::Point(183, 68);
+			this->tbxautor->Location = System::Drawing::Point(244, 84);
+			this->tbxautor->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxautor->Name = L"tbxautor";
-			this->tbxautor->Size = System::Drawing::Size(474, 20);
+			this->tbxautor->Size = System::Drawing::Size(631, 23);
 			this->tbxautor->TabIndex = 7;
 			// 
 			// tbxnombre
 			// 
-			this->tbxnombre->Location = System::Drawing::Point(183, 31);
+			this->tbxnombre->Location = System::Drawing::Point(244, 38);
+			this->tbxnombre->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxnombre->Name = L"tbxnombre";
-			this->tbxnombre->Size = System::Drawing::Size(474, 20);
+			this->tbxnombre->Size = System::Drawing::Size(631, 23);
 			this->tbxnombre->TabIndex = 6;
 			// 
 			// lbltitdestino
 			// 
 			this->lbltitdestino->AutoSize = true;
-			this->lbltitdestino->Location = System::Drawing::Point(19, 235);
+			this->lbltitdestino->Location = System::Drawing::Point(25, 289);
+			this->lbltitdestino->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitdestino->Name = L"lbltitdestino";
-			this->lbltitdestino->Size = System::Drawing::Size(46, 13);
+			this->lbltitdestino->Size = System::Drawing::Size(60, 17);
 			this->lbltitdestino->TabIndex = 5;
 			this->lbltitdestino->Text = L"Destino:";
 			// 
 			// lbltitestado
 			// 
 			this->lbltitestado->AutoSize = true;
-			this->lbltitestado->Location = System::Drawing::Point(19, 201);
+			this->lbltitestado->Location = System::Drawing::Point(25, 247);
+			this->lbltitestado->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitestado->Name = L"lbltitestado";
-			this->lbltitestado->Size = System::Drawing::Size(46, 13);
+			this->lbltitestado->Size = System::Drawing::Size(60, 17);
 			this->lbltitestado->TabIndex = 4;
 			this->lbltitestado->Text = L"Estado: ";
 			// 
 			// lbltitedicion
 			// 
 			this->lbltitedicion->AutoSize = true;
-			this->lbltitedicion->Location = System::Drawing::Point(19, 137);
+			this->lbltitedicion->Location = System::Drawing::Point(25, 169);
+			this->lbltitedicion->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitedicion->Name = L"lbltitedicion";
-			this->lbltitedicion->Size = System::Drawing::Size(87, 13);
+			this->lbltitedicion->Size = System::Drawing::Size(116, 17);
 			this->lbltitedicion->TabIndex = 3;
 			this->lbltitedicion->Text = L"Edicion del libro: ";
 			// 
 			// lbltitfecha
 			// 
 			this->lbltitfecha->AutoSize = true;
-			this->lbltitfecha->Location = System::Drawing::Point(19, 103);
+			this->lbltitfecha->Location = System::Drawing::Point(25, 127);
+			this->lbltitfecha->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitfecha->Name = L"lbltitfecha";
-			this->lbltitfecha->Size = System::Drawing::Size(115, 13);
+			this->lbltitfecha->Size = System::Drawing::Size(150, 17);
 			this->lbltitfecha->TabIndex = 2;
 			this->lbltitfecha->Text = L"Fecha de publicacion: ";
 			// 
 			// lbltitautor
 			// 
 			this->lbltitautor->AutoSize = true;
-			this->lbltitautor->Location = System::Drawing::Point(19, 68);
+			this->lbltitautor->Location = System::Drawing::Point(25, 84);
+			this->lbltitautor->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitautor->Name = L"lbltitautor";
-			this->lbltitautor->Size = System::Drawing::Size(77, 13);
+			this->lbltitautor->Size = System::Drawing::Size(104, 17);
 			this->lbltitautor->TabIndex = 1;
 			this->lbltitautor->Text = L"Autor del libro: ";
 			// 
 			// lbltitnombre
 			// 
 			this->lbltitnombre->AutoSize = true;
-			this->lbltitnombre->Location = System::Drawing::Point(19, 31);
+			this->lbltitnombre->Location = System::Drawing::Point(25, 38);
+			this->lbltitnombre->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitnombre->Name = L"lbltitnombre";
-			this->lbltitnombre->Size = System::Drawing::Size(86, 13);
+			this->lbltitnombre->Size = System::Drawing::Size(116, 17);
 			this->lbltitnombre->TabIndex = 0;
 			this->lbltitnombre->Text = L"Nombre del libro:";
 			// 
 			// gpbxPersonaindi
 			// 
+			this->gpbxPersonaindi->BackColor = System::Drawing::Color::Linen;
 			this->gpbxPersonaindi->Controls->Add(this->btnVisualizarP);
 			this->gpbxPersonaindi->Controls->Add(this->lblresultVisualizarIding);
 			this->gpbxPersonaindi->Controls->Add(this->lblresultVisualizarprofesion);
@@ -938,9 +966,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbxPersonaindi->Controls->Add(this->label16);
 			this->gpbxPersonaindi->Controls->Add(this->tbxVisualizarnombrePersona);
 			this->gpbxPersonaindi->Controls->Add(this->label15);
-			this->gpbxPersonaindi->Location = System::Drawing::Point(8, 374);
+			this->gpbxPersonaindi->Location = System::Drawing::Point(11, 460);
+			this->gpbxPersonaindi->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxPersonaindi->Name = L"gpbxPersonaindi";
-			this->gpbxPersonaindi->Size = System::Drawing::Size(418, 317);
+			this->gpbxPersonaindi->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxPersonaindi->Size = System::Drawing::Size(557, 390);
 			this->gpbxPersonaindi->TabIndex = 16;
 			this->gpbxPersonaindi->TabStop = false;
 			this->gpbxPersonaindi->Text = L"Visualizar datos de persona individualmente";
@@ -953,9 +983,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->btnVisualizarP->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnVisualizarP->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->btnVisualizarP->Location = System::Drawing::Point(104, 264);
+			this->btnVisualizarP->Location = System::Drawing::Point(139, 325);
+			this->btnVisualizarP->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btnVisualizarP->Name = L"btnVisualizarP";
-			this->btnVisualizarP->Size = System::Drawing::Size(234, 30);
+			this->btnVisualizarP->Size = System::Drawing::Size(312, 37);
 			this->btnVisualizarP->TabIndex = 10;
 			this->btnVisualizarP->Text = L"Visualizar datos de persona";
 			this->btnVisualizarP->UseVisualStyleBackColor = false;
@@ -964,89 +995,100 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// lblresultVisualizarIding
 			// 
 			this->lblresultVisualizarIding->AutoSize = true;
-			this->lblresultVisualizarIding->Location = System::Drawing::Point(182, 212);
+			this->lblresultVisualizarIding->Location = System::Drawing::Point(243, 261);
+			this->lblresultVisualizarIding->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblresultVisualizarIding->Name = L"lblresultVisualizarIding";
-			this->lblresultVisualizarIding->Size = System::Drawing::Size(0, 13);
+			this->lblresultVisualizarIding->Size = System::Drawing::Size(0, 16);
 			this->lblresultVisualizarIding->TabIndex = 9;
 			// 
 			// lblresultVisualizarprofesion
 			// 
 			this->lblresultVisualizarprofesion->AutoSize = true;
-			this->lblresultVisualizarprofesion->Location = System::Drawing::Point(182, 163);
+			this->lblresultVisualizarprofesion->Location = System::Drawing::Point(243, 201);
+			this->lblresultVisualizarprofesion->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblresultVisualizarprofesion->Name = L"lblresultVisualizarprofesion";
-			this->lblresultVisualizarprofesion->Size = System::Drawing::Size(0, 13);
+			this->lblresultVisualizarprofesion->Size = System::Drawing::Size(0, 16);
 			this->lblresultVisualizarprofesion->TabIndex = 8;
 			// 
 			// lblresultVisualizarnumero
 			// 
 			this->lblresultVisualizarnumero->AutoSize = true;
-			this->lblresultVisualizarnumero->Location = System::Drawing::Point(180, 126);
+			this->lblresultVisualizarnumero->Location = System::Drawing::Point(240, 155);
+			this->lblresultVisualizarnumero->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblresultVisualizarnumero->Name = L"lblresultVisualizarnumero";
-			this->lblresultVisualizarnumero->Size = System::Drawing::Size(0, 13);
+			this->lblresultVisualizarnumero->Size = System::Drawing::Size(0, 16);
 			this->lblresultVisualizarnumero->TabIndex = 7;
 			// 
 			// lblresultVisualizardocum
 			// 
 			this->lblresultVisualizardocum->AutoSize = true;
-			this->lblresultVisualizardocum->Location = System::Drawing::Point(180, 82);
+			this->lblresultVisualizardocum->Location = System::Drawing::Point(240, 101);
+			this->lblresultVisualizardocum->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblresultVisualizardocum->Name = L"lblresultVisualizardocum";
-			this->lblresultVisualizardocum->Size = System::Drawing::Size(0, 13);
+			this->lblresultVisualizardocum->Size = System::Drawing::Size(0, 16);
 			this->lblresultVisualizardocum->TabIndex = 6;
 			// 
 			// label19
 			// 
 			this->label19->AutoSize = true;
-			this->label19->Location = System::Drawing::Point(21, 212);
+			this->label19->Location = System::Drawing::Point(28, 261);
+			this->label19->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(118, 13);
+			this->label19->Size = System::Drawing::Size(150, 16);
 			this->label19->TabIndex = 5;
 			this->label19->Text = L"Id de libros ingresados: ";
 			// 
 			// label18
 			// 
 			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(21, 163);
+			this->label18->Location = System::Drawing::Point(28, 201);
+			this->label18->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(119, 13);
+			this->label18->Size = System::Drawing::Size(149, 16);
 			this->label18->TabIndex = 4;
 			this->label18->Text = L"Dedicación (profesion): ";
 			// 
 			// label17
 			// 
 			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(18, 126);
+			this->label17->Location = System::Drawing::Point(24, 155);
+			this->label17->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(106, 13);
+			this->label17->Size = System::Drawing::Size(131, 16);
 			this->label17->TabIndex = 3;
 			this->label17->Text = L"Numero de telefonó: ";
 			// 
 			// label16
 			// 
 			this->label16->AutoSize = true;
-			this->label16->Location = System::Drawing::Point(18, 82);
+			this->label16->Location = System::Drawing::Point(24, 101);
+			this->label16->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(133, 13);
+			this->label16->Size = System::Drawing::Size(163, 16);
 			this->label16->TabIndex = 2;
 			this->label16->Text = L"Documento identificación: ";
 			// 
 			// tbxVisualizarnombrePersona
 			// 
-			this->tbxVisualizarnombrePersona->Location = System::Drawing::Point(183, 36);
+			this->tbxVisualizarnombrePersona->Location = System::Drawing::Point(244, 44);
+			this->tbxVisualizarnombrePersona->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxVisualizarnombrePersona->Name = L"tbxVisualizarnombrePersona";
-			this->tbxVisualizarnombrePersona->Size = System::Drawing::Size(203, 20);
+			this->tbxVisualizarnombrePersona->Size = System::Drawing::Size(269, 22);
 			this->tbxVisualizarnombrePersona->TabIndex = 1;
 			// 
 			// label15
 			// 
 			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(15, 36);
+			this->label15->Location = System::Drawing::Point(20, 44);
+			this->label15->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(161, 13);
+			this->label15->Size = System::Drawing::Size(203, 16);
 			this->label15->TabIndex = 0;
 			this->label15->Text = L"Ingrese el nombre de la pesona: ";
 			// 
 			// gpbPersona
 			// 
+			this->gpbPersona->BackColor = System::Drawing::Color::Linen;
 			this->gpbPersona->Controls->Add(this->btnregistroPersona);
 			this->gpbPersona->Controls->Add(this->tbxIngresoID);
 			this->gpbPersona->Controls->Add(this->label14);
@@ -1058,9 +1100,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbPersona->Controls->Add(this->label12);
 			this->gpbPersona->Controls->Add(this->label11);
 			this->gpbPersona->Controls->Add(this->label10);
-			this->gpbPersona->Location = System::Drawing::Point(18, 383);
+			this->gpbPersona->Location = System::Drawing::Point(3, 460);
+			this->gpbPersona->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbPersona->Name = L"gpbPersona";
-			this->gpbPersona->Size = System::Drawing::Size(532, 284);
+			this->gpbPersona->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbPersona->Size = System::Drawing::Size(709, 350);
 			this->gpbPersona->TabIndex = 14;
 			this->gpbPersona->TabStop = false;
 			this->gpbPersona->Text = L"Ingrese los datos de la persona";
@@ -1072,9 +1116,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->btnregistroPersona->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->btnregistroPersona->ForeColor = System::Drawing::SystemColors::HighlightText;
-			this->btnregistroPersona->Location = System::Drawing::Point(218, 238);
+			this->btnregistroPersona->Location = System::Drawing::Point(291, 293);
+			this->btnregistroPersona->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btnregistroPersona->Name = L"btnregistroPersona";
-			this->btnregistroPersona->Size = System::Drawing::Size(114, 33);
+			this->btnregistroPersona->Size = System::Drawing::Size(152, 41);
 			this->btnregistroPersona->TabIndex = 10;
 			this->btnregistroPersona->Text = L"Registrar persona";
 			this->btnregistroPersona->UseVisualStyleBackColor = false;
@@ -1082,86 +1127,97 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			// tbxIngresoID
 			// 
-			this->tbxIngresoID->Location = System::Drawing::Point(272, 200);
+			this->tbxIngresoID->Location = System::Drawing::Point(363, 246);
+			this->tbxIngresoID->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxIngresoID->Name = L"tbxIngresoID";
-			this->tbxIngresoID->Size = System::Drawing::Size(227, 20);
+			this->tbxIngresoID->Size = System::Drawing::Size(301, 22);
 			this->tbxIngresoID->TabIndex = 9;
 			// 
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(18, 207);
+			this->label14->Location = System::Drawing::Point(24, 255);
+			this->label14->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(216, 13);
+			this->label14->Size = System::Drawing::Size(275, 16);
 			this->label14->TabIndex = 8;
 			this->label14->Text = L"Id de libros ingresados (Valor de referencia): ";
 			// 
 			// tbxIngresoProfesion
 			// 
-			this->tbxIngresoProfesion->Location = System::Drawing::Point(272, 160);
+			this->tbxIngresoProfesion->Location = System::Drawing::Point(363, 197);
+			this->tbxIngresoProfesion->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxIngresoProfesion->Name = L"tbxIngresoProfesion";
-			this->tbxIngresoProfesion->Size = System::Drawing::Size(227, 20);
+			this->tbxIngresoProfesion->Size = System::Drawing::Size(301, 22);
 			this->tbxIngresoProfesion->TabIndex = 7;
 			// 
 			// tbxIngresoNumero
 			// 
-			this->tbxIngresoNumero->Location = System::Drawing::Point(272, 122);
+			this->tbxIngresoNumero->Location = System::Drawing::Point(363, 150);
+			this->tbxIngresoNumero->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxIngresoNumero->Name = L"tbxIngresoNumero";
-			this->tbxIngresoNumero->Size = System::Drawing::Size(227, 20);
+			this->tbxIngresoNumero->Size = System::Drawing::Size(301, 22);
 			this->tbxIngresoNumero->TabIndex = 6;
 			// 
 			// tbxIngresoDocIdent
 			// 
-			this->tbxIngresoDocIdent->Location = System::Drawing::Point(272, 86);
+			this->tbxIngresoDocIdent->Location = System::Drawing::Point(363, 106);
+			this->tbxIngresoDocIdent->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxIngresoDocIdent->Name = L"tbxIngresoDocIdent";
-			this->tbxIngresoDocIdent->Size = System::Drawing::Size(227, 20);
+			this->tbxIngresoDocIdent->Size = System::Drawing::Size(301, 22);
 			this->tbxIngresoDocIdent->TabIndex = 5;
 			// 
 			// tbxIngresopersona
 			// 
-			this->tbxIngresopersona->Location = System::Drawing::Point(272, 41);
+			this->tbxIngresopersona->Location = System::Drawing::Point(363, 50);
+			this->tbxIngresopersona->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxIngresopersona->Name = L"tbxIngresopersona";
-			this->tbxIngresopersona->Size = System::Drawing::Size(227, 20);
+			this->tbxIngresopersona->Size = System::Drawing::Size(301, 22);
 			this->tbxIngresopersona->TabIndex = 4;
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(21, 163);
+			this->label13->Location = System::Drawing::Point(28, 201);
+			this->label13->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(120, 13);
+			this->label13->Size = System::Drawing::Size(150, 16);
 			this->label13->TabIndex = 3;
 			this->label13->Text = L"Dedicacion (Profesion): ";
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(21, 123);
+			this->label12->Location = System::Drawing::Point(28, 151);
+			this->label12->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(106, 13);
+			this->label12->Size = System::Drawing::Size(131, 16);
 			this->label12->TabIndex = 2;
 			this->label12->Text = L"Numero de telefono: ";
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(18, 89);
+			this->label11->Location = System::Drawing::Point(24, 110);
+			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(133, 13);
+			this->label11->Size = System::Drawing::Size(163, 16);
 			this->label11->TabIndex = 1;
 			this->label11->Text = L"Documento identificacion: ";
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(18, 48);
+			this->label10->Location = System::Drawing::Point(24, 59);
+			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(117, 13);
+			this->label10->Size = System::Drawing::Size(148, 16);
 			this->label10->TabIndex = 0;
 			this->label10->Text = L"Nombre de la persona: ";
 			// 
 			// gpbVisualizar
 			// 
+			this->gpbVisualizar->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->gpbVisualizar->Controls->Add(this->lblresulteditorialVisualizar);
 			this->gpbVisualizar->Controls->Add(this->label1);
 			this->gpbVisualizar->Controls->Add(this->lblresultcatgoriaVisualizar);
@@ -1183,17 +1239,206 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbVisualizar->Controls->Add(this->lbltitrefrenciadelibrovisualizar);
 			this->gpbVisualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gpbVisualizar->Location = System::Drawing::Point(18, 48);
+			this->gpbVisualizar->Location = System::Drawing::Point(24, 59);
+			this->gpbVisualizar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbVisualizar->Name = L"gpbVisualizar";
-			this->gpbVisualizar->Size = System::Drawing::Size(647, 324);
+			this->gpbVisualizar->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbVisualizar->Size = System::Drawing::Size(863, 399);
 			this->gpbVisualizar->TabIndex = 2;
 			this->gpbVisualizar->TabStop = false;
 			this->gpbVisualizar->Text = L"Visualizar libro ";
 			this->gpbVisualizar->Visible = false;
 			this->gpbVisualizar->Enter += gcnew System::EventHandler(this, &MyForm::gpbVisualizar_Enter);
 			// 
+			// lblresulteditorialVisualizar
+			// 
+			this->lblresulteditorialVisualizar->AutoSize = true;
+			this->lblresulteditorialVisualizar->Location = System::Drawing::Point(215, 322);
+			this->lblresulteditorialVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblresulteditorialVisualizar->Name = L"lblresulteditorialVisualizar";
+			this->lblresulteditorialVisualizar->Size = System::Drawing::Size(0, 17);
+			this->lblresulteditorialVisualizar->TabIndex = 18;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(20, 322);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(67, 17);
+			this->label1->TabIndex = 17;
+			this->label1->Text = L"Editorial: ";
+			// 
+			// lblresultcatgoriaVisualizar
+			// 
+			this->lblresultcatgoriaVisualizar->AutoSize = true;
+			this->lblresultcatgoriaVisualizar->Location = System::Drawing::Point(215, 283);
+			this->lblresultcatgoriaVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblresultcatgoriaVisualizar->Name = L"lblresultcatgoriaVisualizar";
+			this->lblresultcatgoriaVisualizar->Size = System::Drawing::Size(0, 17);
+			this->lblresultcatgoriaVisualizar->TabIndex = 16;
+			// 
+			// lbltitcategoriaVisualizar
+			// 
+			this->lbltitcategoriaVisualizar->AutoSize = true;
+			this->lbltitcategoriaVisualizar->Location = System::Drawing::Point(20, 284);
+			this->lbltitcategoriaVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbltitcategoriaVisualizar->Name = L"lbltitcategoriaVisualizar";
+			this->lbltitcategoriaVisualizar->Size = System::Drawing::Size(73, 17);
+			this->lbltitcategoriaVisualizar->TabIndex = 15;
+			this->lbltitcategoriaVisualizar->Text = L"Categoria:";
+			// 
+			// tbxvreferenciaVisualizar
+			// 
+			this->tbxvreferenciaVisualizar->Location = System::Drawing::Point(491, 38);
+			this->tbxvreferenciaVisualizar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->tbxvreferenciaVisualizar->Name = L"tbxvreferenciaVisualizar";
+			this->tbxvreferenciaVisualizar->Size = System::Drawing::Size(132, 23);
+			this->tbxvreferenciaVisualizar->TabIndex = 14;
+			// 
+			// btnvisualizar
+			// 
+			this->btnvisualizar->BackColor = System::Drawing::SystemColors::HighlightText;
+			this->btnvisualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnvisualizar->ForeColor = System::Drawing::Color::Green;
+			this->btnvisualizar->Location = System::Drawing::Point(705, 348);
+			this->btnvisualizar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnvisualizar->Name = L"btnvisualizar";
+			this->btnvisualizar->Size = System::Drawing::Size(143, 38);
+			this->btnvisualizar->TabIndex = 13;
+			this->btnvisualizar->Text = L"Visualizar libro";
+			this->btnvisualizar->UseVisualStyleBackColor = false;
+			this->btnvisualizar->Click += gcnew System::EventHandler(this, &MyForm::btnvisualizar_Click);
+			// 
+			// lblresultdestinoVisualizar
+			// 
+			this->lblresultdestinoVisualizar->AutoSize = true;
+			this->lblresultdestinoVisualizar->Location = System::Drawing::Point(215, 254);
+			this->lblresultdestinoVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblresultdestinoVisualizar->Name = L"lblresultdestinoVisualizar";
+			this->lblresultdestinoVisualizar->Size = System::Drawing::Size(0, 17);
+			this->lblresultdestinoVisualizar->TabIndex = 12;
+			// 
+			// lblresultestadoVisualizar
+			// 
+			this->lblresultestadoVisualizar->AutoSize = true;
+			this->lblresultestadoVisualizar->Location = System::Drawing::Point(215, 219);
+			this->lblresultestadoVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblresultestadoVisualizar->Name = L"lblresultestadoVisualizar";
+			this->lblresultestadoVisualizar->Size = System::Drawing::Size(0, 17);
+			this->lblresultestadoVisualizar->TabIndex = 11;
+			// 
+			// lblresultedicionVisualizar
+			// 
+			this->lblresultedicionVisualizar->AutoSize = true;
+			this->lblresultedicionVisualizar->Location = System::Drawing::Point(215, 187);
+			this->lblresultedicionVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblresultedicionVisualizar->Name = L"lblresultedicionVisualizar";
+			this->lblresultedicionVisualizar->Size = System::Drawing::Size(0, 17);
+			this->lblresultedicionVisualizar->TabIndex = 10;
+			// 
+			// lblresultfechaVisualizar
+			// 
+			this->lblresultfechaVisualizar->AutoSize = true;
+			this->lblresultfechaVisualizar->Location = System::Drawing::Point(215, 156);
+			this->lblresultfechaVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblresultfechaVisualizar->Name = L"lblresultfechaVisualizar";
+			this->lblresultfechaVisualizar->Size = System::Drawing::Size(0, 17);
+			this->lblresultfechaVisualizar->TabIndex = 9;
+			// 
+			// lblresultautorVisualizar
+			// 
+			this->lblresultautorVisualizar->AutoSize = true;
+			this->lblresultautorVisualizar->Location = System::Drawing::Point(215, 122);
+			this->lblresultautorVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblresultautorVisualizar->Name = L"lblresultautorVisualizar";
+			this->lblresultautorVisualizar->Size = System::Drawing::Size(0, 17);
+			this->lblresultautorVisualizar->TabIndex = 8;
+			// 
+			// lblresultnombreVisualizar
+			// 
+			this->lblresultnombreVisualizar->AutoSize = true;
+			this->lblresultnombreVisualizar->Location = System::Drawing::Point(215, 84);
+			this->lblresultnombreVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblresultnombreVisualizar->Name = L"lblresultnombreVisualizar";
+			this->lblresultnombreVisualizar->Size = System::Drawing::Size(0, 17);
+			this->lblresultnombreVisualizar->TabIndex = 7;
+			// 
+			// lbltitdestinoVisualizar
+			// 
+			this->lbltitdestinoVisualizar->AutoSize = true;
+			this->lbltitdestinoVisualizar->Location = System::Drawing::Point(20, 254);
+			this->lbltitdestinoVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbltitdestinoVisualizar->Name = L"lbltitdestinoVisualizar";
+			this->lbltitdestinoVisualizar->Size = System::Drawing::Size(64, 17);
+			this->lbltitdestinoVisualizar->TabIndex = 6;
+			this->lbltitdestinoVisualizar->Text = L"Destino: ";
+			// 
+			// lbltitestadoVisualizar
+			// 
+			this->lbltitestadoVisualizar->AutoSize = true;
+			this->lbltitestadoVisualizar->Location = System::Drawing::Point(20, 219);
+			this->lbltitestadoVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbltitestadoVisualizar->Name = L"lbltitestadoVisualizar";
+			this->lbltitestadoVisualizar->Size = System::Drawing::Size(60, 17);
+			this->lbltitestadoVisualizar->TabIndex = 5;
+			this->lbltitestadoVisualizar->Text = L"Estado: ";
+			this->lbltitestadoVisualizar->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
+			// 
+			// lbltitedicionVisualizar
+			// 
+			this->lbltitedicionVisualizar->AutoSize = true;
+			this->lbltitedicionVisualizar->Location = System::Drawing::Point(20, 187);
+			this->lbltitedicionVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbltitedicionVisualizar->Name = L"lbltitedicionVisualizar";
+			this->lbltitedicionVisualizar->Size = System::Drawing::Size(62, 17);
+			this->lbltitedicionVisualizar->TabIndex = 4;
+			this->lbltitedicionVisualizar->Text = L"Edicion: ";
+			// 
+			// lbltitfechaVisualizar
+			// 
+			this->lbltitfechaVisualizar->AutoSize = true;
+			this->lbltitfechaVisualizar->Location = System::Drawing::Point(20, 156);
+			this->lbltitfechaVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbltitfechaVisualizar->Name = L"lbltitfechaVisualizar";
+			this->lbltitfechaVisualizar->Size = System::Drawing::Size(150, 17);
+			this->lbltitfechaVisualizar->TabIndex = 3;
+			this->lbltitfechaVisualizar->Text = L"Fecha de publicación: ";
+			// 
+			// lbltitautorVisualizar
+			// 
+			this->lbltitautorVisualizar->AutoSize = true;
+			this->lbltitautorVisualizar->Location = System::Drawing::Point(20, 122);
+			this->lbltitautorVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbltitautorVisualizar->Name = L"lbltitautorVisualizar";
+			this->lbltitautorVisualizar->Size = System::Drawing::Size(50, 17);
+			this->lbltitautorVisualizar->TabIndex = 2;
+			this->lbltitautorVisualizar->Text = L"Autor: ";
+			// 
+			// lblnombreVisualizar
+			// 
+			this->lblnombreVisualizar->AutoSize = true;
+			this->lblnombreVisualizar->Location = System::Drawing::Point(20, 84);
+			this->lblnombreVisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lblnombreVisualizar->Name = L"lblnombreVisualizar";
+			this->lblnombreVisualizar->Size = System::Drawing::Size(66, 17);
+			this->lblnombreVisualizar->TabIndex = 1;
+			this->lblnombreVisualizar->Text = L"Nombre: ";
+			// 
+			// lbltitrefrenciadelibrovisualizar
+			// 
+			this->lbltitrefrenciadelibrovisualizar->AutoSize = true;
+			this->lbltitrefrenciadelibrovisualizar->Location = System::Drawing::Point(16, 38);
+			this->lbltitrefrenciadelibrovisualizar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbltitrefrenciadelibrovisualizar->Name = L"lbltitrefrenciadelibrovisualizar";
+			this->lbltitrefrenciadelibrovisualizar->Size = System::Drawing::Size(430, 17);
+			this->lbltitrefrenciadelibrovisualizar->TabIndex = 0;
+			this->lbltitrefrenciadelibrovisualizar->Text = L"Ingrese el valor correspondiente a su libro al momento de ingreso: ";
+			// 
 			// gpbxModificarPersona
 			// 
+			this->gpbxModificarPersona->BackColor = System::Drawing::Color::Linen;
 			this->gpbxModificarPersona->Controls->Add(this->txtModificarIdLib);
 			this->gpbxModificarPersona->Controls->Add(this->txtModificarDocIden);
 			this->gpbxModificarPersona->Controls->Add(this->txtModificarProf);
@@ -1206,9 +1451,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbxModificarPersona->Controls->Add(this->label27);
 			this->gpbxModificarPersona->Controls->Add(this->txtModificarPer);
 			this->gpbxModificarPersona->Controls->Add(this->label28);
-			this->gpbxModificarPersona->Location = System::Drawing::Point(0, 402);
+			this->gpbxModificarPersona->Location = System::Drawing::Point(0, 495);
+			this->gpbxModificarPersona->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxModificarPersona->Name = L"gpbxModificarPersona";
-			this->gpbxModificarPersona->Size = System::Drawing::Size(576, 303);
+			this->gpbxModificarPersona->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxModificarPersona->Size = System::Drawing::Size(768, 373);
 			this->gpbxModificarPersona->TabIndex = 17;
 			this->gpbxModificarPersona->TabStop = false;
 			this->gpbxModificarPersona->Text = L"Modificar persona";
@@ -1216,43 +1463,130 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			// txtModificarIdLib
 			// 
-			this->txtModificarIdLib->Location = System::Drawing::Point(142, 214);
+			this->txtModificarIdLib->Location = System::Drawing::Point(189, 263);
+			this->txtModificarIdLib->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txtModificarIdLib->Name = L"txtModificarIdLib";
-			this->txtModificarIdLib->Size = System::Drawing::Size(203, 20);
+			this->txtModificarIdLib->Size = System::Drawing::Size(269, 22);
 			this->txtModificarIdLib->TabIndex = 21;
 			// 
 			// txtModificarDocIden
 			// 
-			this->txtModificarDocIden->Location = System::Drawing::Point(155, 84);
+			this->txtModificarDocIden->Location = System::Drawing::Point(207, 103);
+			this->txtModificarDocIden->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txtModificarDocIden->Name = L"txtModificarDocIden";
-			this->txtModificarDocIden->Size = System::Drawing::Size(203, 20);
+			this->txtModificarDocIden->Size = System::Drawing::Size(269, 22);
 			this->txtModificarDocIden->TabIndex = 20;
 			// 
 			// txtModificarProf
 			// 
-			this->txtModificarProf->Location = System::Drawing::Point(148, 165);
+			this->txtModificarProf->Location = System::Drawing::Point(197, 203);
+			this->txtModificarProf->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txtModificarProf->Name = L"txtModificarProf";
-			this->txtModificarProf->Size = System::Drawing::Size(203, 20);
+			this->txtModificarProf->Size = System::Drawing::Size(269, 22);
 			this->txtModificarProf->TabIndex = 19;
 			// 
 			// txtModificarNumTel
 			// 
-			this->txtModificarNumTel->Location = System::Drawing::Point(133, 125);
+			this->txtModificarNumTel->Location = System::Drawing::Point(177, 154);
+			this->txtModificarNumTel->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txtModificarNumTel->Name = L"txtModificarNumTel";
-			this->txtModificarNumTel->Size = System::Drawing::Size(203, 20);
+			this->txtModificarNumTel->Size = System::Drawing::Size(269, 22);
 			this->txtModificarNumTel->TabIndex = 18;
+			// 
+			// btnModificarPersona
+			// 
+			this->btnModificarPersona->Location = System::Drawing::Point(271, 315);
+			this->btnModificarPersona->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnModificarPersona->Name = L"btnModificarPersona";
+			this->btnModificarPersona->Size = System::Drawing::Size(153, 28);
+			this->btnModificarPersona->TabIndex = 17;
+			this->btnModificarPersona->Text = L"Modificar persona";
+			this->btnModificarPersona->UseVisualStyleBackColor = true;
+			this->btnModificarPersona->Click += gcnew System::EventHandler(this, &MyForm::btnModificarPersona_Click);
+			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(576, 47);
+			this->button5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(100, 28);
+			this->button5->TabIndex = 16;
+			this->button5->Text = L"Modificar";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
+			// 
+			// label24
+			// 
+			this->label24->AutoSize = true;
+			this->label24->Location = System::Drawing::Point(32, 263);
+			this->label24->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(150, 16);
+			this->label24->TabIndex = 15;
+			this->label24->Text = L"Id de libros ingresados: ";
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Location = System::Drawing::Point(32, 203);
+			this->label25->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(149, 16);
+			this->label25->TabIndex = 14;
+			this->label25->Text = L"Dedicación (profesion): ";
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(28, 158);
+			this->label26->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(131, 16);
+			this->label26->TabIndex = 13;
+			this->label26->Text = L"Numero de telefonó: ";
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Location = System::Drawing::Point(28, 103);
+			this->label27->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(163, 16);
+			this->label27->TabIndex = 12;
+			this->label27->Text = L"Documento identificación: ";
+			// 
+			// txtModificarPer
+			// 
+			this->txtModificarPer->Location = System::Drawing::Point(248, 47);
+			this->txtModificarPer->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->txtModificarPer->Name = L"txtModificarPer";
+			this->txtModificarPer->Size = System::Drawing::Size(269, 22);
+			this->txtModificarPer->TabIndex = 11;
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Location = System::Drawing::Point(24, 47);
+			this->label28->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(203, 16);
+			this->label28->TabIndex = 10;
+			this->label28->Text = L"Ingrese el nombre de la pesona: ";
 			// 
 			// gpbeliminar
 			// 
+			this->gpbeliminar->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->gpbeliminar->Controls->Add(this->btnConfirEliLib);
 			this->gpbeliminar->Controls->Add(this->btnEliminarLibro);
 			this->gpbeliminar->Controls->Add(this->lblresultnombreEliminar);
 			this->gpbeliminar->Controls->Add(this->lbltitnombreeliminar);
 			this->gpbeliminar->Controls->Add(this->tbxvalorreferenciaEliminar);
 			this->gpbeliminar->Controls->Add(this->lbltitvreferencia);
-			this->gpbeliminar->Location = System::Drawing::Point(6, 28);
+			this->gpbeliminar->Location = System::Drawing::Point(14, 41);
+			this->gpbeliminar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbeliminar->Name = L"gpbeliminar";
-			this->gpbeliminar->Size = System::Drawing::Size(529, 164);
+			this->gpbeliminar->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbeliminar->Size = System::Drawing::Size(705, 202);
 			this->gpbeliminar->TabIndex = 3;
 			this->gpbeliminar->TabStop = false;
 			this->gpbeliminar->Text = L"Eliminar libro";
@@ -1265,9 +1599,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->btnConfirEliLib->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnConfirEliLib->ForeColor = System::Drawing::Color::Red;
-			this->btnConfirEliLib->Location = System::Drawing::Point(79, 116);
+			this->btnConfirEliLib->Location = System::Drawing::Point(105, 143);
+			this->btnConfirEliLib->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btnConfirEliLib->Name = L"btnConfirEliLib";
-			this->btnConfirEliLib->Size = System::Drawing::Size(171, 31);
+			this->btnConfirEliLib->Size = System::Drawing::Size(228, 38);
 			this->btnConfirEliLib->TabIndex = 5;
 			this->btnConfirEliLib->Text = L"Confirmar eliminar libro";
 			this->btnConfirEliLib->UseVisualStyleBackColor = false;
@@ -1279,9 +1614,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->btnEliminarLibro->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->btnEliminarLibro->ForeColor = System::Drawing::Color::Red;
-			this->btnEliminarLibro->Location = System::Drawing::Point(304, 57);
+			this->btnEliminarLibro->Location = System::Drawing::Point(405, 70);
+			this->btnEliminarLibro->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btnEliminarLibro->Name = L"btnEliminarLibro";
-			this->btnEliminarLibro->Size = System::Drawing::Size(102, 31);
+			this->btnEliminarLibro->Size = System::Drawing::Size(136, 38);
 			this->btnEliminarLibro->TabIndex = 4;
 			this->btnEliminarLibro->Text = L"Eliminar libro";
 			this->btnEliminarLibro->UseVisualStyleBackColor = false;
@@ -1290,151 +1626,43 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// lblresultnombreEliminar
 			// 
 			this->lblresultnombreEliminar->AutoSize = true;
-			this->lblresultnombreEliminar->Location = System::Drawing::Point(167, 61);
+			this->lblresultnombreEliminar->Location = System::Drawing::Point(223, 75);
+			this->lblresultnombreEliminar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblresultnombreEliminar->Name = L"lblresultnombreEliminar";
-			this->lblresultnombreEliminar->Size = System::Drawing::Size(0, 13);
+			this->lblresultnombreEliminar->Size = System::Drawing::Size(0, 16);
 			this->lblresultnombreEliminar->TabIndex = 3;
 			// 
 			// lbltitnombreeliminar
 			// 
 			this->lbltitnombreeliminar->AutoSize = true;
-			this->lbltitnombreeliminar->Location = System::Drawing::Point(22, 61);
+			this->lbltitnombreeliminar->Location = System::Drawing::Point(29, 75);
+			this->lbltitnombreeliminar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitnombreeliminar->Name = L"lbltitnombreeliminar";
-			this->lbltitnombreeliminar->Size = System::Drawing::Size(105, 13);
+			this->lbltitnombreeliminar->Size = System::Drawing::Size(133, 16);
 			this->lbltitnombreeliminar->TabIndex = 2;
 			this->lbltitnombreeliminar->Text = L"El libro a eliminar es: ";
 			// 
 			// tbxvalorreferenciaEliminar
 			// 
-			this->tbxvalorreferenciaEliminar->Location = System::Drawing::Point(362, 28);
+			this->tbxvalorreferenciaEliminar->Location = System::Drawing::Point(483, 34);
+			this->tbxvalorreferenciaEliminar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxvalorreferenciaEliminar->Name = L"tbxvalorreferenciaEliminar";
-			this->tbxvalorreferenciaEliminar->Size = System::Drawing::Size(100, 20);
+			this->tbxvalorreferenciaEliminar->Size = System::Drawing::Size(132, 22);
 			this->tbxvalorreferenciaEliminar->TabIndex = 1;
 			// 
 			// lbltitvreferencia
 			// 
 			this->lbltitvreferencia->AutoSize = true;
-			this->lbltitvreferencia->Location = System::Drawing::Point(19, 28);
+			this->lbltitvreferencia->Location = System::Drawing::Point(25, 34);
+			this->lbltitvreferencia->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitvreferencia->Name = L"lbltitvreferencia";
-			this->lbltitvreferencia->Size = System::Drawing::Size(321, 13);
+			this->lbltitvreferencia->Size = System::Drawing::Size(408, 16);
 			this->lbltitvreferencia->TabIndex = 0;
 			this->lbltitvreferencia->Text = L"Ingrese el valor de su libro correspondiente al momento de ingreso:";
 			// 
-			// btnModificarPersona
-			// 
-			this->btnModificarPersona->Location = System::Drawing::Point(203, 256);
-			this->btnModificarPersona->Name = L"btnModificarPersona";
-			this->btnModificarPersona->Size = System::Drawing::Size(115, 23);
-			this->btnModificarPersona->TabIndex = 17;
-			this->btnModificarPersona->Text = L"Modificar persona";
-			this->btnModificarPersona->UseVisualStyleBackColor = true;
-			this->btnModificarPersona->Click += gcnew System::EventHandler(this, &MyForm::btnModificarPersona_Click);
-			// 
-			// button5
-			// 
-			this->button5->Location = System::Drawing::Point(432, 38);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(75, 23);
-			this->button5->TabIndex = 16;
-			this->button5->Text = L"Modificar";
-			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
-			// 
-			// label24
-			// 
-			this->label24->AutoSize = true;
-			this->label24->Location = System::Drawing::Point(24, 214);
-			this->label24->Name = L"label24";
-			this->label24->Size = System::Drawing::Size(118, 13);
-			this->label24->TabIndex = 15;
-			this->label24->Text = L"Id de libros ingresados: ";
-			// 
-			// label25
-			// 
-			this->label25->AutoSize = true;
-			this->label25->Location = System::Drawing::Point(24, 165);
-			this->label25->Name = L"label25";
-			this->label25->Size = System::Drawing::Size(119, 13);
-			this->label25->TabIndex = 14;
-			this->label25->Text = L"Dedicación (profesion): ";
-			// 
-			// label26
-			// 
-			this->label26->AutoSize = true;
-			this->label26->Location = System::Drawing::Point(21, 128);
-			this->label26->Name = L"label26";
-			this->label26->Size = System::Drawing::Size(106, 13);
-			this->label26->TabIndex = 13;
-			this->label26->Text = L"Numero de telefonó: ";
-			// 
-			// label27
-			// 
-			this->label27->AutoSize = true;
-			this->label27->Location = System::Drawing::Point(21, 84);
-			this->label27->Name = L"label27";
-			this->label27->Size = System::Drawing::Size(133, 13);
-			this->label27->TabIndex = 12;
-			this->label27->Text = L"Documento identificación: ";
-			// 
-			// txtModificarPer
-			// 
-			this->txtModificarPer->Location = System::Drawing::Point(186, 38);
-			this->txtModificarPer->Name = L"txtModificarPer";
-			this->txtModificarPer->Size = System::Drawing::Size(203, 20);
-			this->txtModificarPer->TabIndex = 11;
-			// 
-			// label28
-			// 
-			this->label28->AutoSize = true;
-			this->label28->Location = System::Drawing::Point(18, 38);
-			this->label28->Name = L"label28";
-			this->label28->Size = System::Drawing::Size(161, 13);
-			this->label28->TabIndex = 10;
-			this->label28->Text = L"Ingrese el nombre de la pesona: ";
-			// 
-			// lblresulteditorialVisualizar
-			// 
-			this->lblresulteditorialVisualizar->AutoSize = true;
-			this->lblresulteditorialVisualizar->Location = System::Drawing::Point(161, 262);
-			this->lblresulteditorialVisualizar->Name = L"lblresulteditorialVisualizar";
-			this->lblresulteditorialVisualizar->Size = System::Drawing::Size(0, 13);
-			this->lblresulteditorialVisualizar->TabIndex = 18;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(15, 262);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(50, 13);
-			this->label1->TabIndex = 17;
-			this->label1->Text = L"Editorial: ";
-			// 
-			// lblresultcatgoriaVisualizar
-			// 
-			this->lblresultcatgoriaVisualizar->AutoSize = true;
-			this->lblresultcatgoriaVisualizar->Location = System::Drawing::Point(161, 230);
-			this->lblresultcatgoriaVisualizar->Name = L"lblresultcatgoriaVisualizar";
-			this->lblresultcatgoriaVisualizar->Size = System::Drawing::Size(0, 13);
-			this->lblresultcatgoriaVisualizar->TabIndex = 16;
-			// 
-			// lbltitcategoriaVisualizar
-			// 
-			this->lbltitcategoriaVisualizar->AutoSize = true;
-			this->lbltitcategoriaVisualizar->Location = System::Drawing::Point(15, 231);
-			this->lbltitcategoriaVisualizar->Name = L"lbltitcategoriaVisualizar";
-			this->lbltitcategoriaVisualizar->Size = System::Drawing::Size(55, 13);
-			this->lbltitcategoriaVisualizar->TabIndex = 15;
-			this->lbltitcategoriaVisualizar->Text = L"Categoria:";
-			// 
-			// tbxvreferenciaVisualizar
-			// 
-			this->tbxvreferenciaVisualizar->Location = System::Drawing::Point(368, 31);
-			this->tbxvreferenciaVisualizar->Name = L"tbxvreferenciaVisualizar";
-			this->tbxvreferenciaVisualizar->Size = System::Drawing::Size(100, 20);
-			this->tbxvreferenciaVisualizar->TabIndex = 14;
-			// 
 			// gpbmodificar
 			// 
+			this->gpbmodificar->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->gpbmodificar->Controls->Add(this->btnGuarLibMod);
 			this->gpbmodificar->Controls->Add(this->lbltitcategoriaModificar);
 			this->gpbmodificar->Controls->Add(this->cmbcategoriaModificar);
@@ -1455,9 +1683,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->gpbmodificar->Controls->Add(this->lbltitautorModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitnombreModificar);
 			this->gpbmodificar->Controls->Add(this->lbltitvreferenciaModificar);
-			this->gpbmodificar->Location = System::Drawing::Point(12, 49);
+			this->gpbmodificar->Location = System::Drawing::Point(16, 46);
+			this->gpbmodificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbmodificar->Name = L"gpbmodificar";
-			this->gpbmodificar->Size = System::Drawing::Size(724, 379);
+			this->gpbmodificar->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbmodificar->Size = System::Drawing::Size(965, 466);
 			this->gpbmodificar->TabIndex = 4;
 			this->gpbmodificar->TabStop = false;
 			this->gpbmodificar->Text = L"Modificar libro ingresado";
@@ -1469,9 +1699,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->btnGuarLibMod->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnGuarLibMod->ForeColor = System::Drawing::Color::Goldenrod;
-			this->btnGuarLibMod->Location = System::Drawing::Point(492, 320);
+			this->btnGuarLibMod->Location = System::Drawing::Point(656, 394);
+			this->btnGuarLibMod->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btnGuarLibMod->Name = L"btnGuarLibMod";
-			this->btnGuarLibMod->Size = System::Drawing::Size(191, 35);
+			this->btnGuarLibMod->Size = System::Drawing::Size(255, 43);
 			this->btnGuarLibMod->TabIndex = 19;
 			this->btnGuarLibMod->Text = L"Guardar libro modificado";
 			this->btnGuarLibMod->UseVisualStyleBackColor = false;
@@ -1480,9 +1711,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// lbltitcategoriaModificar
 			// 
 			this->lbltitcategoriaModificar->AutoSize = true;
-			this->lbltitcategoriaModificar->Location = System::Drawing::Point(13, 303);
+			this->lbltitcategoriaModificar->Location = System::Drawing::Point(17, 373);
+			this->lbltitcategoriaModificar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitcategoriaModificar->Name = L"lbltitcategoriaModificar";
-			this->lbltitcategoriaModificar->Size = System::Drawing::Size(109, 13);
+			this->lbltitcategoriaModificar->Size = System::Drawing::Size(138, 16);
 			this->lbltitcategoriaModificar->TabIndex = 18;
 			this->lbltitcategoriaModificar->Text = L"(Correcion) Categoria:";
 			// 
@@ -1494,25 +1726,28 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 					L"Recreativo", L"Cientifico", L"Instructivo", L"Literariosy linguistico", L"Tecnico", L"Informativos", L"Divulgacion", L"Religioso",
 					L"Ilustrado", L"Electronico", L"Poetico", L"Biografico", L"Material auxiliar", L"Didactico", L"Viaje", L"Artistico", L"Autoestima"
 			});
-			this->cmbcategoriaModificar->Location = System::Drawing::Point(275, 298);
+			this->cmbcategoriaModificar->Location = System::Drawing::Point(367, 367);
+			this->cmbcategoriaModificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cmbcategoriaModificar->Name = L"cmbcategoriaModificar";
-			this->cmbcategoriaModificar->Size = System::Drawing::Size(170, 21);
+			this->cmbcategoriaModificar->Size = System::Drawing::Size(225, 24);
 			this->cmbcategoriaModificar->TabIndex = 17;
 			// 
 			// tbxeditorialModificar
 			// 
-			this->tbxeditorialModificar->Location = System::Drawing::Point(275, 195);
+			this->tbxeditorialModificar->Location = System::Drawing::Point(367, 240);
+			this->tbxeditorialModificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxeditorialModificar->Name = L"tbxeditorialModificar";
-			this->tbxeditorialModificar->Size = System::Drawing::Size(428, 20);
+			this->tbxeditorialModificar->Size = System::Drawing::Size(569, 22);
 			this->tbxeditorialModificar->TabIndex = 16;
 			this->tbxeditorialModificar->TextChanged += gcnew System::EventHandler(this, &MyForm::tbxeditorialModificar_TextChanged);
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(15, 198);
+			this->label2->Location = System::Drawing::Point(20, 244);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(107, 13);
+			this->label2->Size = System::Drawing::Size(135, 16);
 			this->label2->TabIndex = 15;
 			this->label2->Text = L"(Correccion) Editorial:";
 			// 
@@ -1522,9 +1757,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->btnmodificar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnmodificar->ForeColor = System::Drawing::Color::Goldenrod;
-			this->btnmodificar->Location = System::Drawing::Point(411, 24);
+			this->btnmodificar->Location = System::Drawing::Point(548, 30);
+			this->btnmodificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btnmodificar->Name = L"btnmodificar";
-			this->btnmodificar->Size = System::Drawing::Size(116, 35);
+			this->btnmodificar->Size = System::Drawing::Size(155, 43);
 			this->btnmodificar->TabIndex = 14;
 			this->btnmodificar->Text = L"Modificar libro";
 			this->btnmodificar->UseVisualStyleBackColor = false;
@@ -1537,9 +1773,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 				L"Ingreso a biblioteca ", L"Reciclaje",
 					L"Sección tome 1"
 			});
-			this->cmbdestinoModificar->Location = System::Drawing::Point(275, 261);
+			this->cmbdestinoModificar->Location = System::Drawing::Point(367, 321);
+			this->cmbdestinoModificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cmbdestinoModificar->Name = L"cmbdestinoModificar";
-			this->cmbdestinoModificar->Size = System::Drawing::Size(170, 21);
+			this->cmbdestinoModificar->Size = System::Drawing::Size(225, 24);
 			this->cmbdestinoModificar->TabIndex = 13;
 			// 
 			// cmbestadoModificar
@@ -1549,245 +1786,135 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 				L"Bueno", L"Decente", L"Deteriorado",
 					L"Malo"
 			});
-			this->cmbestadoModificar->Location = System::Drawing::Point(275, 227);
+			this->cmbestadoModificar->Location = System::Drawing::Point(367, 279);
+			this->cmbestadoModificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cmbestadoModificar->Name = L"cmbestadoModificar";
-			this->cmbestadoModificar->Size = System::Drawing::Size(170, 21);
+			this->cmbestadoModificar->Size = System::Drawing::Size(225, 24);
 			this->cmbestadoModificar->TabIndex = 12;
 			this->cmbestadoModificar->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::cmbestadoModificar_SelectedIndexChanged);
 			// 
 			// tbxedicionModificar
 			// 
-			this->tbxedicionModificar->Location = System::Drawing::Point(275, 159);
+			this->tbxedicionModificar->Location = System::Drawing::Point(367, 196);
+			this->tbxedicionModificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxedicionModificar->Name = L"tbxedicionModificar";
-			this->tbxedicionModificar->Size = System::Drawing::Size(428, 20);
+			this->tbxedicionModificar->Size = System::Drawing::Size(569, 22);
 			this->tbxedicionModificar->TabIndex = 11;
 			// 
 			// datetimepfechaModificar
 			// 
-			this->datetimepfechaModificar->Location = System::Drawing::Point(275, 126);
+			this->datetimepfechaModificar->Location = System::Drawing::Point(367, 155);
+			this->datetimepfechaModificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->datetimepfechaModificar->Name = L"datetimepfechaModificar";
-			this->datetimepfechaModificar->Size = System::Drawing::Size(428, 20);
+			this->datetimepfechaModificar->Size = System::Drawing::Size(569, 22);
 			this->datetimepfechaModificar->TabIndex = 10;
 			// 
 			// tbxautorModificar
 			// 
-			this->tbxautorModificar->Location = System::Drawing::Point(275, 99);
+			this->tbxautorModificar->Location = System::Drawing::Point(367, 122);
+			this->tbxautorModificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxautorModificar->Name = L"tbxautorModificar";
-			this->tbxautorModificar->Size = System::Drawing::Size(428, 20);
+			this->tbxautorModificar->Size = System::Drawing::Size(569, 22);
 			this->tbxautorModificar->TabIndex = 9;
 			// 
 			// tbxnombreModificar
 			// 
-			this->tbxnombreModificar->Location = System::Drawing::Point(275, 68);
+			this->tbxnombreModificar->Location = System::Drawing::Point(367, 84);
+			this->tbxnombreModificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxnombreModificar->Name = L"tbxnombreModificar";
-			this->tbxnombreModificar->Size = System::Drawing::Size(428, 20);
+			this->tbxnombreModificar->Size = System::Drawing::Size(569, 22);
 			this->tbxnombreModificar->TabIndex = 8;
 			// 
 			// tbxvalorreferenciaModificar
 			// 
-			this->tbxvalorreferenciaModificar->Location = System::Drawing::Point(275, 35);
+			this->tbxvalorreferenciaModificar->Location = System::Drawing::Point(367, 43);
+			this->tbxvalorreferenciaModificar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxvalorreferenciaModificar->Name = L"tbxvalorreferenciaModificar";
-			this->tbxvalorreferenciaModificar->Size = System::Drawing::Size(100, 20);
+			this->tbxvalorreferenciaModificar->Size = System::Drawing::Size(132, 22);
 			this->tbxvalorreferenciaModificar->TabIndex = 7;
 			// 
 			// lbltitdestinoModificar
 			// 
 			this->lbltitdestinoModificar->AutoSize = true;
-			this->lbltitdestinoModificar->Location = System::Drawing::Point(15, 269);
+			this->lbltitdestinoModificar->Location = System::Drawing::Point(20, 331);
+			this->lbltitdestinoModificar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitdestinoModificar->Name = L"lbltitdestinoModificar";
-			this->lbltitdestinoModificar->Size = System::Drawing::Size(90, 13);
+			this->lbltitdestinoModificar->Size = System::Drawing::Size(110, 16);
 			this->lbltitdestinoModificar->TabIndex = 6;
 			this->lbltitdestinoModificar->Text = L"(Nuevo) Destino: ";
 			// 
 			// lbltitestadoModificar
 			// 
 			this->lbltitestadoModificar->AutoSize = true;
-			this->lbltitestadoModificar->Location = System::Drawing::Point(15, 230);
+			this->lbltitestadoModificar->Location = System::Drawing::Point(20, 283);
+			this->lbltitestadoModificar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitestadoModificar->Name = L"lbltitestadoModificar";
-			this->lbltitestadoModificar->Size = System::Drawing::Size(90, 13);
+			this->lbltitestadoModificar->Size = System::Drawing::Size(114, 16);
 			this->lbltitestadoModificar->TabIndex = 5;
 			this->lbltitestadoModificar->Text = L"(Cambio) Estado: ";
 			// 
 			// lbltitedicionModificar
 			// 
 			this->lbltitedicionModificar->AutoSize = true;
-			this->lbltitedicionModificar->Location = System::Drawing::Point(15, 162);
+			this->lbltitedicionModificar->Location = System::Drawing::Point(20, 199);
+			this->lbltitedicionModificar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitedicionModificar->Name = L"lbltitedicionModificar";
-			this->lbltitedicionModificar->Size = System::Drawing::Size(86, 13);
+			this->lbltitedicionModificar->Size = System::Drawing::Size(106, 16);
 			this->lbltitedicionModificar->TabIndex = 4;
 			this->lbltitedicionModificar->Text = L"(Nueva) Edicion:";
 			// 
 			// lbltitfechaModificar
 			// 
 			this->lbltitfechaModificar->AutoSize = true;
-			this->lbltitfechaModificar->Location = System::Drawing::Point(15, 129);
+			this->lbltitfechaModificar->Location = System::Drawing::Point(20, 159);
+			this->lbltitfechaModificar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitfechaModificar->Name = L"lbltitfechaModificar";
-			this->lbltitfechaModificar->Size = System::Drawing::Size(156, 13);
+			this->lbltitfechaModificar->Size = System::Drawing::Size(197, 16);
 			this->lbltitfechaModificar->TabIndex = 3;
 			this->lbltitfechaModificar->Text = L"(Cambio) Fecha de publicacion:";
 			// 
 			// lbltitautorModificar
 			// 
 			this->lbltitautorModificar->AutoSize = true;
-			this->lbltitautorModificar->Location = System::Drawing::Point(15, 99);
+			this->lbltitautorModificar->Location = System::Drawing::Point(20, 122);
+			this->lbltitautorModificar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitautorModificar->Name = L"lbltitautorModificar";
-			this->lbltitautorModificar->Size = System::Drawing::Size(98, 13);
+			this->lbltitautorModificar->Size = System::Drawing::Size(120, 16);
 			this->lbltitautorModificar->TabIndex = 2;
 			this->lbltitautorModificar->Text = L"(Correccion) Autor: ";
 			// 
 			// lbltitnombreModificar
 			// 
 			this->lbltitnombreModificar->AutoSize = true;
-			this->lbltitnombreModificar->Location = System::Drawing::Point(15, 68);
+			this->lbltitnombreModificar->Location = System::Drawing::Point(20, 84);
+			this->lbltitnombreModificar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitnombreModificar->Name = L"lbltitnombreModificar";
-			this->lbltitnombreModificar->Size = System::Drawing::Size(146, 13);
+			this->lbltitnombreModificar->Size = System::Drawing::Size(186, 16);
 			this->lbltitnombreModificar->TabIndex = 1;
 			this->lbltitnombreModificar->Text = L"(Correccion) Nombre del libro:";
 			// 
 			// lbltitvreferenciaModificar
 			// 
 			this->lbltitvreferenciaModificar->AutoSize = true;
-			this->lbltitvreferenciaModificar->Location = System::Drawing::Point(15, 35);
+			this->lbltitvreferenciaModificar->Location = System::Drawing::Point(20, 43);
+			this->lbltitvreferenciaModificar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitvreferenciaModificar->Name = L"lbltitvreferenciaModificar";
-			this->lbltitvreferenciaModificar->Size = System::Drawing::Size(240, 13);
+			this->lbltitvreferenciaModificar->Size = System::Drawing::Size(304, 16);
 			this->lbltitvreferenciaModificar->TabIndex = 0;
 			this->lbltitvreferenciaModificar->Text = L"Ingrese el valor de referencia del libro a modificar:";
 			// 
-			// btnvisualizar
-			// 
-			this->btnvisualizar->BackColor = System::Drawing::SystemColors::HighlightText;
-			this->btnvisualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btnvisualizar->ForeColor = System::Drawing::Color::Green;
-			this->btnvisualizar->Location = System::Drawing::Point(529, 283);
-			this->btnvisualizar->Name = L"btnvisualizar";
-			this->btnvisualizar->Size = System::Drawing::Size(107, 31);
-			this->btnvisualizar->TabIndex = 13;
-			this->btnvisualizar->Text = L"Visualizar libro";
-			this->btnvisualizar->UseVisualStyleBackColor = false;
-			this->btnvisualizar->Click += gcnew System::EventHandler(this, &MyForm::btnvisualizar_Click);
-			// 
-			// lblresultdestinoVisualizar
-			// 
-			this->lblresultdestinoVisualizar->AutoSize = true;
-			this->lblresultdestinoVisualizar->Location = System::Drawing::Point(161, 206);
-			this->lblresultdestinoVisualizar->Name = L"lblresultdestinoVisualizar";
-			this->lblresultdestinoVisualizar->Size = System::Drawing::Size(0, 13);
-			this->lblresultdestinoVisualizar->TabIndex = 12;
-			// 
-			// lblresultestadoVisualizar
-			// 
-			this->lblresultestadoVisualizar->AutoSize = true;
-			this->lblresultestadoVisualizar->Location = System::Drawing::Point(161, 178);
-			this->lblresultestadoVisualizar->Name = L"lblresultestadoVisualizar";
-			this->lblresultestadoVisualizar->Size = System::Drawing::Size(0, 13);
-			this->lblresultestadoVisualizar->TabIndex = 11;
-			// 
-			// lblresultedicionVisualizar
-			// 
-			this->lblresultedicionVisualizar->AutoSize = true;
-			this->lblresultedicionVisualizar->Location = System::Drawing::Point(161, 152);
-			this->lblresultedicionVisualizar->Name = L"lblresultedicionVisualizar";
-			this->lblresultedicionVisualizar->Size = System::Drawing::Size(0, 13);
-			this->lblresultedicionVisualizar->TabIndex = 10;
-			// 
-			// lblresultfechaVisualizar
-			// 
-			this->lblresultfechaVisualizar->AutoSize = true;
-			this->lblresultfechaVisualizar->Location = System::Drawing::Point(161, 127);
-			this->lblresultfechaVisualizar->Name = L"lblresultfechaVisualizar";
-			this->lblresultfechaVisualizar->Size = System::Drawing::Size(0, 13);
-			this->lblresultfechaVisualizar->TabIndex = 9;
-			// 
-			// lblresultautorVisualizar
-			// 
-			this->lblresultautorVisualizar->AutoSize = true;
-			this->lblresultautorVisualizar->Location = System::Drawing::Point(161, 99);
-			this->lblresultautorVisualizar->Name = L"lblresultautorVisualizar";
-			this->lblresultautorVisualizar->Size = System::Drawing::Size(0, 13);
-			this->lblresultautorVisualizar->TabIndex = 8;
-			// 
-			// lblresultnombreVisualizar
-			// 
-			this->lblresultnombreVisualizar->AutoSize = true;
-			this->lblresultnombreVisualizar->Location = System::Drawing::Point(161, 68);
-			this->lblresultnombreVisualizar->Name = L"lblresultnombreVisualizar";
-			this->lblresultnombreVisualizar->Size = System::Drawing::Size(0, 13);
-			this->lblresultnombreVisualizar->TabIndex = 7;
-			// 
-			// lbltitdestinoVisualizar
-			// 
-			this->lbltitdestinoVisualizar->AutoSize = true;
-			this->lbltitdestinoVisualizar->Location = System::Drawing::Point(15, 206);
-			this->lbltitdestinoVisualizar->Name = L"lbltitdestinoVisualizar";
-			this->lbltitdestinoVisualizar->Size = System::Drawing::Size(49, 13);
-			this->lbltitdestinoVisualizar->TabIndex = 6;
-			this->lbltitdestinoVisualizar->Text = L"Destino: ";
-			// 
-			// lbltitestadoVisualizar
-			// 
-			this->lbltitestadoVisualizar->AutoSize = true;
-			this->lbltitestadoVisualizar->Location = System::Drawing::Point(15, 178);
-			this->lbltitestadoVisualizar->Name = L"lbltitestadoVisualizar";
-			this->lbltitestadoVisualizar->Size = System::Drawing::Size(46, 13);
-			this->lbltitestadoVisualizar->TabIndex = 5;
-			this->lbltitestadoVisualizar->Text = L"Estado: ";
-			this->lbltitestadoVisualizar->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
-			// 
-			// lbltitedicionVisualizar
-			// 
-			this->lbltitedicionVisualizar->AutoSize = true;
-			this->lbltitedicionVisualizar->Location = System::Drawing::Point(15, 152);
-			this->lbltitedicionVisualizar->Name = L"lbltitedicionVisualizar";
-			this->lbltitedicionVisualizar->Size = System::Drawing::Size(48, 13);
-			this->lbltitedicionVisualizar->TabIndex = 4;
-			this->lbltitedicionVisualizar->Text = L"Edicion: ";
-			// 
-			// lbltitfechaVisualizar
-			// 
-			this->lbltitfechaVisualizar->AutoSize = true;
-			this->lbltitfechaVisualizar->Location = System::Drawing::Point(15, 127);
-			this->lbltitfechaVisualizar->Name = L"lbltitfechaVisualizar";
-			this->lbltitfechaVisualizar->Size = System::Drawing::Size(115, 13);
-			this->lbltitfechaVisualizar->TabIndex = 3;
-			this->lbltitfechaVisualizar->Text = L"Fecha de publicación: ";
-			// 
-			// lbltitautorVisualizar
-			// 
-			this->lbltitautorVisualizar->AutoSize = true;
-			this->lbltitautorVisualizar->Location = System::Drawing::Point(15, 99);
-			this->lbltitautorVisualizar->Name = L"lbltitautorVisualizar";
-			this->lbltitautorVisualizar->Size = System::Drawing::Size(38, 13);
-			this->lbltitautorVisualizar->TabIndex = 2;
-			this->lbltitautorVisualizar->Text = L"Autor: ";
-			// 
-			// lblnombreVisualizar
-			// 
-			this->lblnombreVisualizar->AutoSize = true;
-			this->lblnombreVisualizar->Location = System::Drawing::Point(15, 68);
-			this->lblnombreVisualizar->Name = L"lblnombreVisualizar";
-			this->lblnombreVisualizar->Size = System::Drawing::Size(50, 13);
-			this->lblnombreVisualizar->TabIndex = 1;
-			this->lblnombreVisualizar->Text = L"Nombre: ";
-			// 
-			// lbltitrefrenciadelibrovisualizar
-			// 
-			this->lbltitrefrenciadelibrovisualizar->AutoSize = true;
-			this->lbltitrefrenciadelibrovisualizar->Location = System::Drawing::Point(12, 31);
-			this->lbltitrefrenciadelibrovisualizar->Name = L"lbltitrefrenciadelibrovisualizar";
-			this->lbltitrefrenciadelibrovisualizar->Size = System::Drawing::Size(318, 13);
-			this->lbltitrefrenciadelibrovisualizar->TabIndex = 0;
-			this->lbltitrefrenciadelibrovisualizar->Text = L"Ingrese el valor correspondiente a su libro al momento de ingreso: ";
-			// 
 			// gpbxRdestino
 			// 
+			this->gpbxRdestino->BackColor = System::Drawing::Color::LightYellow;
 			this->gpbxRdestino->Controls->Add(this->listBox2);
 			this->gpbxRdestino->Controls->Add(this->button2);
 			this->gpbxRdestino->Controls->Add(this->cmbRdestino);
 			this->gpbxRdestino->Controls->Add(this->label4);
-			this->gpbxRdestino->Location = System::Drawing::Point(814, 29);
+			this->gpbxRdestino->Location = System::Drawing::Point(1059, 57);
+			this->gpbxRdestino->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxRdestino->Name = L"gpbxRdestino";
-			this->gpbxRdestino->Size = System::Drawing::Size(454, 246);
+			this->gpbxRdestino->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxRdestino->Size = System::Drawing::Size(605, 303);
 			this->gpbxRdestino->TabIndex = 5;
 			this->gpbxRdestino->TabStop = false;
 			this->gpbxRdestino->Text = L"Reporte por destino";
@@ -1796,16 +1923,19 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// listBox2
 			// 
 			this->listBox2->FormattingEnabled = true;
-			this->listBox2->Location = System::Drawing::Point(163, 108);
+			this->listBox2->ItemHeight = 16;
+			this->listBox2->Location = System::Drawing::Point(217, 133);
+			this->listBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(120, 95);
+			this->listBox2->Size = System::Drawing::Size(159, 116);
 			this->listBox2->TabIndex = 10;
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(169, 61);
+			this->button2->Location = System::Drawing::Point(225, 75);
+			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(100, 23);
+			this->button2->Size = System::Drawing::Size(133, 28);
 			this->button2->TabIndex = 9;
 			this->button2->Text = L"Realizar reporte";
 			this->button2->UseVisualStyleBackColor = true;
@@ -1815,17 +1945,19 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			this->cmbRdestino->FormattingEnabled = true;
 			this->cmbRdestino->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Ingreso a biblioteca", L"Reciclaje", L"Seccion tome 1" });
-			this->cmbRdestino->Location = System::Drawing::Point(311, 25);
+			this->cmbRdestino->Location = System::Drawing::Point(415, 31);
+			this->cmbRdestino->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cmbRdestino->Name = L"cmbRdestino";
-			this->cmbRdestino->Size = System::Drawing::Size(121, 21);
+			this->cmbRdestino->Size = System::Drawing::Size(160, 24);
 			this->cmbRdestino->TabIndex = 8;
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(13, 25);
+			this->label4->Location = System::Drawing::Point(17, 31);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(292, 13);
+			this->label4->Size = System::Drawing::Size(370, 16);
 			this->label4->TabIndex = 0;
 			this->label4->Text = L"Seleccione el destino por el cual quiere realizar la busqueda:";
 			// 
@@ -1840,19 +1972,21 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 					this->headautor, this->headfecha, this->headedicion, this->headestado, this->headdestino, this->headeditorial, this->headcategoria,
 					this->valorreferencia
 			});
-			this->dtgvcontrol->Location = System::Drawing::Point(209, 434);
+			this->dtgvcontrol->Location = System::Drawing::Point(279, 534);
+			this->dtgvcontrol->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->dtgvcontrol->Name = L"dtgvcontrol";
 			this->dtgvcontrol->ReadOnly = true;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this->dtgvcontrol->Size = System::Drawing::Size(943, 200);
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dtgvcontrol->RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			this->dtgvcontrol->RowHeadersWidth = 51;
+			this->dtgvcontrol->Size = System::Drawing::Size(1257, 246);
 			this->dtgvcontrol->TabIndex = 5;
 			this->dtgvcontrol->Visible = false;
 			this->dtgvcontrol->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dtgvcontrol_CellContentClick);
@@ -1860,64 +1994,85 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// headnombre
 			// 
 			this->headnombre->HeaderText = L"Nombre";
+			this->headnombre->MinimumWidth = 6;
 			this->headnombre->Name = L"headnombre";
 			this->headnombre->ReadOnly = true;
+			this->headnombre->Width = 125;
 			// 
 			// headautor
 			// 
 			this->headautor->HeaderText = L"Autor";
+			this->headautor->MinimumWidth = 6;
 			this->headautor->Name = L"headautor";
 			this->headautor->ReadOnly = true;
+			this->headautor->Width = 125;
 			// 
 			// headfecha
 			// 
 			this->headfecha->HeaderText = L"Fecha de publicacion";
+			this->headfecha->MinimumWidth = 6;
 			this->headfecha->Name = L"headfecha";
 			this->headfecha->ReadOnly = true;
+			this->headfecha->Width = 125;
 			// 
 			// headedicion
 			// 
 			this->headedicion->HeaderText = L"Edicion";
+			this->headedicion->MinimumWidth = 6;
 			this->headedicion->Name = L"headedicion";
 			this->headedicion->ReadOnly = true;
+			this->headedicion->Width = 125;
 			// 
 			// headestado
 			// 
 			this->headestado->HeaderText = L"Estado";
+			this->headestado->MinimumWidth = 6;
 			this->headestado->Name = L"headestado";
 			this->headestado->ReadOnly = true;
+			this->headestado->Width = 125;
 			// 
 			// headdestino
 			// 
 			this->headdestino->HeaderText = L"Destino";
+			this->headdestino->MinimumWidth = 6;
 			this->headdestino->Name = L"headdestino";
 			this->headdestino->ReadOnly = true;
+			this->headdestino->Width = 125;
 			// 
 			// headeditorial
 			// 
 			this->headeditorial->HeaderText = L"Editorial";
+			this->headeditorial->MinimumWidth = 6;
 			this->headeditorial->Name = L"headeditorial";
 			this->headeditorial->ReadOnly = true;
+			this->headeditorial->Width = 125;
 			// 
 			// headcategoria
 			// 
 			this->headcategoria->HeaderText = L"Categoria";
+			this->headcategoria->MinimumWidth = 6;
 			this->headcategoria->Name = L"headcategoria";
 			this->headcategoria->ReadOnly = true;
+			this->headcategoria->Width = 125;
 			// 
 			// valorreferencia
 			// 
 			this->valorreferencia->HeaderText = L"Valor de referencia ";
+			this->valorreferencia->MinimumWidth = 6;
 			this->valorreferencia->Name = L"valorreferencia";
 			this->valorreferencia->ReadOnly = true;
+			this->valorreferencia->Width = 125;
 			// 
 			// gpbxRcantidadlibro
 			// 
+			this->gpbxRcantidadlibro->BackColor = System::Drawing::Color::LightYellow;
 			this->gpbxRcantidadlibro->Controls->Add(this->lblresultRcantidadlibros);
 			this->gpbxRcantidadlibro->Controls->Add(this->lbltitR);
-			this->gpbxRcantidadlibro->Location = System::Drawing::Point(933, 39);
+			this->gpbxRcantidadlibro->Location = System::Drawing::Point(1244, 73);
+			this->gpbxRcantidadlibro->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxRcantidadlibro->Name = L"gpbxRcantidadlibro";
-			this->gpbxRcantidadlibro->Size = System::Drawing::Size(289, 100);
+			this->gpbxRcantidadlibro->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxRcantidadlibro->Size = System::Drawing::Size(385, 123);
 			this->gpbxRcantidadlibro->TabIndex = 6;
 			this->gpbxRcantidadlibro->TabStop = false;
 			this->gpbxRcantidadlibro->Text = L"Reporte de cantidad de libros";
@@ -1929,31 +2084,36 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->lblresultRcantidadlibros->AutoSize = true;
 			this->lblresultRcantidadlibros->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Italic,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->lblresultRcantidadlibros->Location = System::Drawing::Point(137, 56);
+			this->lblresultRcantidadlibros->Location = System::Drawing::Point(183, 69);
+			this->lblresultRcantidadlibros->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblresultRcantidadlibros->Name = L"lblresultRcantidadlibros";
-			this->lblresultRcantidadlibros->Size = System::Drawing::Size(0, 24);
+			this->lblresultRcantidadlibros->Size = System::Drawing::Size(0, 29);
 			this->lblresultRcantidadlibros->TabIndex = 1;
 			// 
 			// lbltitR
 			// 
 			this->lbltitR->AutoSize = true;
-			this->lbltitR->Location = System::Drawing::Point(50, 26);
+			this->lbltitR->Location = System::Drawing::Point(67, 32);
+			this->lbltitR->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbltitR->Name = L"lbltitR";
-			this->lbltitR->Size = System::Drawing::Size(194, 13);
+			this->lbltitR->Size = System::Drawing::Size(246, 16);
 			this->lbltitR->TabIndex = 0;
 			this->lbltitR->Text = L"La cantidad de libros ingresados es de: ";
 			this->lbltitR->Click += gcnew System::EventHandler(this, &MyForm::lbltitR_Click);
 			// 
 			// gpbxRestado
 			// 
+			this->gpbxRestado->BackColor = System::Drawing::Color::LightYellow;
 			this->gpbxRestado->Controls->Add(this->listBox1);
 			this->gpbxRestado->Controls->Add(this->lblresultRestado);
 			this->gpbxRestado->Controls->Add(this->button1);
 			this->gpbxRestado->Controls->Add(this->cmbRestado);
 			this->gpbxRestado->Controls->Add(this->label3);
-			this->gpbxRestado->Location = System::Drawing::Point(814, 26);
+			this->gpbxRestado->Location = System::Drawing::Point(1068, 61);
+			this->gpbxRestado->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxRestado->Name = L"gpbxRestado";
-			this->gpbxRestado->Size = System::Drawing::Size(541, 260);
+			this->gpbxRestado->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxRestado->Size = System::Drawing::Size(721, 320);
 			this->gpbxRestado->TabIndex = 7;
 			this->gpbxRestado->TabStop = false;
 			this->gpbxRestado->Text = L"Reporte por estado";
@@ -1963,25 +2123,29 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// listBox1
 			// 
 			this->listBox1->FormattingEnabled = true;
-			this->listBox1->Location = System::Drawing::Point(191, 137);
+			this->listBox1->ItemHeight = 16;
+			this->listBox1->Location = System::Drawing::Point(255, 169);
+			this->listBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(120, 95);
+			this->listBox1->Size = System::Drawing::Size(159, 116);
 			this->listBox1->TabIndex = 4;
 			this->listBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::listBox1_SelectedIndexChanged);
 			// 
 			// lblresultRestado
 			// 
 			this->lblresultRestado->AutoSize = true;
-			this->lblresultRestado->Location = System::Drawing::Point(46, 118);
+			this->lblresultRestado->Location = System::Drawing::Point(61, 145);
+			this->lblresultRestado->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblresultRestado->Name = L"lblresultRestado";
-			this->lblresultRestado->Size = System::Drawing::Size(0, 13);
+			this->lblresultRestado->Size = System::Drawing::Size(0, 16);
 			this->lblresultRestado->TabIndex = 3;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(213, 68);
+			this->button1->Location = System::Drawing::Point(284, 84);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(103, 23);
+			this->button1->Size = System::Drawing::Size(137, 28);
 			this->button1->TabIndex = 2;
 			this->button1->Text = L"Realizar reporte";
 			this->button1->UseVisualStyleBackColor = true;
@@ -1991,31 +2155,36 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			this->cmbRestado->FormattingEnabled = true;
 			this->cmbRestado->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Bueno", L"Decente", L"Deteriorado", L"Malo" });
-			this->cmbRestado->Location = System::Drawing::Point(317, 32);
+			this->cmbRestado->Location = System::Drawing::Point(423, 39);
+			this->cmbRestado->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cmbRestado->Name = L"cmbRestado";
-			this->cmbRestado->Size = System::Drawing::Size(121, 21);
+			this->cmbRestado->Size = System::Drawing::Size(160, 24);
 			this->cmbRestado->TabIndex = 1;
 			this->cmbRestado->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::cmbRestado_SelectedIndexChanged);
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(15, 35);
+			this->label3->Location = System::Drawing::Point(20, 43);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(296, 13);
+			this->label3->Size = System::Drawing::Size(374, 16);
 			this->label3->TabIndex = 0;
 			this->label3->Text = L"Seleccione el estado por el cual quiere realizar la busqueda:  ";
 			this->label3->Click += gcnew System::EventHandler(this, &MyForm::label3_Click);
 			// 
 			// gpbxRcategoria
 			// 
+			this->gpbxRcategoria->BackColor = System::Drawing::Color::LightYellow;
 			this->gpbxRcategoria->Controls->Add(this->listBox3);
 			this->gpbxRcategoria->Controls->Add(this->button3);
 			this->gpbxRcategoria->Controls->Add(this->cmbRcategoria);
 			this->gpbxRcategoria->Controls->Add(this->label5);
-			this->gpbxRcategoria->Location = System::Drawing::Point(814, 27);
+			this->gpbxRcategoria->Location = System::Drawing::Point(1053, 57);
+			this->gpbxRcategoria->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxRcategoria->Name = L"gpbxRcategoria";
-			this->gpbxRcategoria->Size = System::Drawing::Size(476, 228);
+			this->gpbxRcategoria->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxRcategoria->Size = System::Drawing::Size(635, 281);
 			this->gpbxRcategoria->TabIndex = 8;
 			this->gpbxRcategoria->TabStop = false;
 			this->gpbxRcategoria->Text = L"Reporte por categoria";
@@ -2024,16 +2193,19 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// listBox3
 			// 
 			this->listBox3->FormattingEnabled = true;
-			this->listBox3->Location = System::Drawing::Point(170, 108);
+			this->listBox3->ItemHeight = 16;
+			this->listBox3->Location = System::Drawing::Point(227, 133);
+			this->listBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->listBox3->Name = L"listBox3";
-			this->listBox3->Size = System::Drawing::Size(120, 95);
+			this->listBox3->Size = System::Drawing::Size(159, 116);
 			this->listBox3->TabIndex = 3;
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(170, 65);
+			this->button3->Location = System::Drawing::Point(227, 80);
+			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(112, 23);
+			this->button3->Size = System::Drawing::Size(149, 28);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Realizar reporte";
 			this->button3->UseVisualStyleBackColor = true;
@@ -2047,29 +2219,34 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 					L"Recreativo", L"Cientifico", L"Instructivo", L"Literarios y linguistico", L"Tecnico", L"Informativos", L"Divulgacion", L"Religioso",
 					L"Ilustrado", L"Electronico", L"Poetico", L"Biografico", L"Material auxiliar", L"Didactico", L"Viaje", L"Artistico", L"Autoestima"
 			});
-			this->cmbRcategoria->Location = System::Drawing::Point(329, 30);
+			this->cmbRcategoria->Location = System::Drawing::Point(439, 37);
+			this->cmbRcategoria->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cmbRcategoria->Name = L"cmbRcategoria";
-			this->cmbRcategoria->Size = System::Drawing::Size(121, 21);
+			this->cmbRcategoria->Size = System::Drawing::Size(160, 24);
 			this->cmbRcategoria->TabIndex = 1;
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(16, 30);
+			this->label5->Location = System::Drawing::Point(21, 37);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(302, 13);
+			this->label5->Size = System::Drawing::Size(383, 16);
 			this->label5->TabIndex = 0;
 			this->label5->Text = L"Seleccione la categoria por el cual quiera realizar la busqueda:";
 			// 
 			// gpbxEdicion
 			// 
+			this->gpbxEdicion->BackColor = System::Drawing::Color::LightYellow;
 			this->gpbxEdicion->Controls->Add(this->listBRedicion);
 			this->gpbxEdicion->Controls->Add(this->btnRedicion);
 			this->gpbxEdicion->Controls->Add(this->tbxRedicion);
 			this->gpbxEdicion->Controls->Add(this->label6);
-			this->gpbxEdicion->Location = System::Drawing::Point(815, 23);
+			this->gpbxEdicion->Location = System::Drawing::Point(1046, 48);
+			this->gpbxEdicion->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxEdicion->Name = L"gpbxEdicion";
-			this->gpbxEdicion->Size = System::Drawing::Size(458, 234);
+			this->gpbxEdicion->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxEdicion->Size = System::Drawing::Size(611, 288);
 			this->gpbxEdicion->TabIndex = 9;
 			this->gpbxEdicion->TabStop = false;
 			this->gpbxEdicion->Text = L"Reporte por edicion";
@@ -2078,16 +2255,19 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// listBRedicion
 			// 
 			this->listBRedicion->FormattingEnabled = true;
-			this->listBRedicion->Location = System::Drawing::Point(156, 114);
+			this->listBRedicion->ItemHeight = 16;
+			this->listBRedicion->Location = System::Drawing::Point(208, 140);
+			this->listBRedicion->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->listBRedicion->Name = L"listBRedicion";
-			this->listBRedicion->Size = System::Drawing::Size(120, 95);
+			this->listBRedicion->Size = System::Drawing::Size(159, 116);
 			this->listBRedicion->TabIndex = 3;
 			// 
 			// btnRedicion
 			// 
-			this->btnRedicion->Location = System::Drawing::Point(137, 68);
+			this->btnRedicion->Location = System::Drawing::Point(183, 84);
+			this->btnRedicion->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btnRedicion->Name = L"btnRedicion";
-			this->btnRedicion->Size = System::Drawing::Size(160, 23);
+			this->btnRedicion->Size = System::Drawing::Size(213, 28);
 			this->btnRedicion->TabIndex = 2;
 			this->btnRedicion->Text = L"Consultar libros por edicion";
 			this->btnRedicion->UseVisualStyleBackColor = true;
@@ -2095,29 +2275,34 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			// tbxRedicion
 			// 
-			this->tbxRedicion->Location = System::Drawing::Point(218, 32);
+			this->tbxRedicion->Location = System::Drawing::Point(291, 39);
+			this->tbxRedicion->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxRedicion->Name = L"tbxRedicion";
-			this->tbxRedicion->Size = System::Drawing::Size(176, 20);
+			this->tbxRedicion->Size = System::Drawing::Size(233, 22);
 			this->tbxRedicion->TabIndex = 1;
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(6, 32);
+			this->label6->Location = System::Drawing::Point(8, 39);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(206, 13);
+			this->label6->Size = System::Drawing::Size(260, 16);
 			this->label6->TabIndex = 0;
 			this->label6->Text = L"Ingrese la edición de los libros a consultar:";
 			// 
 			// gpbxRautor
 			// 
+			this->gpbxRautor->BackColor = System::Drawing::Color::LightYellow;
 			this->gpbxRautor->Controls->Add(this->listBRautor);
 			this->gpbxRautor->Controls->Add(this->btnRautor);
 			this->gpbxRautor->Controls->Add(this->tbxRautor);
 			this->gpbxRautor->Controls->Add(this->label7);
-			this->gpbxRautor->Location = System::Drawing::Point(839, 13);
+			this->gpbxRautor->Location = System::Drawing::Point(1050, 48);
+			this->gpbxRautor->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxRautor->Name = L"gpbxRautor";
-			this->gpbxRautor->Size = System::Drawing::Size(451, 238);
+			this->gpbxRautor->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxRautor->Size = System::Drawing::Size(601, 293);
 			this->gpbxRautor->TabIndex = 10;
 			this->gpbxRautor->TabStop = false;
 			this->gpbxRautor->Text = L"Reporte por autor";
@@ -2126,16 +2311,19 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// listBRautor
 			// 
 			this->listBRautor->FormattingEnabled = true;
-			this->listBRautor->Location = System::Drawing::Point(167, 114);
+			this->listBRautor->ItemHeight = 16;
+			this->listBRautor->Location = System::Drawing::Point(223, 140);
+			this->listBRautor->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->listBRautor->Name = L"listBRautor";
-			this->listBRautor->Size = System::Drawing::Size(120, 95);
+			this->listBRautor->Size = System::Drawing::Size(159, 116);
 			this->listBRautor->TabIndex = 3;
 			// 
 			// btnRautor
 			// 
-			this->btnRautor->Location = System::Drawing::Point(156, 71);
+			this->btnRautor->Location = System::Drawing::Point(208, 87);
+			this->btnRautor->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btnRautor->Name = L"btnRautor";
-			this->btnRautor->Size = System::Drawing::Size(131, 23);
+			this->btnRautor->Size = System::Drawing::Size(175, 28);
 			this->btnRautor->TabIndex = 2;
 			this->btnRautor->Text = L"Buscar libros del autor";
 			this->btnRautor->UseVisualStyleBackColor = true;
@@ -2143,29 +2331,34 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			// tbxRautor
 			// 
-			this->tbxRautor->Location = System::Drawing::Point(126, 45);
+			this->tbxRautor->Location = System::Drawing::Point(168, 55);
+			this->tbxRautor->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->tbxRautor->Name = L"tbxRautor";
-			this->tbxRautor->Size = System::Drawing::Size(206, 20);
+			this->tbxRautor->Size = System::Drawing::Size(273, 22);
 			this->tbxRautor->TabIndex = 1;
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(105, 29);
+			this->label7->Location = System::Drawing::Point(140, 36);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(249, 13);
+			this->label7->Size = System::Drawing::Size(314, 16);
 			this->label7->TabIndex = 0;
 			this->label7->Text = L"Ingrese el autor por el que desea buscar sus libros: ";
 			// 
 			// gpbxReditorial
 			// 
+			this->gpbxReditorial->BackColor = System::Drawing::Color::LightYellow;
 			this->gpbxReditorial->Controls->Add(this->listBReditorial);
 			this->gpbxReditorial->Controls->Add(this->btnReditorial);
 			this->gpbxReditorial->Controls->Add(this->tbxReditorial);
 			this->gpbxReditorial->Controls->Add(this->label8);
-			this->gpbxReditorial->Location = System::Drawing::Point(796, 17);
+			this->gpbxReditorial->Location = System::Drawing::Point(1046, 38);
+			this->gpbxReditorial->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxReditorial->Name = L"gpbxReditorial";
-			this->gpbxReditorial->Size = System::Drawing::Size(472, 224);
+			this->gpbxReditorial->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxReditorial->Size = System::Drawing::Size(629, 276);
 			this->gpbxReditorial->TabIndex = 11;
 			this->gpbxReditorial->TabStop = false;
 			this->gpbxReditorial->Text = L"Reporte por editorial";
@@ -2174,20 +2367,55 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// listBReditorial
 			// 
 			this->listBReditorial->FormattingEnabled = true;
-			this->listBReditorial->Location = System::Drawing::Point(131, 93);
+			this->listBReditorial->ItemHeight = 16;
+			this->listBReditorial->Location = System::Drawing::Point(175, 114);
+			this->listBReditorial->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->listBReditorial->Name = L"listBReditorial";
-			this->listBReditorial->Size = System::Drawing::Size(216, 108);
+			this->listBReditorial->Size = System::Drawing::Size(287, 132);
 			this->listBReditorial->TabIndex = 3;
+			// 
+			// btnReditorial
+			// 
+			this->btnReditorial->Location = System::Drawing::Point(175, 65);
+			this->btnReditorial->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnReditorial->Name = L"btnReditorial";
+			this->btnReditorial->Size = System::Drawing::Size(305, 28);
+			this->btnReditorial->TabIndex = 2;
+			this->btnReditorial->Text = L"Busqueda de libros por su editorial";
+			this->btnReditorial->UseVisualStyleBackColor = true;
+			this->btnReditorial->Click += gcnew System::EventHandler(this, &MyForm::btnReditorial_Click);
+			// 
+			// tbxReditorial
+			// 
+			this->tbxReditorial->Location = System::Drawing::Point(175, 33);
+			this->tbxReditorial->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->tbxReditorial->Name = L"tbxReditorial";
+			this->tbxReditorial->Size = System::Drawing::Size(421, 22);
+			this->tbxReditorial->TabIndex = 1;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(17, 33);
+			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(123, 16);
+			this->label8->TabIndex = 0;
+			this->label8->Text = L"Ingrese el editorial: ";
+			this->label8->Click += gcnew System::EventHandler(this, &MyForm::label8_Click);
 			// 
 			// gpbxRfecha
 			// 
+			this->gpbxRfecha->BackColor = System::Drawing::Color::LightYellow;
 			this->gpbxRfecha->Controls->Add(this->listBRfecha);
 			this->gpbxRfecha->Controls->Add(this->button4);
 			this->gpbxRfecha->Controls->Add(this->dtmRfecha);
 			this->gpbxRfecha->Controls->Add(this->label9);
-			this->gpbxRfecha->Location = System::Drawing::Point(776, 14);
+			this->gpbxRfecha->Location = System::Drawing::Point(1022, 46);
+			this->gpbxRfecha->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxRfecha->Name = L"gpbxRfecha";
-			this->gpbxRfecha->Size = System::Drawing::Size(594, 237);
+			this->gpbxRfecha->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxRfecha->Size = System::Drawing::Size(792, 292);
 			this->gpbxRfecha->TabIndex = 12;
 			this->gpbxRfecha->TabStop = false;
 			this->gpbxRfecha->Text = L"Reporte por fecha ";
@@ -2196,16 +2424,19 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// listBRfecha
 			// 
 			this->listBRfecha->FormattingEnabled = true;
-			this->listBRfecha->Location = System::Drawing::Point(221, 108);
+			this->listBRfecha->ItemHeight = 16;
+			this->listBRfecha->Location = System::Drawing::Point(295, 133);
+			this->listBRfecha->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->listBRfecha->Name = L"listBRfecha";
-			this->listBRfecha->Size = System::Drawing::Size(120, 95);
+			this->listBRfecha->Size = System::Drawing::Size(159, 116);
 			this->listBRfecha->TabIndex = 3;
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(174, 64);
+			this->button4->Location = System::Drawing::Point(232, 79);
+			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(217, 23);
+			this->button4->Size = System::Drawing::Size(289, 28);
 			this->button4->TabIndex = 2;
 			this->button4->Text = L"Reporte por fecha de publicacion";
 			this->button4->UseVisualStyleBackColor = true;
@@ -2213,47 +2444,22 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// 
 			// dtmRfecha
 			// 
-			this->dtmRfecha->Location = System::Drawing::Point(272, 24);
+			this->dtmRfecha->Location = System::Drawing::Point(363, 30);
+			this->dtmRfecha->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->dtmRfecha->Name = L"dtmRfecha";
-			this->dtmRfecha->Size = System::Drawing::Size(271, 20);
+			this->dtmRfecha->Size = System::Drawing::Size(360, 22);
 			this->dtmRfecha->TabIndex = 1;
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(16, 30);
+			this->label9->Location = System::Drawing::Point(21, 37);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(219, 13);
+			this->label9->Size = System::Drawing::Size(275, 16);
 			this->label9->TabIndex = 0;
 			this->label9->Text = L"Ingrese la fecha de publicacion de los libros: ";
 			this->label9->Click += gcnew System::EventHandler(this, &MyForm::label9_Click);
-			// 
-			// btnReditorial
-			// 
-			this->btnReditorial->Location = System::Drawing::Point(131, 53);
-			this->btnReditorial->Name = L"btnReditorial";
-			this->btnReditorial->Size = System::Drawing::Size(229, 23);
-			this->btnReditorial->TabIndex = 2;
-			this->btnReditorial->Text = L"Busqueda de libros por su editorial";
-			this->btnReditorial->UseVisualStyleBackColor = true;
-			this->btnReditorial->Click += gcnew System::EventHandler(this, &MyForm::btnReditorial_Click);
-			// 
-			// tbxReditorial
-			// 
-			this->tbxReditorial->Location = System::Drawing::Point(131, 27);
-			this->tbxReditorial->Name = L"tbxReditorial";
-			this->tbxReditorial->Size = System::Drawing::Size(317, 20);
-			this->tbxReditorial->TabIndex = 1;
-			// 
-			// label8
-			// 
-			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(13, 27);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(98, 13);
-			this->label8->TabIndex = 0;
-			this->label8->Text = L"Ingrese el editorial: ";
-			this->label8->Click += gcnew System::EventHandler(this, &MyForm::label8_Click);
 			// 
 			// dtgvcontrolpersonas
 			// 
@@ -2265,10 +2471,12 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 				this->Column1,
 					this->Column2, this->Column3, this->Column4, this->Column5
 			});
-			this->dtgvcontrolpersonas->Location = System::Drawing::Point(422, 410);
+			this->dtgvcontrolpersonas->Location = System::Drawing::Point(563, 505);
+			this->dtgvcontrolpersonas->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->dtgvcontrolpersonas->Name = L"dtgvcontrolpersonas";
 			this->dtgvcontrolpersonas->ReadOnly = true;
-			this->dtgvcontrolpersonas->Size = System::Drawing::Size(546, 215);
+			this->dtgvcontrolpersonas->RowHeadersWidth = 51;
+			this->dtgvcontrolpersonas->Size = System::Drawing::Size(728, 265);
 			this->dtgvcontrolpersonas->TabIndex = 15;
 			this->dtgvcontrolpersonas->Visible = false;
 			this->dtgvcontrolpersonas->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
@@ -2276,44 +2484,57 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// Column1
 			// 
 			this->Column1->HeaderText = L"Nombre ";
+			this->Column1->MinimumWidth = 6;
 			this->Column1->Name = L"Column1";
 			this->Column1->ReadOnly = true;
+			this->Column1->Width = 125;
 			// 
 			// Column2
 			// 
 			this->Column2->HeaderText = L"Documento de identificacion";
+			this->Column2->MinimumWidth = 6;
 			this->Column2->Name = L"Column2";
 			this->Column2->ReadOnly = true;
+			this->Column2->Width = 125;
 			// 
 			// Column3
 			// 
 			this->Column3->HeaderText = L"Numero de telefono";
+			this->Column3->MinimumWidth = 6;
 			this->Column3->Name = L"Column3";
 			this->Column3->ReadOnly = true;
+			this->Column3->Width = 125;
 			// 
 			// Column4
 			// 
 			this->Column4->HeaderText = L"Dedicacion";
+			this->Column4->MinimumWidth = 6;
 			this->Column4->Name = L"Column4";
 			this->Column4->ReadOnly = true;
+			this->Column4->Width = 125;
 			// 
 			// Column5
 			// 
 			this->Column5->HeaderText = L"Valor de referencia de los libros ingresados por la persona";
+			this->Column5->MinimumWidth = 6;
 			this->Column5->Name = L"Column5";
 			this->Column5->ReadOnly = true;
+			this->Column5->Width = 125;
 			// 
 			// gpbxEliminarPersona
 			// 
+			this->gpbxEliminarPersona->BackColor = System::Drawing::Color::Linen;
 			this->gpbxEliminarPersona->Controls->Add(this->button6);
 			this->gpbxEliminarPersona->Controls->Add(this->button7);
 			this->gpbxEliminarPersona->Controls->Add(this->lblEliminarPersona);
 			this->gpbxEliminarPersona->Controls->Add(this->label21);
 			this->gpbxEliminarPersona->Controls->Add(this->txtEliminarPersona);
 			this->gpbxEliminarPersona->Controls->Add(this->label22);
-			this->gpbxEliminarPersona->Location = System::Drawing::Point(6, 378);
+			this->gpbxEliminarPersona->Location = System::Drawing::Point(3, 466);
+			this->gpbxEliminarPersona->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->gpbxEliminarPersona->Name = L"gpbxEliminarPersona";
-			this->gpbxEliminarPersona->Size = System::Drawing::Size(483, 199);
+			this->gpbxEliminarPersona->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->gpbxEliminarPersona->Size = System::Drawing::Size(644, 245);
 			this->gpbxEliminarPersona->TabIndex = 16;
 			this->gpbxEliminarPersona->TabStop = false;
 			this->gpbxEliminarPersona->Text = L"Eliminar Persona";
@@ -2325,9 +2546,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button6->ForeColor = System::Drawing::Color::Red;
-			this->button6->Location = System::Drawing::Point(79, 129);
+			this->button6->Location = System::Drawing::Point(105, 159);
+			this->button6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(213, 31);
+			this->button6->Size = System::Drawing::Size(284, 38);
 			this->button6->TabIndex = 11;
 			this->button6->Text = L"Confirmar eliminar persona";
 			this->button6->UseVisualStyleBackColor = false;
@@ -2339,9 +2561,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button7->ForeColor = System::Drawing::Color::Red;
-			this->button7->Location = System::Drawing::Point(288, 74);
+			this->button7->Location = System::Drawing::Point(384, 91);
+			this->button7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(126, 31);
+			this->button7->Size = System::Drawing::Size(168, 38);
 			this->button7->TabIndex = 10;
 			this->button7->Text = L"Eliminar persona";
 			this->button7->UseVisualStyleBackColor = false;
@@ -2350,46 +2573,52 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			// lblEliminarPersona
 			// 
 			this->lblEliminarPersona->AutoSize = true;
-			this->lblEliminarPersona->Location = System::Drawing::Point(167, 74);
+			this->lblEliminarPersona->Location = System::Drawing::Point(223, 91);
+			this->lblEliminarPersona->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lblEliminarPersona->Name = L"lblEliminarPersona";
-			this->lblEliminarPersona->Size = System::Drawing::Size(0, 13);
+			this->lblEliminarPersona->Size = System::Drawing::Size(0, 16);
 			this->lblEliminarPersona->TabIndex = 9;
 			// 
 			// label21
 			// 
 			this->label21->AutoSize = true;
-			this->label21->Location = System::Drawing::Point(22, 74);
+			this->label21->Location = System::Drawing::Point(29, 91);
+			this->label21->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(124, 13);
+			this->label21->Size = System::Drawing::Size(157, 16);
 			this->label21->TabIndex = 8;
 			this->label21->Text = L"La persona a eliminar es:";
 			// 
 			// txtEliminarPersona
 			// 
-			this->txtEliminarPersona->Location = System::Drawing::Point(277, 41);
+			this->txtEliminarPersona->Location = System::Drawing::Point(369, 50);
+			this->txtEliminarPersona->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txtEliminarPersona->Name = L"txtEliminarPersona";
-			this->txtEliminarPersona->Size = System::Drawing::Size(100, 20);
+			this->txtEliminarPersona->Size = System::Drawing::Size(132, 22);
 			this->txtEliminarPersona->TabIndex = 7;
 			// 
 			// label22
 			// 
 			this->label22->AutoSize = true;
-			this->label22->Location = System::Drawing::Point(19, 41);
+			this->label22->Location = System::Drawing::Point(25, 50);
+			this->label22->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(252, 13);
+			this->label22->Size = System::Drawing::Size(321, 16);
 			this->label22->TabIndex = 6;
 			this->label22->Text = L"Ingrese el nombre de la persona que quiera eliminar:";
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1370, 749);
+			this->BackColor = System::Drawing::Color::Coral;
+			this->ClientSize = System::Drawing::Size(1827, 922);
 			this->Controls->Add(this->gpbxModificarPersona);
 			this->Controls->Add(this->gpbxEliminarPersona);
 			this->Controls->Add(this->gpbxPersonaindi);
 			this->Controls->Add(this->gpbxRfecha);
 			this->Controls->Add(this->gpbPersona);
+			this->Controls->Add(this->gpbxRdestino);
 			this->Controls->Add(this->dtgvcontrolpersonas);
 			this->Controls->Add(this->gpbeliminar);
 			this->Controls->Add(this->gpbxReditorial);
@@ -2398,12 +2627,12 @@ private: System::Windows::Forms::ToolStripMenuItem^ cerrarElProgramaToolStripMen
 			this->Controls->Add(this->gpbxRautor);
 			this->Controls->Add(this->gpbxEdicion);
 			this->Controls->Add(this->gpbxRcategoria);
-			this->Controls->Add(this->gpbxRdestino);
 			this->Controls->Add(this->gpbxRestado);
 			this->Controls->Add(this->gpbxRcantidadlibro);
 			this->Controls->Add(this->dtgvcontrol);
 			this->Controls->Add(this->gpbVisualizar);
 			this->Controls->Add(this->menuStrip1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
