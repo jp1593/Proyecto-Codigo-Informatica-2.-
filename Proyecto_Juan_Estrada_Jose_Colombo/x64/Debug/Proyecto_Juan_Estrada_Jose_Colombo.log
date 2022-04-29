@@ -1,7 +1,7 @@
 ﻿  MyForm.cpp
-C:\Users\juanp\Desktop\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\MyForm.h(3275,20): warning C4101: 'ex': unreferenced local variable
+C:\Users\joseg\Desktop\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\MyForm.h(3468,20): warning C4101: 'ex': variable local sin referencia
   MyForm1.cpp
-C:\Users\juanp\Desktop\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\MyForm.h(3275,20): warning C4101: 'ex': unreferenced local variable
-  Generating Code...
-  Inventario.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Proyecto_Juan_Estrada_Jose_Colombo.vcxproj -> C:\Users\juanp\Desktop\Proyecto-Codigo-Informatica-2.-\x64\Debug\Proyecto_Juan_Estrada_Jose_Colombo.exe
+C:\Users\joseg\Desktop\Proyecto-Codigo-Informatica-2.-\Proyecto_Juan_Estrada_Jose_Colombo\MyForm.h(3468,20): warning C4101: 'ex': variable local sin referencia
+  Generando código...
+  Inventario.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Proyecto_Juan_Estrada_Jose_Colombo.vcxproj -> C:\Users\joseg\Desktop\Proyecto-Codigo-Informatica-2.-\x64\Debug\Proyecto_Juan_Estrada_Jose_Colombo.exe
